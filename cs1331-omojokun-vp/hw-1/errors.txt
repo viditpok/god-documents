@@ -1,0 +1,3 @@
+Bad1 - Compile error. The class name does not match the file name.
+Bad2 - Runtime error. You cannot divide by zero, which is what the code does.
+Bad3 - Compile error. You cannot declare a character in a string variable, causing the error in the code.

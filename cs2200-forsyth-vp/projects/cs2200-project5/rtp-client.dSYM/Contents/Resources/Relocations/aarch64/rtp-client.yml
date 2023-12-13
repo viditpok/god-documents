@@ -1,0 +1,30 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     rtp-client
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100002AA4, symSize: 0x324 }
+  - { offsetInCU: 0x47, offset: 0x47, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100002AA4, symSize: 0x324 }
+  - { offsetInCU: 0x26, offset: 0x557, size: 0x8, addend: 0x0, symName: _net_connect, symObjAddr: 0x0, symBinAddr: 0x100002DC8, symSize: 0x118 }
+  - { offsetInCU: 0x52, offset: 0x583, size: 0x8, addend: 0x0, symName: _c_list, symObjAddr: 0x22F0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x26E, offset: 0x79F, size: 0x8, addend: 0x0, symName: _net_connect, symObjAddr: 0x0, symBinAddr: 0x100002DC8, symSize: 0x118 }
+  - { offsetInCU: 0x441, offset: 0x972, size: 0x8, addend: 0x0, symName: _net_disconnect, symObjAddr: 0x118, symBinAddr: 0x100002EE0, symSize: 0x4C }
+  - { offsetInCU: 0x4FB, offset: 0xA2C, size: 0x8, addend: 0x0, symName: _net_release, symObjAddr: 0x164, symBinAddr: 0x100002F2C, symSize: 0x8C }
+  - { offsetInCU: 0x5A2, offset: 0xAD3, size: 0x8, addend: 0x0, symName: _net_send_packet, symObjAddr: 0x1F0, symBinAddr: 0x100002FB8, symSize: 0xA8 }
+  - { offsetInCU: 0x6BC, offset: 0xBED, size: 0x8, addend: 0x0, symName: _net_recv_packet, symObjAddr: 0x298, symBinAddr: 0x100003060, symSize: 0x100 }
+  - { offsetInCU: 0x26, offset: 0xDB2, size: 0x8, addend: 0x0, symName: _queue_init, symObjAddr: 0x0, symBinAddr: 0x100003160, symSize: 0xC }
+  - { offsetInCU: 0x49, offset: 0xDD5, size: 0x8, addend: 0x0, symName: _queue_init, symObjAddr: 0x0, symBinAddr: 0x100003160, symSize: 0xC }
+  - { offsetInCU: 0x6C, offset: 0xDF8, size: 0x8, addend: 0x0, symName: _queue_add, symObjAddr: 0xC, symBinAddr: 0x10000316C, symSize: 0x74 }
+  - { offsetInCU: 0xAF, offset: 0xE3B, size: 0x8, addend: 0x0, symName: _queue_extract, symObjAddr: 0x80, symBinAddr: 0x1000031E0, symSize: 0x58 }
+  - { offsetInCU: 0xF6, offset: 0xE82, size: 0x8, addend: 0x0, symName: _queue_size, symObjAddr: 0xD8, symBinAddr: 0x100003238, symSize: 0x8 }
+  - { offsetInCU: 0x11F, offset: 0xEAB, size: 0x8, addend: 0x0, symName: _queue_release, symObjAddr: 0xE0, symBinAddr: 0x100003240, symSize: 0x10 }
+  - { offsetInCU: 0x26, offset: 0xF33, size: 0x8, addend: 0x0, symName: _packetize, symObjAddr: 0x0, symBinAddr: 0x100003250, symSize: 0x1A0 }
+  - { offsetInCU: 0x2D4, offset: 0x11E1, size: 0x8, addend: 0x0, symName: _packetize, symObjAddr: 0x0, symBinAddr: 0x100003250, symSize: 0x1A0 }
+  - { offsetInCU: 0x392, offset: 0x129F, size: 0x8, addend: 0x0, symName: _checksum, symObjAddr: 0x1A0, symBinAddr: 0x1000033F0, symSize: 0xA4 }
+  - { offsetInCU: 0x3BE, offset: 0x12CB, size: 0x8, addend: 0x0, symName: _checksum, symObjAddr: 0x1A0, symBinAddr: 0x1000033F0, symSize: 0xA4 }
+  - { offsetInCU: 0x3F9, offset: 0x1306, size: 0x8, addend: 0x0, symName: _rtp_connect, symObjAddr: 0x244, symBinAddr: 0x100003494, symSize: 0x100 }
+  - { offsetInCU: 0x707, offset: 0x1614, size: 0x8, addend: 0x0, symName: _rtp_disconnect, symObjAddr: 0x344, symBinAddr: 0x100003594, symSize: 0x118 }
+  - { offsetInCU: 0x90B, offset: 0x1818, size: 0x8, addend: 0x0, symName: _rtp_recv_message, symObjAddr: 0x45C, symBinAddr: 0x1000036AC, symSize: 0xC0 }
+  - { offsetInCU: 0xA48, offset: 0x1955, size: 0x8, addend: 0x0, symName: _rtp_send_message, symObjAddr: 0x51C, symBinAddr: 0x10000376C, symSize: 0xAC }
+  - { offsetInCU: 0xB0D, offset: 0x1A1A, size: 0x8, addend: 0x0, symName: _rtp_recv_thread, symObjAddr: 0x5C8, symBinAddr: 0x100003818, symSize: 0x284 }
+  - { offsetInCU: 0xCC0, offset: 0x1BCD, size: 0x8, addend: 0x0, symName: _rtp_send_thread, symObjAddr: 0x84C, symBinAddr: 0x100003A9C, symSize: 0x174 }
+...

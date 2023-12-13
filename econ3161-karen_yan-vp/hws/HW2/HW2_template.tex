@@ -1,0 +1,147 @@
+%2multibyte Version: 5.50.0.2953 CodePage: 936
+% Space and title formatting
+%base package for URL sugovort
+% how many sectioning levels to assign numbers to
+% how many sectioning levels to show in ToC
+%% todo
+%\usepackage{todonotes}
+%% Listing
+%% bib
+% Simplified commands
+%\usepackage[dvipsnames]{xcolor}
+
+
+\documentclass[11 pt, a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{subfigure}
+\usepackage[pdftex]{graphicx}
+\usepackage{natbib}
+\usepackage[hypertexnames=false]{hyperref}
+\usepackage{pdfsync}
+\usepackage{lscape}
+\usepackage[hmargin=1.1in,vmargin=1.1in]{geometry}
+\usepackage[titletoc]{appendix}
+\usepackage{setspace, titlesec}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{ctable}
+\usepackage{enumitem}
+\usepackage{epsfig}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{pdflscape}
+\usepackage{setspace}
+\usepackage{ulem}
+\usepackage[justification=centering]{caption}
+\usepackage{url}
+\usepackage{authblk}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{mathrsfs,dsfont}
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{hyperref}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{Codepage=936}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Wednesday, July 24, 2019 15:25:02}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\renewcommand{\bibname}{References}
+\urlstyle{rm}
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}            {-2.5ex\@plus -1ex \@minus -.25ex}            {1.25ex \@plus .25ex}            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\renewcommand{\labelenumii}{(\roman{enumii})}
+\setlist{noitemsep}
+\newcommand{\convas}{\xrightarrow{a.s.}}
+\newcommand{\convl}{\xrightarrow{L}}
+\newcommand{\convln}{\xrightarrow{L_n}}
+\newcommand{\convd}{\xrightarrow{d}}
+\newcommand{\convms}{\xrightarrow{m.s.}}
+\newcommand{\convo}{\xrightarrow{o}}
+\newcommand{\convp}{\xrightarrow{p}}
+\DeclareMathOperator{\var}{Var}
+\DeclareGraphicsExtensions{.jpg}
+\definecolor{blue}{RGB}{65,105,225}
+\hypersetup{
+colorlinks = true,
+citecolor  =blue,
+linkcolor  = blue}
+\parskip = 1.5ex plus 0.5 ex minus0.2 ex
+\newtheorem{pro}{Proposition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{defn}{Definition}[section]
+\newtheorem{ex}{Example}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{rem}{Remark}[section]
+\newtheorem{remju}{Remarks by Gauss}[section]
+\newtheorem{ass}{Assumption}[section]
+\newtheorem{resp}{Respond by Karen}[section]
+\newtheorem{respju}{Response by Gauss}[section]
+\newtheorem{remK}{Remark}[section]
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s \citeyearpar{#1}}
+\newenvironment{packed_enum}{\begin{enumerate} \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}}{\end{enumerate}}
+\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\bibname}{References}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+%\input{tcilatex}
+\begin{document}
+
+\title{{ECON 3161 Homework 2 (Fall 2021)}}
+\author{Your name}
+\date{}
+\maketitle
+\noindent
+1. Type your  HW starting from here...
+    
+
+Below is an example of table:   
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Summary Statistics}
+\begin{tabular}{l*{1}{ccccc}}
+\hline\hline
+                                             \\
+ variables       &        mean&          sd&         min&         max&       obs\\
+\hline
+wage        &    957.9455&    404.3608&         115&        3078&         935\\
+educ        &    13.46845&    2.196654&           9&          18&         935\\
+exper       &    11.56364&    4.374586&           1&          23&         935\\
+age         &    33.08021&    3.107803&          28&          38&         935\\
+black       &    .1283422&    .3346495&           0&           1&         935\\
+married     &    .8930481&    .3092174&           0&           1&         935\\
+south       &    .3411765&    .4743582&           0&           1&         935\\
+urban       &    .7176471&    .4503851&           0&           1&         935\\
+\hline
+\(N\)       &         935&            &            &            &            \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+\end{document}

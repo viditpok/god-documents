@@ -1,0 +1,45 @@
+1:
+Problem: Access to healthcare - BOTH
+Target Customer: All human beings since they could lose access to healthcare
+Customer Need: 8
+Known People With Problem: 100000000
+Target Market Size: 999999999
+Competitors: Public welfare programs from government
+Problem Duration: 400
+
+2:
+Problem: Food Waste - BOTH
+Target Customer: All human beings
+Customer Need: 9
+Known People With Problem: 800000000
+Target Market Size: 800000000
+Competitors: Composting
+Problem Duration: 2000
+
+3:
+Problem: Water contamination - BOTH
+Target Customer: People in poorly developed locations
+Customer Need: 9
+Known People With Problem: 20000000
+Target Market Size: 99999999
+Competitors: Nonprofit organizations
+Problem Duration: 100
+
+4:
+Problem: Schedule send messages not available on iMessages - BOTH
+Target Customer: iPhone users
+Customer Need: 5
+Known People With Problem: 5000000
+Target Market Size: 12000000
+Competitors: None at the moment
+Problem Duration: 14
+
+5:
+Problem: Poverty - BOTH
+Target Customer: All human beings since they have the ability to be poor
+Customer Need: 9
+Known People With Problem: 689000000
+Target Market Size: 999999999
+Competitors: Charities
+Problem Duration: 2000
+

@@ -1,0 +1,19 @@
+CS 2200 Fall 2023
+Homework 2
+
+Name: Vidit Pokharna
+GT Username: vpokharna3
+
+Question 1
+----------
+
+lea $ra, label
+beq $zero$, $zero$, target
+
+label: .word 0xFFFF
+
+
+_________________________________________________________________
+This saves the address of label (which is the current address)
+into register ra. Then it jumps to the target address with the
+label target, since register zero equals register zero.

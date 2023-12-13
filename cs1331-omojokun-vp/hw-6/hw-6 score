@@ -1,0 +1,16 @@
+95/100
+
+
+____________________________________________________________________
+
+
+CourseCatalog addCourse, adding to non-empty catalog (0.0/5.0)
+Test Failed!
+In addCourse
+
+Runtime error:
+
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    at CourseCatalog.addCourse(CourseCatalog.java:48)
+
+    at CourseTest.test_addCourse_to_nonEmpty:595 (CourseTest.java)

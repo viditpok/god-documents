@@ -1,0 +1,3 @@
+Hello! My name is Vidit Pokharna. I am from Orlando, FL with a computer science major. I am currently a first year
+students at Georgia Tech. My favorite thing to do is volunteer. I have chosen to take the asynchronous version of
+CS 1331 to be able to manage my time well along with the new environment I am in.

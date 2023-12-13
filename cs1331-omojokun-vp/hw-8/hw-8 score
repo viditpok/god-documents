@@ -1,0 +1,18 @@
+88/100
+
+
+____________________________________________________________________
+
+
+Results: Example 4 (0.0/6.0)
+Test Failed!
+Expected console output doesn't match
+    at AttendanceTakerTests.test_e4:294 (AttendanceTakerTests.java)
+    
+____________________________________________________________________ 
+  
+
+Results: Example 4 (using main method) (0.0/6.0)
+Test Failed!
+Expected console output doesn't match
+    at AttendanceTakerTests.test_e42:356 (AttendanceTakerTests.java)

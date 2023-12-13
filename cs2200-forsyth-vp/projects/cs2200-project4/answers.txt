@@ -1,0 +1,34 @@
+CS 2200 Fall 2023
+Project 4
+
+Name: Vidit Pokharna
+GT Username: vpokharna3
+
+6.1 FIFO Scheduler
+Run your OS simulation with 1, 2, and 4 CPUs. Compare the total execution time of each. Is there a linear relationship between the number of CPUs and total execution time? Why or why not? Keep in mind that the execution time refers to the simulated execution time.
+----------
+
+The relationship between the number of CPUs and total execution time in a FIFO Scheduler is not strictly linear. In simulations, using two CPUs significantly reduces execution time compared to just one, but increasing to four CPUs offers only a marginal gain. This is because the key constraint isn't the number of CPUs, but the availability of processes ready for execution. Even with more CPUs, if processes are idle or waiting in I/O queues, the additional CPUs won't significantly decrease total execution time. The efficiency gain diminishes as the number of CPUs increases beyond a certain point, governed by process availability.
+
+6.2 Round-Robin Scheduler
+Run your Round-Robin scheduler with timeslices of 800ms, 600ms, 400ms, and 200ms. Use only one CPU
+for your tests. Compare the statistics at the end of the simulation. Is there a relationship between the total waiting time and timeslice length? If so, what is it? In contrast, in a real OS, the shortest timeslice possible is usually not the best choice. Why not?
+----------
+
+In the Round-Robin scheduler, a shorter timeslice length correlates with a decrease in total waiting time. However, in real-world operating systems, the shortest possible timeslice is not always optimal. This is due to the overhead associated with frequent context switches, which can outweigh the benefits of reduced waiting times. The overhead includes time spent in saving and loading process states, which can be substantial compared to the execution time saved by shorter timeslices. Thus, a balance needs to be struck between reducing waiting times and minimizing context switch overhead.
+
+6.3 Preemptive Priority Scheduler
+Priority schedulers can sometimes lead to starvation among processes with lower priority. What is a way
+that operating systems can mitigate starvation in a priority scheduler?
+----------
+
+To mitigate starvation in a preemptive priority scheduler, operating systems can implement priority aging. This technique involves gradually increasing the priority of waiting processes over time. Such a mechanism ensures that higher priority processes get immediate attention while preventing lower priority processes from being perpetually starved. As time passes, lower priority processes slowly rise in priority, ensuring they eventually get processor time, balancing the need for prioritization with fairness among all processes.
+
+6.4 Priority Inversion
+Consider a non-preemptive priority scheduler. Suppose you have a high-priority process (P1) that wants to display a window on the monitor. But, the window manager is a process with low priority and will be placed at the end of the ready queue. While it is waiting to be scheduled, new medium-priority processes are likely to come in and starve the window manager process. The starvation of the window manager will also mean the starvation of P1 (the process with high priority), since P1 is waiting for the window manager to finish running. 
+
+If we want to keep our non-preemptive priority scheduler, what edits can we make to our scheduler to ensure that the P1 can finish its execution before any of the medium priority processes finish their execution? Explain in detail the changes you would make.
+----------
+
+To address priority inversion in a non-preemptive priority scheduler, we could implement dependency-based priority adjustments. This approach involves increasing the priority of low-priority processes if they are critical for the completion of higher-priority processes. For instance, a low-priority process, like a window manager needed by a high-priority process, would temporarily have its priority elevated to ensure the high-priority process isn't unduly delayed. Another method is to assign the highest priority from a set of dependent processes to the entire chain, ensuring critical dependencies are resolved promptly. This strategy helps maintain the integrity of priority scheduling while preventing high-priority processes from being starved due to lower-priority dependencies.
+

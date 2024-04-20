@@ -1,0 +1,19 @@
+name: ml_hw4
+channels:
+    - defaults
+    - pytorch
+dependencies:
+    - python=3.11
+    - imageio
+    - jupyterlab
+    - matplotlib
+    - notebook
+    - numpy
+    - pandas
+    - pip
+    - pytorch=2.2.1
+    - scikit-learn
+    - torchvision=0.17.1
+    - tqdm
+    - pip:
+          - codecarbon

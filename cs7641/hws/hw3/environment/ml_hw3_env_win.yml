@@ -1,0 +1,19 @@
+name: ml_hw3
+channels:
+    - defaults
+dependencies:
+    - python=3.11
+    - matplotlib
+    - numpy
+    - imageio
+    - scikit-learn
+    - notebook
+    - pandas
+    - scipy
+    - ipywidgets
+    - statsmodels
+    - jupyterlab
+    - plotly
+    - pip
+    - pip:
+          - kaleido==0.1.0.post1

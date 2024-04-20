@@ -1,0 +1,16 @@
+name: ml_hw2
+channels:
+  - defaults
+dependencies:
+  - "python>=3.11"
+  - poetry
+  - pandas
+  - seaborn
+  - matplotlib
+  - numpy
+  - tqdm
+  - imageio
+  - scikit-learn
+  - notebook
+  - jupyterlab
+  - scikit-image

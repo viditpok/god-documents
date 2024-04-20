@@ -1,0 +1,14 @@
+bandit
+flake8
+jupyter
+matplotlib
+mypy
+numpy
+pytest
+pyyaml
+torch
+torchvision
+Pillow
+tqdm
+prettytable
+gradescope-utils>=0.3.1

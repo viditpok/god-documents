@@ -1,0 +1,67 @@
+2024-04-01 15:33:11,550 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Configure stats pid to 1295
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/.config/wandb/settings
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/Downloads/assignment-4/wandb/settings
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 15:33:11,551 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:_log_setup():527] Logging user logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_153311-l0onpsfm/logs/debug.log
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:_log_setup():528] Logging internal logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_153311-l0onpsfm/logs/debug-internal.log
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:_jupyter_setup():473] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x11f8b65f0>
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:init():567] calling init triggers
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {}
+2024-04-01 15:33:11,552 INFO    MainThread:1295 [wandb_init.py:init():592] re-initializing run, found existing run on stack: bhgeyfuf
+2024-04-01 15:33:11,555 INFO    MainThread:1295 [wandb_run.py:_finish():2052] finishing run viditdpokharna/scene_recognition/bhgeyfuf
+2024-04-01 15:33:11,555 INFO    MainThread:1295 [wandb_run.py:_atexit_cleanup():2292] got exitcode: 0
+2024-04-01 15:33:11,555 INFO    MainThread:1295 [wandb_run.py:_restore():2275] restore
+2024-04-01 15:33:11,556 INFO    MainThread:1295 [wandb_run.py:_restore():2281] restore done
+2024-04-01 15:33:14,625 INFO    MainThread:1295 [wandb_run.py:_footer_history_summary_info():3920] rendering history
+2024-04-01 15:33:14,626 INFO    MainThread:1295 [wandb_run.py:_footer_history_summary_info():3952] rendering summary
+2024-04-01 15:33:14,632 INFO    MainThread:1295 [wandb_run.py:_footer_sync_info():3879] logging synced files
+2024-04-01 15:33:14,674 INFO    MainThread:1295 [wandb_init.py:init():617] starting backend
+2024-04-01 15:33:14,674 INFO    MainThread:1295 [wandb_init.py:init():621] setting up manager
+2024-04-01 15:33:14,675 INFO    MainThread:1295 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-04-01 15:33:14,678 INFO    MainThread:1295 [wandb_init.py:init():629] backend started and connected
+2024-04-01 15:33:14,689 INFO    MainThread:1295 [wandb_run.py:_label_probe_notebook():1299] probe notebook
+2024-04-01 15:33:14,689 INFO    MainThread:1295 [wandb_run.py:_label_probe_notebook():1309] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-04-01 15:33:14,689 INFO    MainThread:1295 [wandb_init.py:init():721] updated telemetry
+2024-04-01 15:33:14,695 INFO    MainThread:1295 [wandb_init.py:init():754] communicating run to backend with 90.0 second timeout
+2024-04-01 15:33:15,913 INFO    MainThread:1295 [wandb_run.py:_on_init():2344] communicating current version
+2024-04-01 15:33:16,281 INFO    MainThread:1295 [wandb_run.py:_on_init():2353] got version response 
+2024-04-01 15:33:16,281 INFO    MainThread:1295 [wandb_init.py:init():805] starting run threads in backend
+2024-04-01 15:33:18,985 INFO    MainThread:1295 [wandb_run.py:_console_start():2323] atexit reg
+2024-04-01 15:33:18,985 INFO    MainThread:1295 [wandb_run.py:_redirect():2178] redirect: wrap_raw
+2024-04-01 15:33:18,985 INFO    MainThread:1295 [wandb_run.py:_redirect():2243] Wrapping output streams.
+2024-04-01 15:33:18,985 INFO    MainThread:1295 [wandb_run.py:_redirect():2268] Redirects installed.
+2024-04-01 15:33:18,986 INFO    MainThread:1295 [wandb_init.py:init():848] run started, returning control to user process
+2024-04-01 15:33:24,872 INFO    MainThread:1295 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-04-01 15:33:24,873 INFO    MainThread:1295 [wandb_init.py:_pause_backend():438] pausing backend
+2024-04-01 15:34:53,200 INFO    MainThread:1295 [wandb_init.py:_resume_backend():443] resuming backend
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Configure stats pid to 1295
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/.config/wandb/settings
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/Downloads/assignment-4/wandb/settings
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_init.py:_log_setup():527] Logging user logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_153453-ryu7lt5o/logs/debug.log
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_init.py:_log_setup():528] Logging internal logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_153453-ryu7lt5o/logs/debug-internal.log
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_init.py:init():567] calling init triggers
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {}
+2024-04-01 15:34:53,237 INFO    MainThread:1295 [wandb_init.py:init():592] re-initializing run, found existing run on stack: l0onpsfm
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [wandb_run.py:_finish():2052] finishing run viditdpokharna/scene_recognition/l0onpsfm
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [jupyter.py:save_history():445] not saving jupyter history
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [wandb_init.py:_jupyter_teardown():455] cleaning up jupyter logic
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [wandb_run.py:_atexit_cleanup():2292] got exitcode: 0
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [wandb_run.py:_restore():2275] restore
+2024-04-01 15:34:53,245 INFO    MainThread:1295 [wandb_run.py:_restore():2281] restore done
+2024-04-01 15:34:57,359 INFO    MainThread:1295 [wandb_run.py:_footer_history_summary_info():3920] rendering history
+2024-04-01 15:34:57,359 INFO    MainThread:1295 [wandb_run.py:_footer_history_summary_info():3952] rendering summary
+2024-04-01 15:34:57,365 INFO    MainThread:1295 [wandb_run.py:_footer_sync_info():3879] logging synced files

@@ -1,0 +1,78 @@
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Configure stats pid to 4705
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/.config/wandb/settings
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Loading settings from /Users/viditpokharna/Downloads/assignment-4/wandb/settings
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_init.py:_log_setup():527] Logging user logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_214344-w1uj79ok/logs/debug.log
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_init.py:_log_setup():528] Logging internal logs to /Users/viditpokharna/Downloads/assignment-4/wandb/run-20240401_214344-w1uj79ok/logs/debug-internal.log
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_init.py:init():567] calling init triggers
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {}
+2024-04-01 21:43:44,669 INFO    MainThread:4705 [wandb_init.py:init():592] re-initializing run, found existing run on stack: 9d8geloa
+2024-04-01 21:43:44,815 ERROR   MainThread:4705 [wandb_init.py:init():1215] error
+Traceback (most recent call last):
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1187, in init
+    run = wi.init()
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 602, in init
+    latest_run.finish()
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 420, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 361, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2043, in finish
+    return self._finish(exit_code, quiet)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2050, in _finish
+    with telemetry.context(run=self) as tel:
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/telemetry.py", line 42, in __exit__
+    self._run._telemetry_callback(self._obj)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 763, in _telemetry_callback
+    self._telemetry_flush()
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 774, in _telemetry_flush
+    self._backend.interface._publish_telemetry(self._telemetry_obj)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 101, in _publish_telemetry
+    self._publish(rec)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2024-04-01 21:43:45,015 INFO    MainThread:4705 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-04-01 21:43:45,015 INFO    MainThread:4705 [wandb_init.py:_pause_backend():438] pausing backend
+2024-04-01 21:43:56,407 INFO    MainThread:4705 [wandb_init.py:_resume_backend():443] resuming backend
+2024-04-01 21:43:56,436 ERROR   MainThread:4705 [wandb_init.py:init():1215] error
+Traceback (most recent call last):
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1183, in init
+    wi.setup(kwargs)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 226, in setup
+    with telemetry.context(obj=self._init_telemetry_obj) as tel:
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/telemetry.py", line 42, in __exit__
+    self._run._telemetry_callback(self._obj)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 763, in _telemetry_callback
+    self._telemetry_flush()
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 774, in _telemetry_flush
+    self._backend.interface._publish_telemetry(self._telemetry_obj)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 101, in _publish_telemetry
+    self._publish(rec)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2024-04-01 21:43:56,559 INFO    MainThread:4705 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2024-04-01 21:43:56,560 INFO    MainThread:4705 [wandb_init.py:_pause_backend():438] pausing backend

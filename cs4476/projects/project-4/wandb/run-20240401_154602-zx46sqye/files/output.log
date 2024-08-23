@@ -1,0 +1,24 @@
+/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/transformers/models/vit/feature_extraction_vit.py:28: FutureWarning: The class ViTFeatureExtractor is deprecated and will be removed in version 5 of Transformers. Please use ViTImageProcessor instead.
+  warnings.warn(
+Some weights of ViTForImageClassification were not initialized from the model checkpoint at google/vit-base-patch16-224-in21k and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of ViTForImageClassification were not initialized from the model checkpoint at google/vit-base-patch16-224-in21k and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/site-packages/accelerate/accelerator.py:432: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches', 'even_batches', 'use_seedable_sampler']). Please pass an `accelerate.DataLoaderConfiguration` instead:
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False, even_batches=True, use_seedable_sampler=True)
+  warnings.warn(
+{'loss': 2.7101, 'grad_norm': 2.2627687454223633, 'learning_rate': 1.0000000000000002e-06, 'epoch': 0.21}
+{'loss': 2.7188, 'grad_norm': 2.584214925765991, 'learning_rate': 2.0000000000000003e-06, 'epoch': 0.43}
+{'loss': 2.6959, 'grad_norm': 2.320387125015259, 'learning_rate': 3e-06, 'epoch': 0.64}
+{'loss': 2.6938, 'grad_norm': 1.9188232421875, 'learning_rate': 4.000000000000001e-06, 'epoch': 0.85}
+{'loss': 2.6884, 'grad_norm': 2.712526798248291, 'learning_rate': 5e-06, 'epoch': 1.06}
+{'loss': 2.6693, 'grad_norm': 2.1766197681427, 'learning_rate': 6e-06, 'epoch': 1.28}
+{'loss': 2.6402, 'grad_norm': 2.055678129196167, 'learning_rate': 7.000000000000001e-06, 'epoch': 1.49}
+{'loss': 2.6073, 'grad_norm': 2.4379324913024902, 'learning_rate': 8.000000000000001e-06, 'epoch': 1.7}
+{'loss': 2.6085, 'grad_norm': 4.109964847564697, 'learning_rate': 9e-06, 'epoch': 1.91}
+{'loss': 2.5588, 'grad_norm': 2.079148054122925, 'learning_rate': 1e-05, 'epoch': 2.13}
+{'loss': 2.5134, 'grad_norm': 2.2418317794799805, 'learning_rate': 1.1000000000000001e-05, 'epoch': 2.34}
+{'loss': 2.468, 'grad_norm': 2.595956802368164, 'learning_rate': 1.2e-05, 'epoch': 2.55}
+{'loss': 2.4151, 'grad_norm': 2.4564857482910156, 'learning_rate': 1.3000000000000001e-05, 'epoch': 2.77}
+{'loss': 2.3858, 'grad_norm': 4.587366104125977, 'learning_rate': 1.4000000000000001e-05, 'epoch': 2.98}
+{'train_runtime': 163.2171, 'train_samples_per_second': 6.893, 'train_steps_per_second': 0.864, 'train_loss': 2.5962490325278424, 'epoch': 3.0}

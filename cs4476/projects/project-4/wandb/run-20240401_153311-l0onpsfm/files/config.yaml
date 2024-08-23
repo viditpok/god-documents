@@ -1,0 +1,38 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.14
+    cli_version: 0.16.5
+    framework: huggingface
+    huggingface_version: 4.39.2
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    start_time: 1711999994.0
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      2:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      3:
+      - 2
+      - 23
+      4: 3.10.14
+      5: 0.16.5
+      6: 4.39.2
+      8:
+      - 1
+      - 4
+      - 5
+      13: darwin-arm64

@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+AttributeError: Can't get attribute 'CustomImageDataset' on <module '__main__' (built-in)>
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+AttributeError: Can't get attribute 'CustomImageDataset' on <module '__main__' (built-in)>
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+AttributeError: Can't get attribute 'CustomImageDataset' on <module '__main__' (built-in)>
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/viditpokharna/anaconda3/envs/cv_proj4/lib/python3.10/multiprocessing/spawn.py", line 126, in _main
+    self = reduction.pickle.load(from_parent)
+AttributeError: Can't get attribute 'CustomImageDataset' on <module '__main__' (built-in)>
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.

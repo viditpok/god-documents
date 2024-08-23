@@ -1,0 +1,26 @@
+name: cv_proj5
+channels:
+    - conda-forge
+    - pytorch
+dependencies:
+    - bandit
+    - flake8
+    - jupyter
+    - matplotlib
+    - mypy
+    - numpy
+    - pytest
+    - python>=3.6
+    - pyyaml
+    - pytorch
+    - torchvision
+    - Pillow
+    - pandas
+    - colour
+    - scipy
+    - imageio
+    -pip:
+        - torch
+        - torchvision
+        - opencv-python
+        - opencv-contrib-python

@@ -1,0 +1,9 @@
+World1
+Depth, Angle calculation using vision only : (0.29990328008927897, -4.966560336573551)
+Centroid left (360, 207) | Image Size (500, 500, 3)
+Centroid right (248, 207) | Image Size (500, 500, 3)
+
+World2
+Depth, Angle calculation using vision only : (0.4601255804109486, -3.030726770718715)
+Centroid left (320, 223) | Image Size (500, 500, 3)
+Centroid right (247, 223) | Image Size (500, 500, 3)

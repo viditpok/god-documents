@@ -1,0 +1,15 @@
+{
+  "robot_radius": 0.0305,
+  "wheel_radius": 0.0200,
+  "axle_length": 0.057,
+  "fov": 0.84,
+  "camera_baseline": 0.06,
+  "camera_pose": [0.06, 0, 0],
+  "lidar_pose": [-0.02, 0, 0],
+  "world_file": "maze_world1.wbt",
+  "x_range": [-1, 1],
+  "y_range": [-1, 1],
+  "gui_width": 600,
+  "gui_height": 600,
+  "num_correct_est_baseline": 105
+}

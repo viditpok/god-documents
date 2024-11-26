@@ -22,7 +22,7 @@ class Robot_Sim(object):
         self.__y = y
         self.__h = heading % 360
         self.wheel_dist = wheel_dist
-        self.__TIMESTEP = 1
+        self.__TIMESTEP = 2
         
         self.wheel_r = wheel_r
         # Grid cells already explored by the robot

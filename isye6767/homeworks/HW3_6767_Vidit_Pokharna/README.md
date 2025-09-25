@@ -47,7 +47,7 @@
 Use a C++11 (or newer) compiler:
 
 ```bash
-g++ -o option_pricer main.cpp Option.cpp Option_Price.cpp -std=c++11 -lm
+g++ -o main main.cpp Option.cpp Option_Price.cpp -std=c++11 -lm
 ```
 
 ## How to Run
@@ -55,7 +55,7 @@ g++ -o option_pricer main.cpp Option.cpp Option_Price.cpp -std=c++11 -lm
 Run the executable:
 
 ```bash
-./option_pricer
+./main
 ```
 
 The output:

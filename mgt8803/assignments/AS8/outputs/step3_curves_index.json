@@ -1,0 +1,79 @@
+[
+  {
+    "market": "FIAT",
+    "model_path": "outputs/model_step3_FIAT.pt",
+    "curve_path": "outputs/step3_learning_curve_FIAT.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 4,
+      "lr": 0.001,
+      "act": "tanh"
+    }
+  },
+  {
+    "market": "EQUITY",
+    "model_path": "outputs/model_step3_EQUITY.pt",
+    "curve_path": "outputs/step3_learning_curve_EQUITY.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 16,
+      "lr": 0.01,
+      "act": "relu"
+    }
+  },
+  {
+    "market": "GOLD",
+    "model_path": "outputs/model_step3_GOLD.pt",
+    "curve_path": "outputs/step3_learning_curve_GOLD.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 16,
+      "lr": 0.001,
+      "act": "relu"
+    }
+  },
+  {
+    "market": "ENERGY",
+    "model_path": "outputs/model_step3_ENERGY.pt",
+    "curve_path": "outputs/step3_learning_curve_ENERGY.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 4,
+      "lr": 0.001,
+      "act": "linear"
+    }
+  },
+  {
+    "market": "FIAT+EQUITY",
+    "model_path": "outputs/model_step3_FIAT_EQUITY.pt",
+    "curve_path": "outputs/step3_learning_curve_FIAT_EQUITY.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 4,
+      "lr": 0.001,
+      "act": "tanh"
+    }
+  },
+  {
+    "market": "FIAT+GOLD",
+    "model_path": "outputs/model_step3_FIAT_GOLD.pt",
+    "curve_path": "outputs/step3_learning_curve_FIAT_GOLD.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 4,
+      "lr": 0.001,
+      "act": "relu"
+    }
+  },
+  {
+    "market": "FIAT+EQUITY+GOLD+ENERGY",
+    "model_path": "outputs/model_step3_FIAT_EQUITY_GOLD_ENERGY.pt",
+    "curve_path": "outputs/step3_learning_curve_FIAT_EQUITY_GOLD_ENERGY.png",
+    "cfg": {
+      "w": 12,
+      "hidden": 16,
+      "lr": 0.001,
+      "act": "relu"
+    }
+  }
+]

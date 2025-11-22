@@ -1,0 +1,11 @@
+ticker,model,accuracy,precision,sharpe_ratio,max_drawdown,report_path
+CORI,gradient_boosting,0.6351931330472103,0.7142857142857143,1.051550375615339,3.443308106832304,outputs/reports/CORI_gradient_boosting_top10.html
+AAME,random_forest,0.6368467670504872,0.5827814569536424,0.649340828313665,32.485952540266574,outputs/reports/AAME_random_forest_top10.html
+EQS,random_forest,0.650132860938884,0.631578947368421,0.5145779800027139,9.949988926138614,outputs/reports/EQS_random_forest_top10.html
+BELFA,random_forest,0.6341895482728078,1.0,0.19590912945065117,5.073366082276778,outputs/reports/BELFA_random_forest_top10.html
+CBA,gradient_boosting,0.8608490566037735,0.0,,,outputs/reports/CBA_gradient_boosting_top10.html
+ABCO,gradient_boosting,0.8273684210526315,0.0,,,outputs/reports/ABCO_gradient_boosting_top10.html
+AMTD,random_forest,0.7757009345794392,0.0,,,outputs/reports/AMTD_random_forest_top10.html
+CETXP,gradient_boosting,0.6553191489361702,0.0,,,outputs/reports/CETXP_gradient_boosting_top10.html
+CAPR,gradient_boosting,0.6201342281879194,0.0,,,outputs/reports/CAPR_gradient_boosting_top10.html
+ELSE,gradient_boosting,0.6182462356067316,0.0,,,outputs/reports/ELSE_gradient_boosting_top10.html

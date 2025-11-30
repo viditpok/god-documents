@@ -5,7 +5,7 @@
     "curve_path": "outputs/step3_learning_curve_FIAT.png",
     "cfg": {
       "w": 12,
-      "hidden": 4,
+      "hidden": 8,
       "lr": 0.001,
       "act": "tanh"
     }
@@ -17,8 +17,8 @@
     "cfg": {
       "w": 12,
       "hidden": 16,
-      "lr": 0.01,
-      "act": "relu"
+      "lr": 0.001,
+      "act": "linear"
     }
   },
   {
@@ -27,7 +27,7 @@
     "curve_path": "outputs/step3_learning_curve_GOLD.png",
     "cfg": {
       "w": 12,
-      "hidden": 16,
+      "hidden": 8,
       "lr": 0.001,
       "act": "relu"
     }
@@ -39,7 +39,7 @@
     "cfg": {
       "w": 12,
       "hidden": 4,
-      "lr": 0.001,
+      "lr": 0.01,
       "act": "linear"
     }
   },
@@ -49,9 +49,9 @@
     "curve_path": "outputs/step3_learning_curve_FIAT_EQUITY.png",
     "cfg": {
       "w": 12,
-      "hidden": 4,
-      "lr": 0.001,
-      "act": "tanh"
+      "hidden": 8,
+      "lr": 0.01,
+      "act": "relu"
     }
   },
   {
@@ -60,9 +60,9 @@
     "curve_path": "outputs/step3_learning_curve_FIAT_GOLD.png",
     "cfg": {
       "w": 12,
-      "hidden": 4,
+      "hidden": 16,
       "lr": 0.001,
-      "act": "relu"
+      "act": "linear"
     }
   },
   {
@@ -71,9 +71,9 @@
     "curve_path": "outputs/step3_learning_curve_FIAT_EQUITY_GOLD_ENERGY.png",
     "cfg": {
       "w": 12,
-      "hidden": 16,
+      "hidden": 4,
       "lr": 0.001,
-      "act": "relu"
+      "act": "tanh"
     }
   }
 ]

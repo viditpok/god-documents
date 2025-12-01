@@ -1,0 +1,2 @@
+"""Statistical arbitrage project package."""
+

@@ -1,0 +1,5 @@
+row,model,assets,grs,df1,df2,p_value
+0,FF5,25 Portfolios,55.6824,25,5946,<1e-6
+1,AQR6,25 Portfolios,53.3057,25,5945,<1e-6
+2,FF5,10 Industries,185.3329,10,2973,<1e-6
+3,AQR6,10 Industries,176.8196,10,2972,<1e-6

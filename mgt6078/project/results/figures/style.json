@@ -1,0 +1,19 @@
+{
+  "palette": {
+    "primary": "#1f77b4",
+    "secondary": "#ff7f0e",
+    "accent": "#2ca02c",
+    "neutral": "#7f7f7f"
+  },
+  "font": {
+    "family": "Arial",
+    "size": 12,
+    "title_size": 16
+  },
+  "figure": {
+    "dpi": 150,
+    "width": 10,
+    "height": 6
+  },
+  "guideline_reference": "guideline §6 discussion l53-l74"
+}

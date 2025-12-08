@@ -98,6 +98,9 @@ uv run make ui
 *   **Seed:** 42 (Global determinism for ML & Backtests)
 *   **Config:** `config/project.yaml` controls all hyperparameters (lookback windows, regularization, allocation logic).
 
+## Deployed UI
+*   https://macrotone.streamlit.app/
+
 ---
 
 **© 2025 MacroTone Project Team**

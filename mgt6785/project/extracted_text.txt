@@ -1,0 +1,2542 @@
+
+
+--- START /Users/devang/Desktop/Ai in Fin/Capstone/project/MGT6785_Project_Proposal 2.pdf ---
+Factor Timing Strategy Using Macroeconomic Regimes and NLP 
+
+Team: Devang Ajmera, Vidit Pokharna, Osho Sharma 
+
+1.⁠ ⁠Motivation 
+
+Factor investing (value, momentum, size) is typically implemented statically, 
+but empirical evidence shows factor returns are regime-dependent. We propose 
+to dynamically allocate across factors using macroeconomic regimes identified 
+via NLP on Federal Reserve statements and economic reports. By combining 
+traditional factor models with ML and NLP, we aim to build a strategy that 
+times factors more effectively and improves risk-adjusted performance. 
+
+2.⁠ ⁠Research Questions 
+
+•  Can NLP on FOMC minutes and macro reports classify market regimes 
+
+(expansion, slowdown, recession)? 
+
+•  Do factor returns (value, momentum, size) vary systematically across 
+
+these regimes? 
+
+•  Does an ML-driven factor timing strategy improve Sharpe ratios and 
+
+drawdown control vs. static factor allocations? 
+
+3.⁠ ⁠Data 
+
+•  WRDS: CRSP (stock returns), Compustat (fundamentals for value/size), 
+
+Fama-French factors (via WRDS/Ken French) 
+
+•  Public: FOMC minutes (federalreserve.gov), FRED macro series (GDP, 
+
+CPI), economic releases 
+
+•  Optional: Social sentiment (X API) for macro commentary 
+
+4.⁠ ⁠Methodology 
+
+•  NLP Regime Classification: Apply FinBERT or similar to Fed 
+
+minutes/reports to classify regime tone (expansion vs. recession) 
+
+•  Feature Set: Factor returns, macro indicators, NLP-derived regime scores 
+•  Modeling: Gradient boosting / random forests to predict next-period 
+
+factor performance 
+
+•  Strategy: Allocate across factors by overweighting stocks with high 
+
+exposure to predicted top-performing factors 
+
+•  Backtest: Weekly rebalancing, realistic costs, benchmarked against buy-
+
+and-hold SPY and equal-weight factor allocation 
+
+
+--- END /Users/devang/Desktop/Ai in Fin/Capstone/project/MGT6785_Project_Proposal 2.pdf ---
+
+
+--- START /Users/devang/Desktop/Ai in Fin/Capstone/project/20220727_NLP_Statements_Research_Note_Final 2.pdf ---
+            Quantitative Research 
+
+Welcome to the Machine (Learning): An NLP 
+framework for analyzing the Fed’s monetary 
+policy statements 
+  The  following  research  note  describes  a  natural  language  processing 
+(NLP)  technique  that  classifies  and  interprets  the  central  bank's 
+statements 
+
+  The model classified the semantics of each of the Fed monetary policy 
+
+statements in 23 preponderant topics 
+
+  The most important finding was the degree  of strength, given that the 
+model can explain 9 out of 10 rate movements. The model also defines 
+the range of variation of the terminal reference rate 
+
+  Analyzing today’s statement, the model suggests a terminal rate between 
+
+3.5 and 4.25% (upper range) 
+
+Fed’s  topics  classification.  The  Federal  Open  Market  Committee  (FOMC) 
+statement is the primary tool that the monetary authority uses to communicate its 
+monetary policy. It contains the target range for the federal funds rate, transmits 
+its  medium-term  perspective  on  the  US  economy,  and  offers  insights  on  the 
+outcome of future votes. However, the interpretation of the Fed’s monetary policy 
+statement  could  be  subject  to  a  certain  subjectivity  due  to  the  existence  of 
+behavioral biases that limit an objective interpretation. 
+
+The  following  research  note  describes  a  natural  language  processing  (NLP) 
+technique that classifies and interprets the central bank's statements. In addition, 
+it also provides a methodology to confirm whether the communication made by 
+the Central Bank is consistent with the monetary policy implemented.  
+
+July 27, 2022 
+
+www.banorte.com 
+@analisis_fundam 
+
+Alejandro Padilla 
+Chief Economist and Head of Research 
+alejandro.padilla@banorte.com 
+
+Alejandro Cervantes  
+Executive Director of Quantitative Research 
+alejandro.cervantes@banorte.com 
+
+José Luis García  
+Director of Quantitative Research 
+jose.garcia.casales@banorte.com 
+
+Daniel Sosa  
+Analyst, Quantitative Research 
+daniel.sosa@banorte.com 
+
+NLP and Machine Learning. In recent years, machine learning (ML) has evolved 
+to discover common features in verbal and written communication. Quantitative 
+research  techniques  have  gained  ground  in  the  application  of solutions  for  the 
+the  present  study  uses  new 
+financial 
+methodologies for the analysis and processing of unstructured data. 
+
+industry.  Following 
+
+trend, 
+
+this 
+
+Text mining is a tool used for extracting a summary from a set of documents. This 
+is  commonly  referred  to  as  a  corpus.  Central  bank  communication  usually 
+includes  terms  or  phrases  that  convey  significant  messages  related  to  the 
+economy’s evolution and can be extracted with the appropriate text mining tools. 
+In the sentiment analysis literature, Natural Language Processing (NLP) methods 
+are used to build dictionaries that can be associated with sentiments. 
+
+Unstructured data, such as Fed statements, provide a large amount of information. 
+Unlike traditional methods of macroeconomic analysis, it is necessary to use NLP 
+techniques to extract value from the statements. As a result, the main source of 
+information for this study are the Fed’s monetary policy statements from 1978 to 
+2022. 
+
+Winners  of  the  award  for  best  economic 
+forecasters for Mexico in 2021, granted by 
+Refinitiv 
+
+Document for distribution among the 
+general public 
+
+1 
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The  NLP  model  was  carried  out  using  Python,  since  the  monetary  policy 
+statements are available in PDF and HTML formats. In total, 326 Fed statements 
+were considered for our model (August 1978 to July 2022). The following figure 
+shows the treatment applied to the press releases: 
+
+Figure 1: NLP Methodology 
+
+Source: Giuseppe Bruno, Text mining and sentiment extraction in Central Bank documents, IEEE International Conference on Big Data, 
+2016 
+
+The  data  engineering implemented  starts-off by downloading  and cleaning the 
+text  of the statements.  Then,  NLP techniques  were  applied to  extract  the most 
+valuable information contained in the documents. Next, words that didn’t added 
+value (stop words), that appeared only once within the corpus (hapaxes), and that 
+were  present  in  100% of the  documents  were eliminated.  In addition,  n-grams 
+composed of 2 or more tokens (minimum processed text unit) were constructed, 
+given that they could have high relevance in the interpretation of the document, 
+for  example: 
+low  unemployment,  high 
+unemployment;  economic  growth,  etc.  Finally,  lemmatization  techniques  were 
+used to reduce the words to their common root, to condense the size of the text 
+and eliminate the unnecessary noise. As a result, a clean corpus was obtained.  
+
+inflation,  high 
+
+inflation; 
+
+low 
+
+It  is  important  to  highlight  that  the  above-mentioned  cleaning  process  is 
+extremely important to build the ML classification model. Prior to the model, a 
+bag of words (BoW) was built as the main input for defining a dictionary used 
+during the modeling process. 
+
+2 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The model was estimated using Latent Dirichlet Allocation (LDA). These assume 
+that each statement can be represented by a mixture of topics, and each topic is 
+described  by  a  bag  of  words  (BoW),  the  following  figure  is  a  general 
+representation of the LDA model. 
+
+Figure 2: Graphic Representation of a LDA Model 
+
+Source: D.M Blei, A.Y. Ng, and M.I. Jordan. Latent dirichlet allocation. The Journal of Machine Learning Research, 3:993-1022, 2003.   
+
+LDA is a generative model that describes how the documents within a dataset 
+were  created.  In  this  context,  a  dataset  is  a  collection  of  documents,  and  a 
+document is a collection of words. Hence, the generative model describes how 
+each document is represented by these words. Initially, it is assumed that there 
+are K topic distributions within the set of documents, meaning that each K of the 
+K multinomial distributions contains V elements, where V is the number of terms 
+in our corpus. 
+
+The classification model identified  the most relevant  topics in the corpus built 
+from the Federal Reserve Bank statements (refer to Chart 1). The bubble chart 
+shows each of the topics defined in all the monetary policy statements. The size 
+of the bubble explains the preponderance of the topic, while the dissimilarity that 
+exists  between  the  topics  is  represented  by  the  distance  between  each  of  the 
+bubbles; that is, the greater the distance, the greater the dissimilarity between the 
+topics. 
+
+3 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Chart 1: Intertopic Distance Map 
+Most relevant terms via multidimensional scaling  
+
+Source: Banorte 
+
+The bubble chart is a visual tool that helped find the optimal number of topics to 
+classify all monetary policy statements. It is important to highlight that the ML 
+model was trained through iterative processes that allowed to identify the optimal 
+hyperparameters of the model to categorize the latent topics within the corpus. 
+
+To evaluate the efficiency of the model, two intrinsic metrics were used:  
+
+1)  Perplexity allows us to measure how well the model predicts a sample. In 
+the NLP context, it tells us the level of uncertainty that the model has by 
+assigning probabilities to the text; that is, how much entropy the text has 
+(the higher the entropy, the higher the level of uncertainty of the model). 
+The closer this measure is to zero (including negative values), the more 
+relevant the words are. However, the optimization of this measure does 
+not  necessarily  reflect  a  better  interpretation  of  the  topics,  since  it  is 
+possible to have high perplexity and a null business sense relation. 
+
+2) Coherence. This metric helps us measure  the degree of similarity in the 
+semantics of the most relevant words within the topics. There are different 
+coherence  measures.  In  this  case  we  use  the  “C_v”  measure,  based  on 
+subarrays,  segmentation  of  top  words,  cosine  distances  and  the  use  of 
+NMPI (Normalized Mutual Point Information). The higher coherence, the 
+more similar the semantics. 
+
+4 
+
+ 
+ 
+ 
+ 
+The optimal scenario is low perplexity combined with high coherence. However, 
+a higher level of coherence is more relevant than low perplexity. In the search for 
+the highest coherence, we use a variant of the LDA application, the “LDAMallet” 
+model. The latter uses Gibbs sampling, unlike the standard LDA model which 
+uses variational Bayesian methods. It is important to emphasize that both models 
+require a priori the number of topics in which they will classify our corpus. 
+
+The elbow method was used to establish the optimal number of topics. An interval 
+between  10  and  30  topics  was  established  to  measure  the  performance  of  the 
+LDAMallet model to analyze their respective coherence. The method showed that 
+the optimal scenario were 25 topics, with an approximate coherence of 0.43. The 
+standard  LDA  model  with  the  same  scenario  obtained  a  0.39  coherence. 
+Consequently, the LDAMallet model was chosen for the classification. 
+
+The LDAMallet model classified each monetary policy statement within the 25 
+topics. For this classification, the model establishes the weight that each topic has 
+and  assigns  the  one  with  the  greatest  magnitude.  Even  though  25  topics  were 
+identified in the corpus, the allocation resulted in 23 relevant topics.  
+
+Subsequently,  the  relationship  between  the  Fed  funds  rate  and  the  semantic 
+classification  obtained  was  analyzed  (refer  to  Chart  2).  The  most  important 
+finding was the degree of strength, given that the model can explain 9 out of 
+10  rate  movements.  The  model  also  defines  the  range  of  variation  of  the 
+terminal reference rate (refer to Chart 3). 
+
+The model suggests a terminal rate between 3.5 and 4.25% (upper range). 
+After today’s monetary policy announcement, the model classified this statement 
+with a topic that anticipates the terminal rate between 3.5% and 4.25% The model 
+also confirms the Fed’s congruence in its communication. 
+
+Chart 2: Banorte’s Fed Topic Index vs Fed Funds Rate 
+%; Topic 
+
+10
+
+9
+
+8
+
+7
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+1989
+
+FDTR (LHS)
+
+Central Topics (RHS)
+
+Greenspan
+
+Bernanke
+
+Yellen
+
+Powell
+
+20
+
+15
+
+10
+
+5
+
+0
+
+1992
+
+1995
+
+1998
+
+2001
+
+2004
+
+2007
+
+2010
+
+2013
+
+2016
+
+2019
+
+2022
+
+Source: Banorte, Federal Reserve, Bloomberg 
+
+5 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Chart 3: Banorte’s Fed Topic Index Box Plot 
+Central Topics 
+
+Source: Banorte, Federal Reserve, Bloomberg 
+
+References: 
+
+Blei, D.M., Ng, A.Y., and Jordan, M.I. (2003) Latent Dirichlet Allocation. The Journal of Machine 
+Learning Research, 3:993-1022. 
+
+Federal  Reserve  Bank  of  San  Francisco.  (2021)  Taking  the  Fed  at  its  Word:  A  New 
+Approach to Estimating Central Bank Objectives using Text Analysis. San Francisco: SF 
+FED. 
+
+Giuseppe,  B.  (2016)  Text  mining  and  sentiment  extraction  in  central  bank  documents. 
+Washington D.C., IEEE. 
+
+Reed, C. (2012) Latent Dirichlet Allocation: Towards a Deeper Understanding, Colorado 
+Reed Tutorial, p. 2. 
+
+Siakoulis,  V.  and  Petropoulos,  A.  (2021)  “Can  central  bank  speeches  predict  financial 
+market  turbulence?  Evidence  from  an  adaptative  NLP  sentiment  index  analysis  using 
+XGBoost machine learning technique”, Central Bank Review, p.p. 141-153. 
+
+6 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Analyst Certification 
+We,  Alejandro Padilla  Santana,  Juan Carlos  Alderete  Macal,  Alejandro  Cervantes  Llamas,  Manuel  Jiménez  Zaldívar,  Marissa  Garza  Ostos,  Katia 
+Celina Goya Ostos, Francisco José Flores Serrano, José Luis García Casales, Víctor Hugo Cortes Castro, José Itzamna Espitia Hernández, Carlos 
+Hernández García, Leslie Thalía Orozco Vélez, Hugo Armando Gómez Solís, Yazmín Selene Pérez Enríquez, Miguel Alejandro Calvo Domínguez, 
+Daniela Olea Suárez, José De Jesús Ramírez Martínez, Gerardo Daniel Valle Trujillo, Luis Leopoldo López Salinas, Isaías Rodríguez Sobrino, Paola 
+Soto Leal, Oscar Rodolfo Olivos Ortiz, Daniel Sebastián Sosa Aguilar and Salvador Austria Valencia certify that the points of view expressed in this 
+document are a faithful reflection of our personal opinion on the company (s) or firm (s) within this report, along with its affiliates and/or securities 
+issued. Moreover, we also state that we have not received, nor receive, or will receive compensation other than that of Grupo Financiero Banorte 
+S.A.B. of C.V for the provision of our services. 
+
+Relevant statements. 
+In accordance with current laws and internal procedures manuals, analysts are allowed to hold long or short positions in shares or securities issued 
+by companies that are listed on the Mexican Stock Exchange and may be the subject of this report; nonetheless, equity analysts have to adhere to 
+certain rules that regulate their participation in the market in order to prevent, among other things, the use of private information for their benefit 
+and to avoid conflicts of interest. Analysts shall refrain from investing and holding transactions with securities or derivative instruments directly 
+or through an intermediary person, with Securities subject to research reports, from 30 calendar days prior to the issuance date of the report in 
+question, and up to 10 calendar days after its distribution date. 
+
+Compensation of Analysts. 
+
+Analysts’ compensation is based on activities and services that are aimed at benefiting the investment clients of Casa de Bolsa Banorte and its subsidiaries. 
+Such compensation is determined based on the general profitability of the Brokerage House and the Financial Group and on the individual performance of 
+each analyst. However, investors should note that analysts do not receive direct payment or compensation for any specific transaction in investment banking 
+or in other business areas.  
+
+Last-twelve-month activities of the business areas. 
+Grupo Financiero Banorte S.A.B.  de C.V., through its business  areas, provides  services that include,  among others, those  corresponding to investment 
+banking and corporate banking, to a large number of companies in Mexico and abroad. It may have provided, is providing or, in the future, will provide a service 
+such as those mentioned to the companies or firms that are the subject of this report. Casa de Bolsa Banorte or its affiliates receive compensation from such 
+corporations in consideration of the aforementioned services. 
+
+Over the course of the last twelve months, Grupo Financiero Banorte S.A.B. C.V., has not obtained compensation for services rendered by the investment 
+bank or by any of its other business areas of the following companies or their subsidiaries, some of which could be analyzed within this report. 
+
+Activities of the business areas during the next three months. 
+
+Casa de Bolsa Banorte, Grupo Financiero Banorte or its subsidiaries expect to receive or intend to obtain revenue from the services provided by investment 
+banking or any other of its business areas, by issuers or their subsidiaries, some of which could be analyzed in this report. 
+
+Securities holdings and other disclosures. 
+
+As  of  the  end  of  last  quarter,  Grupo  Financiero  Banorte  S.A.B.  of  C.V.  has  not  held  investments,  directly  or  indirectly,  in  securities  or  derivative  financial 
+instruments, whose underlying securities are the subject of recommendations, representing 1% or more of its investment portfolio of outstanding securities or 
+1 % of the issuance or underlying of the securities issued. 
+
+None of the members of the Board of Grupo Financiero Banorte and Casa de Bolsa Banorte, along general managers and executives of an immediately below 
+level, have any charges in the issuers that may be analyzed in this document. 
+
+The Analysts of Grupo Financiero Banorte S.A.B. of C.V. do not maintain direct investments or through an intermediary person, in the securities or derivative 
+instruments object of this analysis report. 
+
+Guide for investment recommendations. 
+
+Reference 
+
+BUY 
+HOLD 
+SELL 
+
+When the share expected performance is greater than the MEXBOL estimated performance. 
+When the share expected performance is similar to the MEXBOL estimated performance. 
+When the share expected performance is lower than the MEXBOL estimated performance. 
+
+Even though this document offers a general criterion of investment, we urge readers to seek advice from their own Consultants or Financial Advisors, in order 
+to consider whether any of the values mentioned in this report are in line with their investment goals, risk and financial position. 
+
+Determination of Target Prices 
+
+For  the  calculation  of  estimated  target  prices  for  securities,  analysts  use  a  combination  of  methodologies  generally  accepted  among  financial  analysts, 
+including, but not limited to, multiples analysis, discounted cash flows, sum-of-the-parts or any other method that could be applicable in each specific case 
+according to the current regulation. No guarantee can be given that the target prices calculated for the securities will be achieved by the analysts of Grupo 
+Financiero Banorte S.A.B. C.V, since this depends on a large number of various endogenous and exogenous factors that affect the performance of the issuing 
+company, the environment in which it performs, along with the influence of trends of the stock market, in which it is listed. Moreover, the investor must consider 
+that the price of the securities or instruments can fluctuate against their interest and cause the partial and even total loss of the invested capital. 
+
+The  information  contained  hereby  has  been  obtained  from  sources  that  we  consider  to  be  reliable,  but  we  make  no  representation  as  to  its  accuracy  or 
+completeness. The information, estimations and recommendations included in this document are valid as of the issue date but are subject to modifications 
+and changes without prior notice; Grupo Financiero Banorte S.A.B. of C.V. does not commit to communicate the changes and also to keep the content of this 
+document updated. Grupo Financiero Banorte S.A.B. of C.V. takes no responsibility for any loss arising from the use of this report or its content. This document 
+may not be photocopied, quoted, disclosed, used, or reproduced in whole or in part without prior written authorization from Grupo Financiero Banorte S.A.B. 
+of C.V. 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+GRUPO FINANCIERO BANORTE S.A.B. de C.V. 
+
+Research and Strategy 
+Alejandro Padilla Santana 
+
+Raquel Vázquez Godinez 
+
+Itzel Martínez Rojas 
+
+Chief Economist and Head of Research  
+
+Assistant 
+
+Analyst 
+
+Lourdes Calvo Fernández 
+
+Analyst (Edition) 
+
+María Fernanda Vargas Santoyo 
+
+Analyst  
+
+Economic Research 
+
+Juan Carlos Alderete Macal, CFA 
+
+Francisco José Flores Serrano 
+
+Executive Director of Economic Research and Financial 
+Markets Strategy 
+Director of Economic Research, Mexico  
+
+alejandro.padilla@banorte.com 
+
+raquel.vazquez@banorte.com 
+
+itzel.martinez.rojas@banorte.com 
+
+(55) 1103 - 4043 
+
+(55) 1670 - 2967 
+
+(55) 1670 - 2251 
+
+lourdes.calvo@banorte.com 
+
+(55) 1103 - 4000 x 2611 
+
+maria.vargas.santoyo@banorte.com 
+
+(55) 1103 - 4000 
+
+juan.alderete.macal@banorte.com 
+
+(55) 1103 - 4046 
+
+francisco.flores.serrano@banorte.com 
+
+(55) 1670 - 2957 
+
+(55) 1670 - 1821 
+
+(55) 5268 - 1694 
+
+Katia Celina Goya Ostos 
+
+Director of Economic Research, Global 
+
+katia.goya@banorte.com 
+
+Yazmín Selene Pérez Enríquez 
+
+Senior Economist, Mexico 
+
+yazmin.perez.enriquez@banorte.com 
+
+Luis Leopoldo López Salinas 
+
+Manager Global Economist 
+
+luis.lopez.salinas@banorte.com 
+
+(55) 1103 - 4000 x 2707 
+
+Director of Market Strategy 
+
+manuel.jimenez@banorte.com 
+
+(55) 5268 - 1671 
+
+Isaías Rodríguez Sobrino 
+
+Strategist, Fixed Income, FX and Commodities 
+
+isaias.rodriguez.sobrino@banorte.com 
+
+Senior Strategist, Fixed Income and FX 
+
+leslie.orozco.velez@banorte.com 
+
+(55) 5268 - 1698 
+
+(55) 1670 - 2144 
+
+Director of Equity Strategy 
+Senior Strategist, Equity 
+Senior Strategist, Equity 
+Senior Strategist, Technical 
+Analyst 
+Analyst 
+
+marissa.garza@banorte.com 
+jose.espitia@banorte.com 
+carlos.hernandez.garcia@banorte.com 
+victorh.cortes@banorte.com 
+paola.soto.leal@banorte.com 
+oscar.olivos@banorte.com 
+
+(55) 1670 - 1719 
+(55) 1670 - 2249 
+(55) 1670 - 2250 
+(55) 1670 - 1800 
+(55) 1103 - 4000 x 1746 
+(55) 1103 - 4000 
+
+Senior Analyst, Corporate Debt 
+
+Analyst, Corporate Debt 
+
+hugoa.gomez@banorte.com 
+
+gerardo.valle.trujillo@banorte.com 
+
+(55) 1670 - 2247 
+
+(55) 1670 - 2248 
+
+Market Strategy 
+Manuel Jiménez Zaldívar 
+
+Fixed income and FX Strategy 
+Leslie Thalía Orozco Vélez 
+
+Equity Strategy 
+Marissa Garza Ostos 
+José Itzamna Espitia Hernández 
+Carlos Hernández García 
+Víctor Hugo Cortes Castro 
+Paola Soto Leal 
+Oscar Rodolfo Olivos Ortiz 
+
+Corporate Debt 
+Hugo Armando Gómez Solís 
+
+Gerardo Daniel Valle Trujillo 
+
+Quantitative Research 
+Alejandro Cervantes Llamas 
+
+José Luis García Casales 
+
+Daniela Olea Suárez 
+
+Executive Director of Quantitative Research 
+
+Director of Quantitative Research 
+
+Senior Analyst, Quantitative Research 
+
+alejandro.cervantes@banorte.com 
+
+jose.garcia.casales@banorte.com 
+
+daniela.olea.suarez@banorte.com 
+
+miguel.calvo@banorte.com 
+
+Miguel Alejandro Calvo Domínguez 
+
+Senior Analyst, Quantitative Research 
+
+José De Jesús Ramírez Martínez 
+
+Senior Analyst, Quantitative Research 
+
+jose.ramirez.martinez@banorte.com 
+
+Daniel Sebastián Sosa Aguilar 
+
+Analyst, Quantitative Research 
+
+daniel.sosa@banorte.com 
+
+Salvador Austria Valencia 
+
+Analyst, Quantitative Research 
+
+salvador.austria.valencia@banorte.com 
+
+Wholesale Banking 
+Armando Rodal Espinosa 
+
+Alejandro Aguilar Ceballos 
+
+Head of Wholesale Banking 
+
+Head of Asset Management 
+
+armando.rodal@banorte.com 
+
+(55) 1670 - 1889 
+
+alejandro.aguilar.ceballos@banorte.com 
+
+(55) 5004 - 1282 
+
+Alejandro Eric Faesi Puente 
+
+Head of Global Markets and Institutional Sales 
+
+alejandro.faesi@banorte.com 
+
+(55) 5268 - 1640 
+
+Alejandro Frigolet Vázquez Vela 
+
+Head of Sólida Banorte 
+
+alejandro.frigolet.vazquezvela@banorte.com 
+
+(55) 5268 - 1656 
+
+Arturo Monroy Ballesteros 
+
+Head of Investment Banking and Structured Finance 
+
+arturo.monroy.ballesteros@banorte.com 
+
+(55) 5004 - 5140 
+
+Carlos Alberto Arciniega Navarro 
+
+Head of Treasury Services  
+
+carlos.arciniega@banorte.com 
+
+Head of Transactional Banking, Leasing and Factoring 
+
+gerardo.zamora@banorte.com 
+
+Gerardo Zamora Nanez 
+
+Jorge de la Vega Grajales 
+
+Luis Pietrini Sheridan 
+
+Lizza Velarde Torres 
+
+Head of Government Banking 
+
+Head of Private Banking 
+
+Executive Director of Wholesale Banking  
+
+Osvaldo Brondo Menchaca 
+
+Head of Specialized Banking Services  
+
+Raúl Alejandro Arauzo Romero 
+
+Head of Transactional Banking 
+
+René Gerardo Pimentel Ibarrola 
+
+Head of Corporate Banking 
+
+Ricardo Velázquez Rodríguez 
+
+Head of International Banking 
+
+Víctor Antonio Roldan Ferrer   
+
+Head of Commercial Banking 
+
+jorge.delavega@banorte.com 
+
+luis.pietrini@banorte.com 
+
+lizza.velarde@banorte.com 
+
+osvaldo.brondo@banorte.com 
+
+alejandro.arauzo@banorte.com 
+
+pimentelr@banorte.com 
+
+rvelazquez@banorte.com 
+
+victor.roldan.ferrer@banorte.com 
+
+(55) 1670 - 2972 
+
+(55) 8510 - 4608 
+
+55) 1103 - 4000 
+
+(55) 1670 - 2220 
+
+(55) 1103 - 4000 
+
+(55) 1103 - 4000 
+
+(55) 1103 - 4000 
+
+(81) 1103 - 4091 
+
+(81) 8173 - 9127 
+
+(55) 5004 - 5121 
+
+(55) 5249 - 6423 
+
+(55) 4433 - 4676 
+
+(55) 5004 - 1423 
+
+(55) 5261 - 4910 
+
+(55) 5004 - 1051 
+
+(55) 5004 - 5279 
+
+(55) 1670 - 1899 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- END /Users/devang/Desktop/Ai in Fin/Capstone/project/20220727_NLP_Statements_Research_Note_Final 2.pdf ---
+
+
+--- START /Users/devang/Desktop/Ai in Fin/Capstone/project/2410.14841v1 2.pdf ---
+Dynamic Factor Allocation Leveraging Regime-Switching Signals
+
+Yizhan Shu
+
+John M. Mulvey
+
+Current Version: October 17, 2024
+Original Manuscript: September 18, 2024
+
+Yizhan Shu is a PhD candidate at Princeton University in the Operations Research and Financial
+Engineering Department in Princeton, NJ, and is the corresponding author.
+yizhans@princeton.edu
+
+John M. Mulvey is a professor at Princeton University in the Operations Research and Financial
+Engineering Department in Princeton, NJ.
+mulvey@princeton.edu
+
+Abstract
+
+This article explores dynamic factor allocation by analyzing the cyclical performance of fac-
+tors through regime analysis. The authors focus on a U.S. equity investment universe comprising
+seven long-only indices representing the market and six style factors: value, size, momentum,
+quality, low volatility, and growth. Their approach integrates factor-specific regime inferences of
+each factor index’s active performance relative to the market into the Black-Litterman model to
+construct a fully-invested, long-only multi-factor portfolio. First, the authors apply the sparse
+jump model (SJM) to identify bull and bear market regimes for individual factors, using a feature
+set based on risk and return measures from historical factor active returns, as well as variables re-
+flecting the broader market environment. The regimes identified by the SJM exhibit enhanced
+stability and interpretability compared to traditional methods. A hypothetical single-factor
+long-short strategy is then used to assess these regime inferences and fine-tune hyperparame-
+ters, resulting in a positive Sharpe ratio of this strategy across all factors with low correlation
+among them. These regime inferences are then incorporated into the Black-Litterman frame-
+work to dynamically adjust allocations among the seven indices, with an equally weighted (EW)
+portfolio serving as the benchmark. Empirical results show that the constructed multi-factor
+portfolio significantly improves the information ratio (IR) relative to the market, raising it from
+just 0.05 for the EW benchmark to approximately 0.4. When measured relative to the EW
+benchmark itself, the dynamic allocation achieves an IR of around 0.4 to 0.5. The strategy
+also enhances absolute portfolio performance across key metrics such as the Sharpe ratio and
+maximum drawdown. These findings highlight the effectiveness of leveraging regime-switching
+signals to enhance factor allocation by capitalizing on factor cyclicality.
+
+Keywords: Factor Allocation; Smart Beta ETFs; Regime Switching; Statistical Jump Model;
+
+Black–Litterman model; Dynamic Asset Allocation
+
+4
+2
+0
+2
+
+t
+c
+O
+8
+1
+
+]
+
+M
+P
+.
+n
+i
+f
+-
+q
+[
+
+1
+v
+1
+4
+8
+4
+1
+.
+0
+1
+4
+2
+:
+v
+i
+X
+r
+a
+
+1
+
+ 
+ 
+ 
+ 
+ 
+ 
+1
+
+Introduction
+
+Originating from the Capital Asset Pricing Model (CAPM) (Sharpe, 1964), which identifies the
+market as the sole source of risk that earns a premium, factors have gained significant attention
+as key drivers of the cross-sectional variation in security returns, offering a systematic approach
+to harvesting additional risk premia. Research on factors has expanded beyond common stocks to
+encompass other assets, such as credit (De Jong and Fabozzi, 2020) and real estate (Reid et al.,
+2023), and even emerging assets like cryptocurrency (Liu et al., 2022). Factor investing has redefined
+the traditional approach to asset allocation, shifting the focus from asset classes to factors, in an
+effort to achieve diversification benefits more effectively (Bass et al., 2017). With the development
+of indexing and exchange-traded funds (ETFs), access to style factors such as value and momentum
+has extended from actively managed funds to index-tracking smart beta ETFs. These rule-based
+“passive” ETFs enable investors to express their active views in a cost-efficient manner (Buetow
+and Hanke, 2024).
+
+Although many well-known factors have been empirically shown to deliver excess returns over
+prolonged periods, often spanning decades,1 factor performance over shorter horizons is subject
+to strong cyclicality, with periods of persistent underperformance that can last for years. This
+cyclicality has been recognized by practitioners as early as the 1990s,2 and more recently by the
+significant drawdown experienced in value investing over the past decade (Israel et al., 2021).
+In response, numerous factor timing models have been proposed to predict factor premia (Hodges
+et al., 2017; DiCiurcio et al., 2024; Vincenz and Zeissler, 2024), utilizing variables such as valuation,
+sentiment, and macroeconomic indicators. However, the challenge of accurately forecasting factor
+premia has been acknowledged by practitioners (Bender et al., 2018), with some referring to it
+as the “siren song” of these timing efforts (Asness, 2016). Nonetheless, there is a consensus that
+dynamic factor allocation, informed by time-varying market conditions, has the potential to enhance
+portfolio performance compared to a static allocation strategy.
+
+In this article, we explore the opportunities presented by factor cyclicality through the lens of
+regime analysis. The phenomenon of regime switching has been observed across nearly all asset
+classes and has gained popularity primarily due to its interpretability: the regimes identified by
+quantitative models often correspond to real-world events, such as changes in central bank monetary
+policies (Sims and Zha, 2006). A financial regime is defined by extended and consecutive periods
+characterized by relatively homogeneous market behavior, while a regime shift signals an abrupt
+but persistent change in that behavior. This framework aligns well with the observed alternation
+between periods of persistent under- and outperformance in factors. Additionally, understanding
+factor performance through regimes is supported by the business cycle – a key predictor of factor
+premia, as demonstrated in Hodges et al. (2017); Polk et al. (2020) – which originally motivated
+the development of financial regime-switching models (Hamilton, 1989). Previous studies, including
+Guidolin and Timmermann (2008); Ang (2023), have employed Markov-switching models to perform
+regime analysis on factor performance, providing valuable insights into the time-varying nature of
+factor returns.
+
+It is important to clearly distinguish between factor regime analysis and factor timing. The key
+
+1For example, the seminal work by Fama and French (1992) demonstrates the return differences in portfolios
+formed by sorting based on firm size and book-to-market ratio over an approximately 30-year period from 1963 to
+1990.
+
+2For example, in a 1992 article (Sharpe, 1992), which proposes analyzing equity fund performance based on the
+value and size factors, William F. Sharpe commented: “those concerned with these distinctions (in asset character-
+istics) have focused . . . on long-run average return differences . . . Less attention has been paid to likely sources of
+short-run variability in returns among such groups.”
+
+2
+
+difference lies in the interpretative nature of regime analysis as an unsupervised algorithm, con-
+trasting with the predictive nature of timing strategies. While a timing strategy directly attempts
+to link features known at the end of each period to future factor performance, a regime identifica-
+tion model classifies all historical periods into homogeneous sub-clusters during the training phase,
+based on characteristics observed at the end of each period. No supervision in forecasting future
+returns is involved. Following this in-sample learning process, an online inference algorithm – cou-
+pled with the core assumption of persistence – is employed in real-time application. The goal is
+that the identified regime at the end of each period will persist in the near future without frequent
+shifts. As Nystrup et al. (2015) summarize, the purpose of regime-based strategies is “not to predict
+regime shifts or future market movements, but to identify when a regime shift has occurred, and
+then benefit from the persistence of equilibrium returns and volatilities.”
+
+Our study focuses on the allocation among seven assets: one U.S. market index (serving as a
+benchmark for the overall equity market) and six long-only U.S. equity smart beta indices repre-
+senting the style factors of: value, size, momentum, quality, low volatility, and growth. We aim to
+maintain a long-only, fully-invested allocation across these seven indices which dynamically adjusts
+to the identified regimes of factor performance. This asset universe ensures practicality and ease
+of implementation, as all indices are accessible through ETFs with relatively low expense ratios.
+Additionally, we incorporate realistic constraints, including transaction costs and a one-day delay
+in applying the online regime inference.
+
+Our methodology involves conducting regime analysis based on the daily active returns for each
+of the six factor indices, followed by synthesizing these factor-specific regime inferences using the
+Black-Litterman framework to incorporate our relative views on each factor’s performance. For the
+regime identification model, we highlight the statistical jump model (JM), which clusters temporal
+features while imposing a penalty for each transition in the hidden state sequence. This explicit
+jump penalization allows JMs to moderate the frequency of regime shifts, enhancing stability and
+robustness against significant noise in market data. Specifically, we implement the sparse jump
+model (SJM) (Nystrup et al., 2021), which introduces a layer of feature weighting and selection on
+top of the JM based on each feature’s in-sample clustering effect. This extension further improves
+the applicability of JM in high-dimensional scenarios, where both informative and irrelevant features
+are present. Compared to traditional Markov-switching models, recent studies (Nystrup et al.,
+2020b,a; Aydınhan et al., 2024; Shu et al., 2024a) have demonstrated that JMs achieve higher
+statistical accuracy and offer better downside risk management.
+
+We input around twenty features into a two-state sparse jump model for each factor index.
+These features include those computed from historical daily factor active returns, as well as others
+related to the market environment, all of which are relatively easy to retrieve in real time. The
+two identified regimes are distinguished by returns, naturally interpreted as bull or bear factor
+performance. For each factor, we apply the regimes inferred in an online fashion to construct a
+hypothetical long-short strategy that, in essence, involves going long on the factor during anticipated
+bull markets and shorting the factor otherwise. This single-factor long-short strategy mimics the
+active positions in the Black-Litterman model when a relative view of the active return for a specific
+factor is inputted. Therefore, its performance serves as a financial evaluation of the quality of the
+regime inference and is used for tuning the hyperparameters in the SJM. We achieve a positive
+Sharpe ratio for the long-short strategy across all factors, with relatively low correlations among
+them, enabling effective synthesis through the Black-Litterman model.
+
+We adopt the Black-Litterman model in the final stage of portfolio construction due to its
+practical relevance in portfolio management. An equally weighted (EW) portfolio among the seven
+indices, rebalanced quarterly, serves as the benchmark. Since our regime analysis focuses on each
+factor’s active performance relative to the market, the natural choice for view portfolios is six
+
+3
+
+relative portfolios that go long on the factor and short on the market. We link the inferred regimes
+to the expected returns of these view portfolios by calculating the historical average active return
+across all training periods under the inferred regime. The posterior expected returns are then
+input into a standard mean-variance optimization with long-only and fully-invested constraints to
+determine the optimal allocation. The confidence level of the views is adjusted to achieve a specified
+tracking error.
+
+In terms of active3 performance, our dynamic allocation strategy significantly improves both
+the information ratio and max drawdown relative to the market, and achieves an information ratio
+of approximately 0.4 to 0.5 relative to the EW benchmark. For absolute performance, our strategy
+consistently enhances (risk-adjusted) return metrics, such as the Sharpe ratio, as well as risk met-
+rics including volatility and max drawdown, all within a reasonable turnover rate. These results
+highlight the benefits of dynamically adjusting factor allocations based on identifying persistent
+regimes in factor performance.
+
+The outline of the article is as follows. We begin with an overview of the factor data used in our
+analysis in Section 2. The following two sections describe our methodology and empirical results for
+regime identification and online inference, and the portfolio construction via the Black-Litterman
+model in Sections 3 and 4, respectively. We conclude with our main findings in the final section.
+
+2 Asset Universe: Factor Index Data
+
+The study of optimal allocation among a collection of factors dates back to the early 2000s
+when ˇLuboˇs P´astor (2000); Brennan and Xia (2001) explored how an investor could exploit mar-
+ket anomalies representing the mispricing of an asset pricing model (e.g., value and size effects are
+anomalies with respect to the CAPM). Their investment universe typically consisted of a broad mar-
+ket index and several long-short factor portfolios, such as the SMB and HML portfolios constructed
+by Fama and French (1993). Despite the widespread popularity of these long-short portfolios within
+academia – particularly those formed by sorting based on stock characteristics – they remain far
+from practical investment opportunities, as they are constructed “without features or constraints
+that would make them investable in practice (e.g., limits on position size)” (Bender et al., 2013),
+especially for momentum, which inherently involves considerable turnover.
+
+To ensure realism in our study, we adopt an investment universe of seven long-only U.S. equity
+indices, reflecting the market and six style factors: value, size, momentum, quality, low volatility,
+and growth. The six factor indices represent long-only portfolios with tilts toward specific stock
+characteristics. All seven indices are tracked by actively traded ETFs with assets under management
+(AUM) in the billions of dollars and are accessible at relatively low expense ratios.4 We sourced
+daily total returns for these indices from Bloomberg, covering the period from 1993 to mid-2024.5
+The six smart beta indices deviate from market capitalization weighting in their parent index by
+assigning higher weights to stocks exhibiting targeted characteristics, such as momentum, measured
+by past stock returns within a specified historical window. For many of these indices, an initial
+screening is conducted so that only a small portion of the stocks – usually well under half of all
+stocks in the parent index – with the most pronounced targeted characteristics receive non-zero
+
+3Throughout the article, “active” refers to returns relative to a benchmark, either the market or the EW portfolio
+(as described in the previous paragraph). In contrast, “absolute” refers to returns in excess of the risk-free rate,
+which is the U.S. Treasury 3-month constant maturity yield.
+
+4For example, the iShares MSCI factor ETFs have an expense ratio of 15 basis points, comparable to many popular
+cap-weighted ETFs, such as those tracking the Nasdaq-100 or the Nasdaq Composite Index, which have an expense
+ratio of around 20 basis points.
+
+5A detailed description of the indices is provided in Appendix A.
+
+4
+
+allocations. This approach results in a stock universe that is quite different from a truly passive
+cap-weighted index. Bender et al. (2014) provide a more detailed treatment of these smart beta
+indices, arguing that they account for more than 80% of the alphas of all active managers.
+
+Despite the long-only index construction, we assess factor performance on a relative basis by
+computing factor active returns, defined as the factor index return minus the market index return.6
+This relative perspective aligns with the original discovery of factors as the outperformance of
+one group of stocks versus another, and also helps reduce correlation when performing regime
+analysis on individual factors. Although factor indices involve weight tilts and stock screening,
+they still maintain a considerable long-run beta to the market, typically ranging from 0.75 to 1.1
+(see Exhibit 1), resulting in a high correlation among absolute factor returns.7 This reduction in
+correlation is evident from the cumulative active and absolute return curves for all factor indices
+shown in Exhibit 2. By removing the common market component, we reveal distinct patterns for
+various factors, contrasting with the highly correlated growth trends seen in the absolute return
+curves.
+It is worth noting that although we assess factor performance on a relative basis, the
+final multi-factor portfolio remains a long-only allocation across the seven indices, with no shorting
+allowed, to ensure practicality.
+
+In the active performance table for all factors presented in Exhibit 1, we observe positive active
+returns for all factors except low volatility, which is attributed to its inherently low beta. After
+adjusting for market risk, all factors display a positive alpha intercept, reflecting their design to
+achieve positive risk premia, although most of these are not statistically significant.
+
+Exhibit 2 further highlights the increased difficulty of performing regime analysis based on active
+factor performance compared to absolute performance, as analyzed in Bosancic et al. (2024). This
+challenge arises from the lack of a strong trend in active returns, in contrast to the clear upward
+and downward trends observed in absolute return curves. Indeed, factor active returns are only a
+few percentage points per annum, compared to the approximately 8–10% expected from a market
+index. Moreover, the sharp drawdowns experienced by a fully invested index during major market
+crashes – such as the dot-com bubble and the global financial crisis (GFC), whose accurate detection
+has been shown by Mulvey and Liu (2016); Shu et al. (2024a) to be effective in mitigating downside
+risk – are not prevalent in the active return plots.8 While most previous regime-based strategies,
+such as those in Bulla et al. (2011); Nystrup et al. (2015, 2018), focus on identifying the regimes
+of a long-only equity index to enhance asset allocation performance, in this article, we extend this
+approach by demonstrating the use of regime-switching signals based on active performance.
+
+Regarding factor correlations, as discussed in Bender and Wang (2016), a “bottom-up” ap-
+proach, which constructs a multi-factor portfolio at the security level by incorporating all factor
+characteristics simultaneously, offers greater potential to exploit interaction effects among factors
+
+6Our use of active returns follows the approach in Hodges et al. (2017). Alternatively, employing residual returns
+that account for betas could potentially address the inherent low-beta effect in the low volatility factor index, as
+discussed later, and can also be easily integrated into the Black-Litterman model.
+
+7Our data reveals that the highest correlation of factor active returns is 54% between value and size, and −52%
+between value and growth; however, all correlations between factor returns in excess of the risk-free rate exceed 85%.
+These figures are consistent with those reported in Hodges et al. (2017); Polk et al. (2020); DiCiurcio et al. (2024).
+Although the last article in this list does not explicitly work with active returns, it attempts to forecast the winning
+factor, which still operates on a comparative rather than absolute basis.
+
+8This is evidenced by both the magnitude and duration of the max drawdown (MDD) seen in Exhibits 1 and 2.
+While a market index often experiences an MDD of more than −50% within one to two years, factor active returns
+typically undergo an MDD of approximately −40% over a much longer period. For example, value’s MDD relative
+to the market began at the start of 2015 and has persisted until recently, lasting nearly a decade. Even momentum,
+known for “momentum crashes” (Daniel and Moskowitz, 2016), experienced its relative MDD between February 2021
+and July 2023, spanning over two years. Its post-GFC crash lasted around a year and a half, from mid-2008 to the
+end of 2009, comparable to the market, albeit with a much milder magnitude of −27.5%.
+
+5
+
+Value
+
+Size Momentum Quality Low Vol Growth
+
+0.11
+Active Return (%)
+Information Ratio
+0.02
+Max Drawdown (%) −44.8 −40.4
+
+0.35
+0.06
+
+α (%)
+t-stat
+β
+
+0.36
+0.35
+1.00
+
+0.13
+0.15
+1.00
+
+2.98
+0.39
+−30.9
+
+3.10
+2.27
+0.99
+
+0.99
+0.29
+−12.1
+
+1.31
+2.17
+0.97
+
+−1.03
+–
+−40.6
+
+0.98
+1.21
+0.78
+
+0.78
+0.14
+−42.5
+
+0.29
+0.31
+1.05
+
+Notes: α and β are estimated from univariate ordinary least squares (OLS) regressions against the market, using all
+available data. “(%)” indicates that the displayed numbers are in percentage points. All values are annualized where
+applicable. For instance, the annualized active return for the value factor is 0.35%.
+
+Exhibit 1: Active Performance Analysis Relative to the Market Index for Six Factor Indices,
+January 4, 1993 – June 28, 2024
+
+Notes: Active returns are measured relative to the market index return, while absolute returns are measured relative
+to the risk-free rate.
+
+Exhibit 2: Cumulative Active and Absolute Returns for All Factor Indices, January 4, 1993 –
+June 28, 2024
+
+6
+
+199219962000200420082012201620202024-25%0%25%50%75%100%CumulativeReturnsCumulativeActiveReturnsforFactorIndices(1993–2024)ValueSizeMomentumQualityLowVolGrowth1992199620002004200820122016202020240%100%200%300%400%CumulativeReturnsCumulativeAbsoluteReturnsforFactorIndices(1993–2024)ValueSizeMomentumQualityLowVolGrowthMarketcompared to our “combination approach”, which directly allocates among a selected number of
+pre-constructed factor portfolios. The bottom-up approach is sometimes preferred by asset man-
+agers and ETF providers. However, our allocation approach is inherently easier to implement and
+is more accessible to investors who lack the resources to perform nuanced stock-level analysis.
+
+3 Regime Identification and Online Inference
+
+3.1 Statistical Jump Models
+
+Our study employs the sparse version of the recently developed statistical jump model (JM) as
+the regime identification model. While machine learning clustering algorithms – such as the k-means
+clustering used to detect market risk regimes (DiCiurcio et al., 2024) – have gained popularity in
+financial applications, JMs are particularly well-suited to time series data due to their incorporation
+of temporal information through an explicit jump penalty for each transition in the hidden state
+sequence. This approach acknowledges the inherent persistence in financial regimes and enhances
+the interpretability of the identified regimes, as market participants typically do not expect frequent
+regime shifts. Bosancic et al. (2024) recently demonstrated the successful application of JMs in
+conducting regime analysis for long-only factor portfolios.
+
+Given a series of high-dimensional standardized features x0, . . . , xT −1 (detailed in the next
+
+subsection), we estimate a two-state JM (K = 2) by solving the following optimization problem:
+
+min
+θ0,...,θK−1,s0,...,sT −1
+
+T −1
+(cid:88)
+
+t=0
+
+1
+2
+
+∥xt − θst∥2
+
+2 + λ
+
+T −1
+(cid:88)
+
+t=1
+
+1{st−1̸=st} .
+
+(1)
+
+Here, the optimization variables include the unobserved state sequence s0, . . . , sT −1, which assigns
+each period to one of the K states, and K centroids θ0, . . . , θK−1, representing each state. The
+dissimilarity between the feature vector xt and its assigned centroid θst is quantified by the squared
+ℓ2-distance. From the optimal state sequence, we derive the transition probability matrix and
+calculate metrics such as return and volatility for each state.9 The JM’s objective function balances
+the partitioning of all training periods into homogeneous sub-clusters with prior beliefs about the
+frequency of regime shifts. The jump penalty λ ≥ 0 moderates the fixed-cost regularization term
+incurred whenever there is a jump between consecutive state variables (i.e., when st−1 ̸= st). This
+penalty controls the persistence level of the state sequence and is tuned as a hyperparameter,
+often via cross-validation. With a zero jump penalty, the model reduces to a k-means clustering
+algorithm, ignoring temporal information; as λ increases, state transitions become less frequent,
+potentially grouping all data points into a single cluster if λ is set high enough.
+
+To further enhance the JM, we implement the sparse jump model (SJM) (Nystrup et al., 2021),
+which adds a layer of feature weighting based on each feature’s clustering effect, measured by the
+reduction in variance along its dimension. Features that lead to greater variance reduction are as-
+signed higher weights, while an ℓ1-norm constraint on the weight vector ensures that uninformative
+features with poor clustering effects receive a weight of zero and are excluded from consideration.
+The upper bound κ on the ℓ1-norm serves as an additional hyperparameter, controlling the number
+of features included. The SJM estimation alternates between fitting the JM using weighted features
+and recalculating the feature weights based on the current JM fit until convergence is reached. This
+extension addresses the original JM’s limitation of assigning equal weights to all features, improving
+
+9An implementation of a collection of jump models is available on the first author’s GitHub page (https://github.
+com/Yizhan-Oliver-Shu/jump-models). For a detailed explanation of the coordinate descent algorithm used to solve
+the optimization problem, see Nystrup et al. (2020b).
+
+7
+
+its ability to extract useful information from high-dimensional feature sets, which are increasingly
+common in modern financial data.
+
+The suite of JMs offers several advantages over traditional Markov-switching models, such as
+hidden Markov models (HMMs), in financial applications. Their primary strength lies in enhanced
+robustness and stability, achieved through explicit jump penalization and a likelihood-free approach.
+Recent studies, including Nystrup et al. (2020b,a); Aydınhan et al. (2024), highlight the suscepti-
+bility of HMMs to mis-estimation due to issues like imbalanced clusters (e.g., the small proportion
+of bear markets) and insufficient data, as well as the mis-specification of likelihood functions. These
+studies, through stylized simulations and real-data tests, demonstrate the improved statistical ac-
+curacy of JMs and their continuous version over HMMs. Shu et al. (2024a) further show that this
+improved accuracy can translate into better investment strategy performance. Additionally, JMs
+naturally accommodate high-dimensional feature sets, unlike HMMs, which are typically applied
+to single-dimensional return series. Nystrup et al. (2021) highlight the advantages of SJMs over
+high-dimensional Markov-switching models, while Bosancic et al. (2024) demonstrate the flexibility
+of JMs in accommodating regime-dependent features.
+
+3.1.1 Features
+
+Exhibit 3 provides a detailed description of all features inputted into the SJM, categorized into
+two types: factor-specific features derived from historical factor active returns and general market-
+environment features. For the first type, when performing regime analysis on each individual factor,
+we calculate a collection of risk and return measures based on the past active returns of that factor.
+The return measures include the exponentially weighted moving average (EWMA) active return,
+along with three technical indicators – relative strength index (RSI), stochastic oscillator %K,
+and Moving Average Convergence/Divergence (MACD) – all computed over three window lengths
+corresponding to 1.5 weeks, one month, and three months. These return features aim to capture
+the time-series momentum effect substantiated in Gupta and Kelly (2019) for factor returns, and
+have been applied in various timing models such as those in Zakamulin (2014); Hodges et al. (2017).
+Their application in identifying regimes in cryptocurrency markets via SJMs is demonstrated in
+Cortese et al. (2023). For risk measures, we compute downside deviation, focusing on negative
+active returns, and active market beta, both using an exponentially weighted calculation with a
+medium window length. It is important to note that these features are based on past returns and
+thus lag the regime shift identified ex-post. It is worth reiterating that regime analysis does not aim
+to predict regime shifts but rather to benefit from accurately identifying when they have occurred,
+allowing for allocation adjustments and gaining an advantage over sticking to a static strategy.
+
+The second type of features focuses on the general market environment, measuring market
+returns, the VIX index, the 2-year Treasury constant maturity yield as an interest rate gauge, and
+the yield curve slope measured by the difference between the 10-year and 2-year yields. Appropriate
+transformations, such as log-differences and exponential smoothing, are applied to these features.
+The market environment naturally plays a critical role in driving factor performance. Specifically,
+Hodges et al. (2017) found that the business cycle is a highly effective predictor of factor premia,
+with a stylized pattern where economic slowdowns favor defensive strategies like quality and low
+volatility, while value, with its higher financial leverage, tends to plunge – this pattern reverses
+during periods of economic expansion. We use the aforementioned variables, easily sourced from
+the FRED Database, as proxies for the general market environment. These variables are based on
+trading markets, updated daily, and are readily accessible in real time without delay.
+
+8
+
+Feature
+Name
+
+Transformation
+
+Window
+Lengths
+
+Abbreviation
+
+Category: Factor-Specific Features
+
+EWMA
+Active Return
+Relative Strength Index
+–
+Stochastic Oscillator %K –
+–
+MACD
+log
+Downside Deviation
+–
+Active Market Beta
+
+8, 21, 63
+8, 21, 63
+8, 21, 63
+(8, 21), (21, 63)
+21
+21
+
+rfactor
+w
+RSIw
+%Kw
+MACDs,l
+log (DDw)
+βw
+
+Category: Market-Environment Features
+
+Market Return
+VIX
+2Y Yield
+10Y Minus 2Y Yield
+
+EWMA
+log, diff, EWMA
+diff, EWMA
+diff, EWMA
+
+21
+21
+21
+21
+
+rmkt
+w
+rVIX
+w
+2Y diffw
+10Y2Y diffw
+
+Notes: All window lengths are measured in trading days and refer to the effective window size in the exponentially
+weighted moving (EWM) computation, except for %K, where they refer to the rolling window length. “EWMA”
+stands for EWM Average. “diff” stands for the difference between consecutive values. “MACD” stands for Moving
+Average Convergence/Divergence. All factor-specific features are computed based on factor active returns. Transfor-
+mations are applied in sequence; for example, the VIX feature is calculated as the EWMA of the log-returns of the
+VIX index, where positive/negative values indicate an increasing/decreasing volatility environment. Raw data for
+the last three market-environment features are sourced from the FRED Database.
+
+Exhibit 3: Overview of Features Inputted into the Sparse Jump Model
+
+3.1.2 An Example of SJM Fitting
+
+To better illustrate the mechanism of SJMs and facilitate comparison with baseline models,
+we present an example fitting on the value factor over a recent 12-year training window, spanning
+from June 2012 to June 2024. Exhibit 4 displays the in-sample fitted regimes from three models:
+SJMs, HMMs, and k-means clustering, while Exhibit 5 shows the feature weights and corresponding
+optimal centroid values under the two market states for each feature dimension in the SJM fitting.
+We distinguish between bull and bear market states based on the cumulative active return for each
+state across all training periods. The SJM and k-means clustering are estimated using the features
+described in Exhibit 3, with the SJM hyperparameters set to typical values,10 while the HMM is
+fitted using daily active returns as input.
+
+From the figures, we observe that the SJM accurately captures the persistent periods of out-
+and underperformance of the value factor, including the rebound after the GFC, the recent plunge
+following the COVID-19 market crash, and the high-interest-rate environment from 2023. A few
+rebounds between these bear markets are also identified. This level of persistence contrasts sharply
+with k-means clustering, which does not account for temporal consistency and results in an unre-
+alistically large number of regime shifts. The SJM can be seen as an effective smoothing of the
+k-means fitting, enhanced by the feature weighting procedure. As for HMMs, the balanced nature
+of bull and bear markets in factor performance makes the issue of lacking persistence less pro-
+nounced than in applications to market indices, as illustrated, for example, in Figure 6 of Shu et al.
+(2024a). Nonetheless, a few short-lived regime shifts are still present, and if these are overlooked,
+
+10In our empirical study, the SJM hyperparameters are tuned using a time series cross-validation approach to
+
+ensure practicality, as detailed in the following subsection.
+
+9
+
+Notes: The blue curve represents the cumulative active returns of the value factor index; the green and red shaded
+areas represent the in-sample fitted bull and bear regimes, respectively, distinguished by the cumulative active returns
+within each state. Sparse jump models and k-means clustering use the features listed in Exhibit 3; hidden Markov
+models use factor active returns as input. The SJM is configured with typical hyperparameters: λ = 50.0 and
+κ2 = 9.5.
+
+Exhibit 4: In-Sample Fitted Regimes Using Sparse Jump Models, Hidden Markov Models, and
+k-means Clustering (from top to bottom) for the Value Factor, June 2012 – June 2024
+
+10
+
+2012201420162018202020222024-30%-20%-10%0%10%CumulativeActiveReturnsIn-SampleFittedRegimesUsingSparseJumpModelsValueBullBear2012201420162018202020222024-30%-20%-10%0%10%CumulativeActiveReturnsIn-SampleFittedRegimesUsingHiddenMarkovModelsValueBullBear2012201420162018202020222024-30%-20%-10%0%10%CumulativeActiveReturnsIn-SampleFittedRegimesUsingk-meansClusteringValueBullBearWeight (%)
+
+Bull
+
+Bear
+
+RSI63
+%K63
+rfactor
+(%)
+63
+MACD8,21
+RSI21
+MACD21,63
+rfactor
+(%)
+21
+RSI8
+%K21
+rfactor
+(%)
+8
+DD21 (%)
+%K8
+2Y diff21 (%)
+10Y2Y diff21 (%)
+β21
+rmkt
+21
+rVIX
+21
+
+11.24
+10.92
+10.47
+9.81
+9.78
+9.35
+9.08
+6.61
+6.19
+5.81
+5.44
+3.18
+1.17
+0.96
+0.00
+0.00
+0.00
+
+55.50
+76.44
+6.70
+0.53
+57.82
+0.84
+
+44.19
+22.82
+−9.35
+−0.64
+42.10
+−1.32
+10.66 −12.76
+41.47
+58.08
+66.14
+33.22
+11.83 −13.89
+6.98
+38.59
+0.12
+−0.33
+–
+–
+–
+
+4.66
+59.19
+0.69
+0.04
+–
+–
+–
+
+Notes: See Exhibit 3 for a detailed description of all features. The SJM is configured with typical hyperparameters
+λ = 50.0 and κ2 = 9.5. For the downside deviation (DD) feature, the average of the original DD values (multiplied
+by
+2 to align with the volatility computation) within each state is displayed, although the logarithm of the DD
+value is used as an input feature in the SJM. All values are annualized where applicable.
+
+√
+
+Exhibit 5: Feature Weights and Optimal Centroid Values Under Bull and Bear Market Regimes
+for the Sparse Jump Model Fitting for the Value Factor, June 2012 – June 2024
+
+the model primarily indicates a bull market before 2019 and a bear market afterward, neglecting
+much of the market dynamics and potential opportunities.
+
+In terms of feature weights, Exhibit 5 shows that the factor-specific return features with the
+longest window sizes receive the highest weights. The quarterly horizon aligns with the timeframe
+market participants typically use to assess factor performance. The four market-environment fea-
+tures receive very little weight, which may underestimate the influence of the market environment
+on factor performance. Exploring more informative market features could potentially enhance the
+performance of the SJM.
+
+Regarding optimal centroids, these values align well with expectations: in bull markets identified
+for the value factor, return features exceed baseline values, with positive EWMA active returns,
+RSI and %K values above 50, and positive MACD – all indicating strong price momentum – and
+a lower risk measure of downside deviation. The opposite is true for bear markets. The differences
+between the centroid values under the two states are also quite discernible.
+
+3.1.3 Online Inference
+
+All previous exposition focuses on the in-sample training of SJMs, where the estimated hidden
+state sequence s0, . . . , sT −1 is derived using all market data up to the end of period T − 1. However,
+for real-time applications, we must infer the state st based solely on data available at the end of the
+current period, without relying on future information. This distinction is commonly referred to as
+smoothing and filtering in signal processing: smoothing uses both past and future data points to
+
+11
+
+estimate values, while filtering relies only on current and past data, making it suitable for real-time
+applications.
+
+In the case of JMs, after estimating the optimal centroids and state sequence during the training
+phase, we must make real-time inferences when a new feature vector xT becomes available at the
+end of day T . For investment purposes, following the approach of Nystrup et al. (2015, 2018),
+we assume that this inferred regime sT can only be applied on day T + 2 with a one-day delay –
+meaning that we estimate sT at the end of day T and rebalance the portfolio accordingly at the
+end of the next day, T + 1. This method of applying online inferred regimes to adjust allocations
+relies heavily on the assumption of regime persistence, whereby the regime identified for period T
+is expected to persist in the near future. Consequently, this approach places a high demand on the
+stability of the inferred regime sequence. Admittedly, a rapidly flipping regime-switching signal
+(e.g., the regimes identified in Exhibit 4 for k-means clustering) is unlikely to remain effective given
+the time discrepancy between T and T + 2.
+
+A basic k-means-style online inference involves directly assigning the feature vector xT to the
+nearest centroid, ignoring temporal information. To enhance regime persistence, we employ the
+online inference algorithm outlined in Nystrup et al. (2020a), which efficiently incorporates historical
+data. The core idea is to solve the optimization problem (1) in JMs over the state sequence within
+a lookback window, while keeping the centroids fixed at their previously estimated values, and then
+extract the last optimal state as the online inference. This online algorithm performs the task for
+a sequence of consecutive inferences in linear time.
+
+Despite this improvement in persistence, it is important to note that the number of regime
+shifts in real-time inference remains higher – usually twice as frequent – than in the in-sample
+training. This discrepancy arises because both the first and last few states in a window suffer from
+the highest estimation error, as shown in Figure 1 of Bulla et al. (2011), due to the lack of past or
+future data context. By analogy, pinpointing the exact onset of a bear market shift (as identified
+in hindsight) in real-time is challenging; both individuals and quantitative models typically require
+several consecutive weeks of negative returns to confirm the shift.
+
+An alternative approach to utilizing JMs for generating regime forecasts is to train a separate
+algorithm that predicts the in-sample identified regime labels st using another feature vector ˜xt−1,
+which is strictly available beforehand, as illustrated in Shu et al. (2024b).
+
+3.2 Single-Factor Long-Short Strategy
+
+The previous discussion on training the SJM and executing online inference assumes a fixed set
+of hyperparameters. To optimize these parameters, we evaluate the quality of the online inferred
+regimes by constructing a hypothetical long-short strategy, where we generally go long on the factor
+during anticipated bull markets and short during bear markets. Cortese et al. (2024) proposes an
+alternative method for model selection in JMs using generalized information criteria (GIC).
+
+The construction of this factor-specific long-short strategy closely relates to the active weights
+derived from a relative view on the active return for a specific factor in the Black-Litterman model,
+while neglecting the influence of other views (details in Appendix B). To implement this strategy,
+we first associate the inferred regimes for a specific factor with the historical average active return
+across all training periods under the same regime. This historical average serves as the expected
+active return for the factor, which also functions as the expected return for the relative view portfolio
+in the Black-Litterman model. It is not intended to be an accurate active return forecast but rather
+a convenient way to represent the inferred regimes without explicit human interpretation.11
+
+11There are situations where both regimes display positive average returns, so the expectation of a clear bull/bear
+
+regime distinction may not hold.
+
+12
+
+Panel A: Single-Factor Long-Short Strategy Performance
+
+Value
+
+Size Momentum Quality Low Vol
+
+Growth
+
+Sharpe Ratio
+#(Shifts)
+
+0.39
+3.16
+
+0.20
+2.57
+
+0.16
+3.66
+
+0.21
+0.64
+
+0.30
+1.78
+
+0.37
+1.31
+
+Panel B: Correlation of the Single-Factor Long-Short Strategy Returns
+
+Value
+
+Size Momentum Quality Low Vol
+
+Growth
+
+Value
+Size
+Momentum
+Quality
+Low Vol
+Growth
+
+0.37
+
+0.20
+0.11
+
+0.07
+0.05
+−0.01
+
+0.17
+0.12
+0.10
+0.21
+
+0.48
+0.29
+0.23
+0.11
+0.28
+
+Notes: The return of this single-factor long-short strategy generally equals the factor’s active return during bull
+regimes and its negative active return during bear regimes, before accounting for transaction costs. This hypothetical
+strategy is intended solely for evaluating the online inferred regimes and not for practical trading. “#(Shifts)” stands
+for the number of regime shifts per year. A transaction cost of 5 basis points is applied for both buying and selling.
+All values are annualized where applicable.
+
+Exhibit 6: Performance of the Hypothetical Single-Factor Long-Short Strategy and Correlation of
+Strategy Returns Among Factors Over the Test Period of 2007–2024
+
+When the expected return exceeds 5% per annum, the strategy invests 100% in a relative
+portfolio by going long 100% on the factor and shorting 100% of the market. Conversely, when the
+expected return falls below −5%, the strategy shorts the factor 100% and longs the market 100%.
+If the expected returns fall within the range of −5% to 5%, we invest in this relative portfolio
+using a linear weighting. Thus, this strategy invests in a relative portfolio reflecting the factor’s
+active returns, with the position size proportional to the expected factor active return, capped at
+±5%. For performance evaluation, a transaction cost of 5 basis points for both buying and selling
+is consistently applied. A radical regime shift from fully bullish to bearish would involve a one-way
+200% turnover (100% to −100% for the factor and the opposite for the market position).
+
+The Sharpe ratio of this factor-specific long-short strategy serves as the financial evaluation
+of the online inferred regimes, and we adjust the SJM hyperparameters accordingly using a time-
+series cross-validation approach. To avoid optimizing over a large grid, we tune the hyperparameters
+for each factor individually. Our expanding training window spans a minimum of 8 years and a
+maximum of 12 years. For each set of hyperparameters, we refit the SJM monthly and perform
+online inference during the intervals between refittings. The validation window spans 6 years and
+rolls forward every six months, during which we select the hyperparameter combination that yields
+the highest Sharpe ratio for the long-short strategy, applying these values for the next six months.
+Our testing period begins in 2007. It is worth noting that this single-factor long-short strategy is
+intended solely for evaluating the inferred regimes and not for practical trading, which is why we
+call it “hypothetical.” The final multi-factor portfolio involves a long-only allocation among the
+seven indices.
+
+Exhibit 6 presents the performance of the factor-specific long-short strategies for all factors,
+along with the correlations among these strategy returns over the testing period from 2007 to
+
+13
+
+Notes: The blue curve represents the cumulative factor active returns; the green and red shaded areas represent the
+online inferred bull and bear regimes after hyperparameter tuning, respectively, defined by whether the expected
+factor active return is positive or negative.
+
+Exhibit 7: Online Inferred Regimes by the Sparse Jump Model (After Hyperparameter Tuning)
+Over the Test Period of 2007–2024 for Three Factors: Value, Size, and Momentum
+
+14
+
+200820102012201420162018202020222024-30%-20%-10%0%10%CumulativeActiveReturnsValueValueBullBear200820102012201420162018202020222024-10%-5%0%5%10%15%CumulativeActiveReturnsSizeSizeBullBear2008201020122014201620182020202220240%10%20%30%CumulativeActiveReturnsMomentumMomentumBullBearNotes: The blue curve represents the cumulative factor active returns; the green and red shaded areas represent the
+online inferred bull and bear regimes after hyperparameter tuning, respectively, defined by whether the expected
+factor active return is positive or negative.
+
+Exhibit 7 (Continued): Online Inferred Regimes by the Sparse Jump Model (After
+Hyperparameter Tuning) Over the Test Period of 2007–2024 for Three Factors: Quality, Low
+Volatility, and Growth
+
+15
+
+2008201020122014201620182020202220240%2%5%8%10%13%15%CumulativeActiveReturnsQualityQualityBullBear200820102012201420162018202020222024-20%-10%0%10%CumulativeActiveReturnsLowVolLowVolBullBear2008201020122014201620182020202220240%10%20%30%40%CumulativeActiveReturnsGrowthGrowthBullBear2024. The Sharpe ratios of these strategies range from a low of 0.16 for momentum to a high of
+nearly 0.4 for value and growth. The varied Sharpe ratios reflect the differing levels of difficulty
+in accurately discerning bull and bear markets across factors. The frequency of regime shifts per
+year also varies. All Sharpe ratios are positive, demonstrating the potential utility of our regime-
+switching signal. The correlations among the factor-specific long-short strategies are generally low,
+below 0.5, suggesting potential for synthesis using the Black-Litterman model, which can effectively
+combine these factor-specific regime inferences while accounting for risk and portfolio constraints.
+Exhibit 7 displays the online inferred regimes after hyperparameter tuning using SJMs for the
+six factors, alongside their cumulative factor active returns. These results complement the in-sample
+fitted regimes for the value factor under a specific hyperparameter setting, as shown in Exhibit 4.
+Overall, for most factors, the identified bear markets align with significant price declines, during
+which reducing market exposure helps avoid losses and mitigate risk. For factors where the long-
+short strategy achieves a higher Sharpe ratio, the identified regimes appear to be more accurate.
+During periods of market oscillation, the SJM produces rapidly flipping regimes, indicating its
+sensitivity to price reversals. For the quality factor, which has particularly low volatility and max
+drawdown due to its defensive nature, we found the regime identification to be the least effective.
+
+4 Multi-Factor Portfolio Construction
+
+The final stage integrates all factor-specific regime inferences into a multi-factor portfolio. Here,
+the Black-Litterman model plays a central role in expressing our relative views on factor active per-
+formance into a long-only and 100% fully invested allocation among the seven indices representing
+the market and six style factors. We emphasize our “combination” approach, which invests directly
+in pre-constructed factor indices. Alternatively, Kolm and Ritter (2021) offer a framework for in-
+corporating factor views into the Black-Litterman model to construct a “bottom-up” multi-factor
+portfolio from the security level.
+
+Several alternative methods exist for synthesizing asset-specific regime inferences/forecasts.
+Though not explored here, a straightforward approach would be to employ any of the six con-
+structed hypothetical long-short factor strategies individually or in combination (e.g., through
+equal weighting, as in Bosancic et al. (2024)) as an overlay to an existing allocation to enhance
+returns. Alternatively, Shu et al. (2024b) investigate the use of traditional portfolio models, such as
+mean-variance and minimum-variance optimization, to synthesize asset-specific regime inferences
+into a dynamic allocation among asset classes.
+
+The Black-Litterman model (see Kolm et al. (2021) for an overview) is highly relevant in the
+active management industry due to its emphasis on a benchmark portfolio. In our case, we use an
+equally weighted (EW) allocation among the seven indices, rebalanced quarterly,12 as the bench-
+mark. The robustness of this EW allocation as a benchmark in factor allocation contexts has been
+validated by Khang et al. (2023). For prior expected returns, we use a risk aversion parameter of
+δ = 2.5, representing the “world average risk tolerance” (He and Litterman, 1999), and estimate
+the covariance matrix using an exponentially weighted moving approach with a halflife of 126 days.
+In constructing our view portfolios, we naturally express views on factor active returns through
+six relative portfolios, each comprising a 100% long position on a factor and a 100% short posi-
+tion on the market. The expected factor active return discussed in the previous section is used
+as the expected return for these view portfolios. Under a specific confidence level,13 we compute
+
+12This rebalancing frequency aligns with that typically used by ETFs and mutual funds adopting EW strategies.
+13Using the same notation as in Appendix B, the diagonal elements of the matrix Ω/τ are chosen as a constant
+
+multiple of the diagonal elements of P ΣP T. The inverse of this constant reflects the confidence level.
+
+16
+
+Panel A: Active Performance Relative to Market
+
+Benchmark
+
+Dynamic Allocation
+
+Market
+
+EW TE = 1% TE = 2% TE = 3% TE = 4%
+
+Active Return (%)
+Information Ratio
+Max Drawdown (%)
+
+0.00
+–
+–
+
+0.09
+0.05
+−10.29
+
+0.49
+0.24
+−7.92
+
+1.07
+0.39
+−5.89
+
+1.55
+0.43
+−5.91
+
+1.97
+0.44
+−7.43
+
+Panel B: Active Performance Relative to EW Benchmark
+
+Benchmark
+
+Dynamic Allocation
+
+Active Return (%)
+Information Ratio
+
+Market
+
+−0.09
+–
+
+EW TE = 1% TE = 2% TE = 3% TE = 4%
+
+0.00
+–
+
+0.41
+0.40
+
+0.98
+0.49
+
+1.46
+0.49
+
+1.88
+0.47
+
+Notes: Our dynamic strategy maintains a long-only, fully-invested allocation among the market and six factor indices.
+“EW” stands for the equally weighted portfolio of the seven indices, rebalanced quarterly. “TE” stands for the tracking
+error relative to the EW benchmark. A transaction cost of 5 basis points is applied for both buying and selling. All
+values are annualized where applicable.
+
+Exhibit 8: Active Performance Analysis Relative to the Market and the EW Benchmark for
+Strategies Over the Test Period of 2007–2024
+
+the posterior expected returns, which are then integrated into a standard mean-variance quadratic
+optimization with long-only and fully invested weight constraints to determine the optimal alloca-
+tion. Confidence levels are chosen to achieve a targeted tracking error relative to the benchmark,
+ranging from 1–4%, allowing us to evaluate the performance of our dynamic allocation strategy.
+
+Exhibit 8 presents the active performance of our dynamic multi-factor portfolio, measured
+relative to both the market and the benchmark EW portfolio, over the test period from 2007 to
+2024. A transaction cost of 5 basis points is applied for both buying and selling throughout the
+performance evaluation. In Panel A, all performance measures are shown relative to the market,
+with the EW benchmark exhibiting a negligible positive active return and information ratio (IR).
+Our dynamic allocation significantly improves both active return and IR, with the IR increasing
+from 0.05 to a maximum of 0.44. Additionally, the maximum drawdown relative to the market is
+reduced from −10% to a low of −6%. In Panel B, when evaluating performance relative to the EW
+benchmark, our dynamic allocation achieves an IR of approximately 0.4 to 0.5, indicating robust
+outperformance over the EW benchmark.
+
+Exhibit 9 presents our strategy’s performance from an absolute perspective (i.e., in excess of
+the risk-free rate). The table shows that as the dynamic factor allocation allows for higher tracking
+error, both excess returns and the Sharpe ratio improve almost monotonically, while risk measures
+such as maximum drawdown decrease, albeit at the cost of higher turnover. An annualized one-
+way turnover of around 500% remains within an acceptable range for active management and is
+reasonably implementable. One reason the max drawdown is not extensively mitigated, as seen
+in Shu et al. (2024a,b); Bosancic et al. (2024), is that we maintain a 100% leverage, whereas
+those studies reduce leverage during identified bear markets to avoid significant wealth losses.
+Incorporating an additional absolute view on the overall market’s bull/bear regime, as developed in
+those studies, into our Black-Litterman model here could potentially achieve further risk mitigation.
+
+17
+
+Panel A: Absolute Performance
+
+Benchmark
+
+Dynamic Allocation
+
+Market
+
+EW TE = 1% TE = 2% TE = 3% TE = 4%
+
+Excess Return (%)
+Excess Risk (%)
+Sharpe Ratio
+Max Drawdown (%)
+Turnover (%)
+
+10.5
+20.1
+0.52
+−54.9
+–
+
+10.6
+19.6
+0.54
+−52.9
+3.8
+
+11.0
+19.4
+0.57
+−52.5
+237.2
+
+11.6
+19.2
+0.60
+−52.2
+395.5
+
+12.1
+19.1
+0.63
+−51.4
+522.5
+
+12.5
+19.1
+0.65
+−50.5
+627.5
+
+Panel B: Cumulative Excess Returns of Strategies
+
+Notes: See the notes in Exhibit 8.
+
+Exhibit 9: Absolute Performance Analysis for Strategies Over the Test Period of 2007–2024
+
+In the accompanying figure, we plot the cumulative excess return curves for the market, the
+EW benchmark portfolio, and our dynamic allocation with a moderate tracking error of 3%. Our
+strategy remains on par with the two baseline portfolios until around 2012, after which it steadily
+outperforms them through to the end of the period. The empirical findings from both the factor-
+specific long-short strategy and the portfolio construction via the Black-Litterman model provide
+robust evidence of the potential to exploit factor cyclicality through regime analysis using the sparse
+jump model with a readily accessible feature set.
+
+From the figure, it is notable that the outperformance of an equally weighted factor portfolio
+(benchmark) over the market steadily declined after about 2015, diminishing further following the
+COVID-19 market shock, and nearly disappeared post-2022 as the Federal Reserve implemented
+aggressive interest rate hikes. Many well-known style factors have struggled recently14 due to a
+concentration of returns in a few of the largest companies in the U.S. equity market, amid a high-
+interest-rate environment not seen in nearly two decades. These factors have only begun to recover
+
+14As of August 2024, when the first draft of this article was written.
+
+18
+
+200820102012201420162018202020222024-50%0%50%100%150%200%CumulativeStrategyExcessReturnsMarketEW(Benchmark)DynamicAllocation(TE=3%)very recently, driven by expectations of future interest rate cuts and a rotation toward riskier assets.
+It is beyond the scope and intention of our study and model to predict whether a comeback in factor
+investing is imminent.
+
+5 Conclusion
+
+Motivated by the cyclical behavior of factor returns, this article proposes a dynamic factor
+allocation strategy through regime analysis based on each factor’s active performance, synthesizing
+these factor-specific regime inferences using the Black-Litterman model. A key distinction between
+factor regime analysis and factor timing strategies is that regime analysis does not aim to predict
+when a regime shift will occur but rather to identify when it has occurred, allowing investors to
+capitalize on changing risk-return dynamics, compared to a static benchmark allocation.
+
+We employ the sparse jump model (SJM) as the regime identification model, which clusters
+temporal features while imposing a penalty for each transition in the hidden state sequence and
+assigns different weights to features based on their in-sample clustering effect. The input features
+include return and risk measures calculated from historical factor active returns, as well as features
+representing the general market environment. The regimes identified by the SJM demonstrate
+improved robustness and accuracy compared to traditional regime-switching models.
+
+Our empirical study focuses on a U.S. equity investment universe comprising seven long-only
+indices representing the market and six style factors – value, size, momentum, quality, low volatility,
+and growth. We construct a hypothetical single-factor long-short strategy to evaluate the quality
+of the factor-specific regime inferences and tune hyperparameters based on its performance. This
+strategy also closely mirrors the active weights in the Black-Litterman model when an active view
+of a factor is applied. We achieve positive Sharpe ratios across all factors, with low correlations
+among them, demonstrating the high accuracy of our regime inferences.
+
+Finally, we apply the Black-Litterman model, using the equally weighted allocation as the
+benchmark, to determine the optimal dynamic allocation derived from the factor-specific regime
+inferences. Empirical results show that our dynamic allocation strategy outperforms a static ap-
+proach, enhancing key metrics such as the information ratio and Sharpe ratio while reducing maxi-
+mum drawdown. These findings underscore the effectiveness of leveraging regime-switching signals
+to exploit factor cyclicality and improve factor allocation performance.
+
+Going forward, the statistical jump model framework can be enhanced through alternative
+approaches for measuring the (dis-)similarity between a given time period and the cluster centroid.
+For example, advanced neural network structures such as variational auto-encoders (VAEs) have
+proven beneficial in intraday trading by developing regime-aware execution systems (Sawhney,
+2021). Moreover, Antulov-Fantulin et al. (2024) have proposed a JM-inspired recurrent neural
+network (RNN)-based model for regime identification. Another promising extension is the use of
+generative models to expand the training and validation datasets, which could help mitigate the
+challenge of overfitting – a constant issue in the field of investment.
+
+19
+
+Appendix A
+
+Factor Indices
+
+Exhibit 10 provides a detailed overview of the factor indices, including the number of stock
+holdings (as of mid-2024) and the tickers of the actively traded index-tracking ETFs used in our
+study.
+
+Factor
+
+Market
+
+Value
+
+Size
+
+Index Name
+
+MSCI USA Index
+
+MSCI USA Enhanced Value Index15
+
+MSCI USA Low Size Index16
+
+Momentum MSCI USA Momentum SR Variant Index17
+
+Quality
+
+MSCI USA Sector Neutral Quality Index18
+
+Low Volatility
+
+MSCI USA Minimum Volatility Index19
+
+Growth
+
+Russell 1000 Growth Index
+
+Number
+of Stocks
+
+ETF
+Ticker
+
+601
+
+150
+
+601
+
+125
+
+125
+
+170
+
+440
+
+PBUS
+
+VLUE
+
+SIZE
+
+MTUM
+
+QUAL
+
+USMV
+
+IWF
+
+Exhibit 10: Detailed Overview of Factor Indices, Number of Stock Holdings, and Index-Tracking
+ETF Tickers
+
+Appendix B
+
+Details of the Black-Litterman Model
+
+Most of the results can be found in He and Litterman (1999). We present them here as they
+provide significant motivation for our method of constructing the factor-specific long-short strategy.
+Consider N securities and K view portfolios, represented by p1, . . . , pK ∈ RN , assembled into
+
+
+ ∈ RK×N . Let v ∈ RK denote the expected returns of the view portfolios,
+
+the matrix P :=
+
+
+
+
+
+pT
+1
+· · ·
+pT
+K
+
+and wbmk ∈ RN the benchmark portfolio weights.
+If the investor optimizes a quadratic mean-
+variance utility function with no constraints, the optimal portfolio weights in the Black-Litterman
+model are given by:
+
+wBL = wbmk + P Tλ,
+(2)
+where λ = δ−1 (cid:0)P ΣP T + Ω/τ (cid:1)−1 (v − P π). Here, δ is the risk aversion parameter, Σ ∈ RN ×N is
+the covariance matrix estimate, and Ω ∈ RK×K and τ denote the uncertainty matrix and parameter
+in the views and the prior, respectively. Ω is a diagonal matrix with diagonal elements ω1, . . . , ωK.
+
+15Replaced by the MSCI USA Value Weighted Index prior to 1997/12.
+16Replaced by the MSCI USA Equal Weighted Index prior to 1994/6.
+17Replaced by the MSCI USA Momentum Index prior to 2002/6.
+18Replaced by the MSCI USA Quality Index prior to 1998/12.
+19Replaced by the MSCI USA Risk Weighted Index prior to 1994/6.
+
+20
+
+Thus, the active weights P Tλ = (cid:80)
+
+j λjpj represent a linear combination of all the view portfo-
+lios, weighted by the vector λ. Using the Schur complement, the explicit formula for each element
+λj is given by:
+
+λj =
+
+1
+δ
+
+j µBL
+vj − pT
+−j
+ηj
+
+,
+
+(3)
+
+where µBL
+ered, and ηj adjusts for risk:
+
+−j denotes the posterior expected return estimation when all but the j-th view are consid-
+
+ηj = pT
+
+j Σpj + ωj/τ − pT
+
+j ΣP T (cid:16)
+
+P ΣP T + Ω/τ
+
+(cid:17)−1
+
+P Σpj.
+
+Since we aim to tune the hyperparameters for each factor individually, λjpj is a natural choice
+for constructing the hypothetical long-short strategy. Furthermore, the weight λj is approximately
+proportional to the expected return vj for the active return, assuming the risk ηj remains stable
+over time and the impact of the other views, expressed in pT
+−j , is minimal. We cap the estimated
+expected active return at ±5% per annum to mitigate the impact of extreme values.
+
+j µBL
+
+References
+
+Ang, A. (2023). Trends and cycles of style factors in the 20th and 21st centuries. The Journal of Portfolio
+
+Management, 49(2):33–56. Quantitative Special Issue.
+
+Antulov-Fantulin, N., Cauderan, A., and Kolm, P. N. (2024). A dynamic regime-switching model using
+
+gated recurrent straight-through units. The Journal of Financial Data Science. To appear.
+
+Asness, C. S. (2016). The siren song of factor timing. The Journal of Portfolio Management, 42(5):1–6.
+
+Special QES Issue.
+
+Aydınhan, A. O., Kolm, P. N., Mulvey, J. M., and Shu, Y. (2024). Identifying patterns in financial markets:
+extending the statistical jump model for regime identification. Annals of Operations Research. To appear.
+
+Bass, R., Gladstone, S., and Ang, A. (2017). Total portfolio factor, not just asset, allocation. The Journal
+
+of Portfolio Management, 43(5):38–53. Special QES Issue.
+
+Bender, J., Briand, R., Melas, D., and Subramanian, R. A. (2013). Foundations of factor investing. Technical
+
+report, MSCI Inc.
+
+Bender, J., Hammond, P. B., and Mok, W. (2014). Can alpha be captured by risk premia? The Journal of
+
+Portfolio Management, 40(2):18–29.
+
+Bender, J., Sun, X., Thomas, R., and Zdorovtsov, V. (2018). The promises and pitfalls of factor timing. The
+
+Journal of Portfolio Management, 44(4):79–92. Quantitative Special Issue.
+
+Bender, J. and Wang, T. (2016). Can the whole be more than the sum of the parts? Bottom-up versus
+top-down multifactor portfolio construction. The Journal of Portfolio Management, 42(5):39–50. Special
+QES Issue.
+
+Bosancic, T., Nie, Y., and Mulvey, J. (2024). Regime-aware factor allocation with optimal feature selection.
+
+The Journal of Financial Data Science, 6(3):10–37.
+
+Brennan, M. J. and Xia, Y. (2001). Assessing asset pricing anomalies. The Review of Financial Studies,
+
+14(4):905–942.
+
+Buetow, G. W. J. and Hanke, B. (2024). The exchange traded fund landscape: Past, present, and future.
+
+The Journal of Portfolio Management, 50(9):164–181.
+
+21
+
+Bulla, J., Mergner, S., Bulla, I., Sesbo¨u´e, A., and Chesneau, C. (2011). Markov-switching asset allocation:
+
+Do profitable strategies exist? Journal of Asset Management, 12:310–321.
+
+Cortese, F. P., Kolm, P. N., and Lindstr¨om, E. (2023). What drives cryptocurrency returns? A sparse
+
+statistical jump model approach. Digital Finance, 5:483–518.
+
+Cortese, F. P., Kolm, P. N., and Lindstr¨om, E. (2024). Generalized information criteria for high-dimensional
+
+sparse statistical jump models. SSRN.
+
+Daniel, K. and Moskowitz, T. J. (2016). Momentum crashes. Journal of Financial Economics, 122(2):221–
+
+247.
+
+De Jong, M. and Fabozzi, F. J. (2020). The market risk of corporate bonds. The Journal of Portfolio
+
+Management, 46(2):92–105. Quantitative Special Issue.
+
+DiCiurcio, K. J., Wu, B., Xu, F., Rodemer, S., and Wang, Q. (2024). Equity factor timing: A two-stage
+machine learning approach. The Journal of Portfolio Management, 50(3):132–148. Quantitative Special
+Issue.
+
+Fama, E. F. and French, K. R. (1992). The cross-section of expected stock returns. Journal of Finance,
+
+47(2):427–465.
+
+Fama, E. F. and French, K. R. (1993). Common risk factors in the returns on stocks and bonds. Journal of
+
+Financial Economics, 33(1):3–56.
+
+Guidolin, M. and Timmermann, A. (2008). Size and value anomalies under regime shifts. Journal of Financial
+
+Econometrics, 6(1):1–48.
+
+Gupta, T. and Kelly, B. (2019). Factor momentum everywhere. The Journal of Portfolio Management,
+
+45(3):13–36. Quantitative Special Issue.
+
+Hamilton, J. D. (1989). A new approach to the economic analysis of nonstationary time series and the
+
+business cycle. Econometrica, 57(2):357–384.
+
+He, G. and Litterman, R. (1999). The intuition behind Black-Litterman model portfolios. Technical report,
+
+Goldman Sachs.
+
+Hodges, P., Hogan, K., Peterson, J. R., and Ang, A. (2017). Factor timing with cross-sectional and time-series
+
+predictors. The Journal of Portfolio Management, 44(1):30–43.
+
+Israel, R., Laursen, K., and Richardson, S. (2021). Is (systematic) value investing dead? The Journal of
+
+Portfolio Management, 47(2):38–62. Quantitative Special Issue.
+
+Khang, K., Picca, A., Zhang, S., and Zhu, M. (2023). How inefficient is the 1/N strategy for a factor
+
+investor? Journal of Investment Management, 21(1):103–119.
+
+Kolm, P. N. and Ritter, G. (2021). Factor investing with Black–Litterman–Bayes: Incorporating factor views
+and priors in portfolio construction. The Journal of Portfolio Management, 47(2):113–126. Quantitative
+Special Issue.
+
+Kolm, P. N., Ritter, G., and Simonian, J. (2021). Black–Litterman and beyond: The bayesian paradigm in
+
+investment management. The Journal of Portfolio Management, 47(5):91–113. Investment Models.
+
+Liu, Y., Tsyvinski, A., and Wu, X. (2022). Common risk factors in cryptocurrency. The Journal of Finance,
+
+77(2):1133–1177.
+
+Mulvey, J. M. and Liu, H. (2016). Identifying economic regimes: Reducing downside risks for university
+
+endowments and foundations. The Journal of Portfolio Management, 43(1):100–108.
+
+22
+
+Nystrup, P., Hansen, B. W., Larsen, H. O., Madsen, H., and Lindstr¨om, E. (2018). Dynamic allocation
+or diversification: A regime-based approach to multiple assets. The Journal of Portfolio Management,
+44(2):62–73. Multi-Asset Special Issue.
+
+Nystrup, P., Hansen, B. W., Madsen, H., and Lindstr¨om, E. (2015). Regime-based versus static asset
+
+allocation: Letting the data speak. The Journal of Portfolio Management, 42(1):103–109.
+
+Nystrup, P., Kolm, P. N., and Lindstr¨om, E. (2020a). Greedy online classification of persistent market states
+
+using realized intraday volatility features. The Journal of Financial Data Science, 2(3):25–39.
+
+Nystrup, P., Kolm, P. N., and Lindstr¨om, E. (2021). Feature selection in jump models. Expert Systems with
+
+Applications, 184:115558.
+
+Nystrup, P., Lindstr¨om, E., and Madsen, H. (2020b). Learning hidden Markov models with persistent states
+
+by penalizing jumps. Expert Systems with Applications, 150:113307.
+
+Polk, C., Haghbin, M., and de Longis, A. (2020). Time-series variation in factor premia: The influence of
+
+the business cycle. Journal of Investment Management, 18(1):69–89.
+
+Reid, B., Louw, F., and Robson, W. (2023). Style factors for private real estate – Beyond property type and
+
+location. The Journal of Portfolio Management, 49(10):59–68. Real Estate Special Issue.
+
+Sawhney, A. (2021). Regime identification, curse of dimensionality, and deep generative models. Technical
+
+report, Quantitative Brokers.
+
+Sharpe, W. F. (1964). Capital asset prices: A theory of market equilibrium under conditions of risk. The
+
+Journal of Finance, 19(3):425–442.
+
+Sharpe, W. F. (1992). Asset allocation: Management style and performance measurement. The Journal of
+
+Portfolio Management, 18(2):7–19.
+
+Shu, Y., Yu, C., and Mulvey, J. M. (2024a). Downside risk reduction using regime-switching signals: A
+
+statistical jump model approach. Journal of Asset Management. To appear.
+
+Shu, Y., Yu, C., and Mulvey, J. M. (2024b). Dynamic asset allocation with asset-specific regime forecasts.
+
+Annals of Operations Research. To appear.
+
+Sims, C. A. and Zha, T. (2006). Were there regime switches in U.S. monetary policy? American Economic
+
+Review, 96(1):54–81.
+
+Vincenz, S. and Zeissler, T. O. K. (2024). Time-varying factor allocation. The Journal of Portfolio Man-
+
+agement, 50(5):158–217. Multi-Asset Special Issue.
+
+Zakamulin, V. (2014). The real-life performance of market timing with moving average and time-series
+
+momentum rules. Journal of Asset Management, 15(4):261–278.
+
+ˇLuboˇs P´astor (2000). Portfolio selection and asset pricing models. The Journal of Finance, 55(1):179–223.
+
+23
+
+
+--- END /Users/devang/Desktop/Ai in Fin/Capstone/project/2410.14841v1 2.pdf ---
+
+
+--- START /Users/devang/Desktop/Ai in Fin/Capstone/project/1340005_Regime_Based_Factor_Allocation 2.pdf ---
+
+Error reading /Users/devang/Desktop/Ai in Fin/Capstone/project/1340005_Regime_Based_Factor_Allocation 2.pdf: No /Root object! - Is this really a PDF?

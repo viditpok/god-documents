@@ -1,0 +1,45 @@
+project:
+  name: "MacroTone"
+  start: "1990-01-31"
+  end: "2025-08-31"
+  rebalance: "M"
+  rf_col: "RF"
+  benchmark: "SPY"
+
+data:
+  fred_series: ["UNRATE", "CPIAUCSL", "INDPRO", "USREC", "DGS1", "DGS10"]
+  out_raw: "data/raw"
+  out_interim: "data/interim"
+  out_processed: "data/processed"
+
+model:
+  horizon_months: 1
+  cv_splits: 10
+  min_train_months: 120
+  ensemble: ["xgb", "ridge"]   # choices: ridge, xgb (add lgbm later)
+
+costs:
+  bps_per_turnover: 10
+
+portfolio:
+  allocator: "topk"        # Changed from "softmax" to "topk" for higher conviction
+  long_only: true          # Keeping Long-Only for ETF realism (shorts require margin/inverse ETFs)
+  k_top: 2                 # Focus on the top 2 best-performing factors
+  temperature: 0.5         # (Ignored by topk)
+  hold_cash_threshold: 0.0 # Reduce cash drag (invest fully unless signal is terrible)
+  smooth_lambda: 0.2       # Reduced from 0.5 to 0.2 for faster reaction to regime shifts
+  risk_target_ann: 0.15    # Increased from 0.10 to 0.15 to match Market (SPY) volatility level
+  weight_cap: 1.0          # Allow full conviction in top ideas
+  cost_bps: 8              # per-month trading cost, applied to L1 turnover
+
+lags:
+  # conservative release lags in months (in addition to your global 1M safety lag)
+  fred_months: 1
+  nlp_months: 1
+  UNRATE: 2        # first Fri next month (safe 2M)
+  CPIAUCSL: 2      # CPI mid-next-month
+  INDPRO: 2        # mid-next-month
+  USREC: 2         # published with delay
+  DGS1: 1          # daily → already safe
+  DGS10: 1
+  TERM_SPREAD: 1

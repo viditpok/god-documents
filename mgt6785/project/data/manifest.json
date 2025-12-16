@@ -1,0 +1,3047 @@
+{
+  "data/interim/nlp_doc_scores.parquet": {
+    "mtime": 1760051578.5508072,
+    "path": "data/interim/nlp_doc_scores.parquet",
+    "rows": 422,
+    "sha1": "58a86aef8ca1983fd6657c46c38547ffd3f6fbd8",
+    "size": 35066
+  },
+  "data/processed/backtest.parquet": {
+    "mtime": 1759200605.4481895,
+    "path": "data/processed/backtest.parquet",
+    "rows": 306,
+    "sha1": "f3e5a957001ccdaf42685aa0d89946a2ba489bb2",
+    "size": 50594
+  },
+  "data/processed/costs_sweep.csv": {
+    "mtime": 1759200644.747606,
+    "path": "data/processed/costs_sweep.csv",
+    "rows": 4,
+    "sha1": "30677f817e005898f1b1adcf4bc002f96ebb3b07",
+    "size": 376
+  },
+  "data/processed/equity_curve.png": {
+    "mtime": 1760051591.3846276,
+    "path": "data/processed/equity_curve.png",
+    "rows": null,
+    "sha1": "e7574e25641ef75cd307f3b76832e6dde491b363",
+    "size": 25992
+  },
+  "data/processed/ic_rolling.parquet": {
+    "mtime": 1760051594.7628412,
+    "path": "data/processed/ic_rolling.parquet",
+    "rows": 306,
+    "sha1": "64934db9249dda485e55b81b5551ddd3d453f716",
+    "size": 13385
+  },
+  "data/processed/ic_summary.csv": {
+    "mtime": 1760051594.7602713,
+    "path": "data/processed/ic_summary.csv",
+    "rows": 3,
+    "sha1": "85d9130e0a74c0f5e76075777db47fb8272e9139",
+    "size": 234
+  },
+  "data/processed/panel.parquet": {
+    "mtime": 1760051587.435771,
+    "path": "data/processed/panel.parquet",
+    "rows": 427,
+    "sha1": "f6b1948c51a8d3ae370341b3d991fe3edef8d94e",
+    "size": 60371
+  },
+  "data/processed/preds.parquet": {
+    "mtime": 1759200603.7857416,
+    "path": "data/processed/preds.parquet",
+    "rows": 306,
+    "sha1": "513a4ed0439cc903466fba25cfa9a0203c1b1b8b",
+    "size": 18105
+  },
+  "data/processed/regime_boxplot.png": {
+    "mtime": 1760051592.291677,
+    "path": "data/processed/regime_boxplot.png",
+    "rows": null,
+    "sha1": "4175025696e0f050e47b07612276f1ad15861ea1",
+    "size": 17107
+  },
+  "data/processed/regime_summary.csv": {
+    "mtime": 1760051592.1258192,
+    "path": "data/processed/regime_summary.csv",
+    "rows": 3,
+    "sha1": "a28ed4ee021be24750fbaaf0760cb755bacb4701",
+    "size": 351
+  },
+  "data/processed/rolling_sharpe.png": {
+    "mtime": 1760051591.450924,
+    "path": "data/processed/rolling_sharpe.png",
+    "rows": null,
+    "sha1": "fd22790b507c97197ff117402f0e56fbb8a6f533",
+    "size": 43679
+  },
+  "data/processed/walkforward_oos.csv": {
+    "mtime": 1759200638.4035275,
+    "path": "data/processed/walkforward_oos.csv",
+    "rows": 5,
+    "sha1": "ace584f82ae35cab6b4b36ba9e6ee4d96a925534",
+    "size": 702
+  },
+  "data/raw/ff/ff_monthly.parquet": {
+    "mtime": 1760047228.4420142,
+    "path": "data/raw/ff/ff_monthly.parquet",
+    "rows": 1190,
+    "sha1": "d9035510808dc9d4e52c992d3d2e3b95d52f85ab",
+    "size": 39806
+  },
+  "data/raw/fomc/1994-03-31_minutes.txt": {
+    "mtime": 1760048219.1279185,
+    "path": "data/raw/fomc/1994-03-31_minutes.txt",
+    "rows": 175,
+    "sha1": "fd986fbc4865918f48f784106cf1e89034ef8f39",
+    "size": 3367
+  },
+  "data/raw/fomc/2005-05-01_minutes.txt": {
+    "mtime": 1759117107.3035963,
+    "path": "data/raw/fomc/2005-05-01_minutes.txt",
+    "rows": 195,
+    "sha1": "23479a888299366af4a4801435b18a3508540e43",
+    "size": 9805
+  },
+  "data/raw/fomc/2007-10-31_html.txt": {
+    "mtime": 1760048220.1137393,
+    "path": "data/raw/fomc/2007-10-31_html.txt",
+    "rows": 180,
+    "sha1": "512cc7b30eba5a4663bbfb07cc1b04112f183e1a",
+    "size": 37073
+  },
+  "data/raw/fomc/2007-12-31_html.txt": {
+    "mtime": 1760048221.111703,
+    "path": "data/raw/fomc/2007-12-31_html.txt",
+    "rows": 158,
+    "sha1": "2c095fa30258f7458a61a2ffe623d01a283e2bf8",
+    "size": 40404
+  },
+  "data/raw/fomc/2008-01-31_html.txt": {
+    "mtime": 1760048222.1965647,
+    "path": "data/raw/fomc/2008-01-31_html.txt",
+    "rows": 332,
+    "sha1": "8dc516ec9e8d3244ff4f8bbdf24b1924bda1b9c2",
+    "size": 63848
+  },
+  "data/raw/fomc/2008-03-31_html.txt": {
+    "mtime": 1760048223.1187315,
+    "path": "data/raw/fomc/2008-03-31_html.txt",
+    "rows": 178,
+    "sha1": "d92c68dcffe0a2f09c275db3ff844c5beebf2e87",
+    "size": 40844
+  },
+  "data/raw/fomc/2008-04-30_html.txt": {
+    "mtime": 1760048224.1648068,
+    "path": "data/raw/fomc/2008-04-30_html.txt",
+    "rows": 212,
+    "sha1": "40a7af78231b9db993ab6a9573e5c4ea7865b527",
+    "size": 46863
+  },
+  "data/raw/fomc/2008-08-31_html.txt": {
+    "mtime": 1760048225.1328423,
+    "path": "data/raw/fomc/2008-08-31_html.txt",
+    "rows": 171,
+    "sha1": "63bfa9c7c38990708cd1734604be4433c83a22e1",
+    "size": 34917
+  },
+  "data/raw/fomc/2008-09-30_html.txt": {
+    "mtime": 1760048226.104923,
+    "path": "data/raw/fomc/2008-09-30_html.txt",
+    "rows": 151,
+    "sha1": "3c19f73d06827d4576c7580369d48802f96ec528",
+    "size": 30992
+  },
+  "data/raw/fomc/2008-10-31_html.txt": {
+    "mtime": 1760048227.1475832,
+    "path": "data/raw/fomc/2008-10-31_html.txt",
+    "rows": 191,
+    "sha1": "c790d9ca9ea19f5df7877b9f159d1f83b88927db",
+    "size": 53590
+  },
+  "data/raw/fomc/2008-12-31_html.txt": {
+    "mtime": 1760048228.184162,
+    "path": "data/raw/fomc/2008-12-31_html.txt",
+    "rows": 204,
+    "sha1": "dd82898d7c9866591feaf521fcf2da2a77530784",
+    "size": 51132
+  },
+  "data/raw/fomc/2009-01-31_html.txt": {
+    "mtime": 1760048229.1640196,
+    "path": "data/raw/fomc/2009-01-31_html.txt",
+    "rows": 327,
+    "sha1": "46f52243102275f2217bf3f38cea0ee00e7cd0fd",
+    "size": 72214
+  },
+  "data/raw/fomc/2009-03-31_html.txt": {
+    "mtime": 1760048230.1701014,
+    "path": "data/raw/fomc/2009-03-31_html.txt",
+    "rows": 170,
+    "sha1": "4b4d690ddf984312c28eb8b80ccc69e85a9ccbeb",
+    "size": 46526
+  },
+  "data/raw/fomc/2009-04-30_html.txt": {
+    "mtime": 1760048231.167008,
+    "path": "data/raw/fomc/2009-04-30_html.txt",
+    "rows": 178,
+    "sha1": "c8f038ae56ac9ccef2f6b2069b473140def5454b",
+    "size": 44102
+  },
+  "data/raw/fomc/2009-06-30_html.txt": {
+    "mtime": 1760048232.1982107,
+    "path": "data/raw/fomc/2009-06-30_html.txt",
+    "rows": 188,
+    "sha1": "7aa11a28b988ab89ff9b277187ba4a04f1365c45",
+    "size": 54957
+  },
+  "data/raw/fomc/2009-08-31_html.txt": {
+    "mtime": 1760048233.1524184,
+    "path": "data/raw/fomc/2009-08-31_html.txt",
+    "rows": 181,
+    "sha1": "53aaecabf75f03478b1106c93e9d4e80101a49f1",
+    "size": 46284
+  },
+  "data/raw/fomc/2009-09-30_html.txt": {
+    "mtime": 1760048234.184668,
+    "path": "data/raw/fomc/2009-09-30_html.txt",
+    "rows": 166,
+    "sha1": "1ba161281a276e484b85c3ac8ff192bb8d66de1a",
+    "size": 49966
+  },
+  "data/raw/fomc/2009-11-30_html.txt": {
+    "mtime": 1760048235.1650307,
+    "path": "data/raw/fomc/2009-11-30_html.txt",
+    "rows": 171,
+    "sha1": "683af5f20aa6735a3bb791e2b7b5fb693770f9dd",
+    "size": 46764
+  },
+  "data/raw/fomc/2009-12-31_html.txt": {
+    "mtime": 1760048236.1764727,
+    "path": "data/raw/fomc/2009-12-31_html.txt",
+    "rows": 197,
+    "sha1": "20b7d826443323933cebcec48b71d84584003de8",
+    "size": 53726
+  },
+  "data/raw/fomc/2010-01-31_html.txt": {
+    "mtime": 1760048237.2048752,
+    "path": "data/raw/fomc/2010-01-31_html.txt",
+    "rows": 313,
+    "sha1": "cd1ec474333f3401ed83217955b1ffffb11f1e32",
+    "size": 74890
+  },
+  "data/raw/fomc/2010-03-31_html.txt": {
+    "mtime": 1760048238.194941,
+    "path": "data/raw/fomc/2010-03-31_html.txt",
+    "rows": 175,
+    "sha1": "4757f7172e16ab6aeed980f970a8c2f878efcc3f",
+    "size": 44389
+  },
+  "data/raw/fomc/2010-04-30_html.txt": {
+    "mtime": 1760048239.2273989,
+    "path": "data/raw/fomc/2010-04-30_html.txt",
+    "rows": 188,
+    "sha1": "7fa2e125e6b21c0d2c0f3f2fbe59baa3bc3a8441",
+    "size": 47176
+  },
+  "data/raw/fomc/2010-06-30_html.txt": {
+    "mtime": 1760048240.1937325,
+    "path": "data/raw/fomc/2010-06-30_html.txt",
+    "rows": 197,
+    "sha1": "570a5a0e5a3ea216e1b381eb5fa9511db4427a10",
+    "size": 52962
+  },
+  "data/raw/fomc/2010-08-31_html.txt": {
+    "mtime": 1760048241.1706812,
+    "path": "data/raw/fomc/2010-08-31_html.txt",
+    "rows": 176,
+    "sha1": "067918068b9a7d35684faa0002346b8d25470331",
+    "size": 44710
+  },
+  "data/raw/fomc/2010-09-30_html.txt": {
+    "mtime": 1760048242.2126787,
+    "path": "data/raw/fomc/2010-09-30_html.txt",
+    "rows": 164,
+    "sha1": "d130eb4773c0b66a17f262d554eb63109a270081",
+    "size": 40697
+  },
+  "data/raw/fomc/2010-11-30_html.txt": {
+    "mtime": 1760048243.2105668,
+    "path": "data/raw/fomc/2010-11-30_html.txt",
+    "rows": 177,
+    "sha1": "21088358434b429c4cabd96adaa2056f8e128476",
+    "size": 48048
+  },
+  "data/raw/fomc/2010-12-31_html.txt": {
+    "mtime": 1760048244.20063,
+    "path": "data/raw/fomc/2010-12-31_html.txt",
+    "rows": 170,
+    "sha1": "4a6e2a943fb5c18388309b53d67139bb561e09c0",
+    "size": 44952
+  },
+  "data/raw/fomc/2011-01-31_html.txt": {
+    "mtime": 1760048246.2711718,
+    "path": "data/raw/fomc/2011-01-31_html.txt",
+    "rows": 324,
+    "sha1": "af44938728add8e2b2d4e217bbc382702038371c",
+    "size": 69717
+  },
+  "data/raw/fomc/2011-01-31_statement.txt": {
+    "mtime": 1760048245.2446427,
+    "path": "data/raw/fomc/2011-01-31_statement.txt",
+    "rows": 41,
+    "sha1": "12473db9b3300673b7fe4d57f6e3ec6cee4d92fd",
+    "size": 3687
+  },
+  "data/raw/fomc/2011-03-31_html.txt": {
+    "mtime": 1760048248.2593598,
+    "path": "data/raw/fomc/2011-03-31_html.txt",
+    "rows": 173,
+    "sha1": "69cbaee9d06f5c6b5156c5acff04560ef0b1d746",
+    "size": 45304
+  },
+  "data/raw/fomc/2011-03-31_statement.txt": {
+    "mtime": 1760048247.2766712,
+    "path": "data/raw/fomc/2011-03-31_statement.txt",
+    "rows": 41,
+    "sha1": "5e8fe0d6489b0e6732313eb7a566c7e5c735e008",
+    "size": 3829
+  },
+  "data/raw/fomc/2011-04-30_html.txt": {
+    "mtime": 1760048251.2898555,
+    "path": "data/raw/fomc/2011-04-30_html.txt",
+    "rows": 195,
+    "sha1": "15086f834ce1138acfdb70a8d30a4684bf3f3de5",
+    "size": 51691
+  },
+  "data/raw/fomc/2011-04-30_statement.txt": {
+    "mtime": 1760048249.2889092,
+    "path": "data/raw/fomc/2011-04-30_statement.txt",
+    "rows": 41,
+    "sha1": "7118f567be65d9f4ab1317e2835328782cbd2a33",
+    "size": 3848
+  },
+  "data/raw/fomc/2011-06-30_html.txt": {
+    "mtime": 1760048254.2614489,
+    "path": "data/raw/fomc/2011-06-30_html.txt",
+    "rows": 219,
+    "sha1": "a100b0281de82d0d95876363d10cc3f3e84b155d",
+    "size": 49897
+  },
+  "data/raw/fomc/2011-06-30_statement.txt": {
+    "mtime": 1760048252.2696004,
+    "path": "data/raw/fomc/2011-06-30_statement.txt",
+    "rows": 40,
+    "sha1": "d119ae1672e609ec8ef03b8d10917819e7377634",
+    "size": 3799
+  },
+  "data/raw/fomc/2011-08-31_html.txt": {
+    "mtime": 1760048256.268967,
+    "path": "data/raw/fomc/2011-08-31_html.txt",
+    "rows": 179,
+    "sha1": "de64edabd090f661419db13c95b930d7ab41455f",
+    "size": 44392
+  },
+  "data/raw/fomc/2011-08-31_statement.txt": {
+    "mtime": 1760048255.2786934,
+    "path": "data/raw/fomc/2011-08-31_statement.txt",
+    "rows": 41,
+    "sha1": "8116417777cca7d95e26f78f37ffeee50f0c50a6",
+    "size": 4256
+  },
+  "data/raw/fomc/2011-09-30_html.txt": {
+    "mtime": 1760048258.3131125,
+    "path": "data/raw/fomc/2011-09-30_html.txt",
+    "rows": 182,
+    "sha1": "67ad2b1f17b507ec58032ad80013916368cd8150",
+    "size": 56497
+  },
+  "data/raw/fomc/2011-09-30_statement.txt": {
+    "mtime": 1760048257.2744727,
+    "path": "data/raw/fomc/2011-09-30_statement.txt",
+    "rows": 48,
+    "sha1": "c82da3d2c2230c353ec8ffc765816e07e136a0d2",
+    "size": 4807
+  },
+  "data/raw/fomc/2011-11-30_html.txt": {
+    "mtime": 1760048261.3019822,
+    "path": "data/raw/fomc/2011-11-30_html.txt",
+    "rows": 198,
+    "sha1": "e39e9a8ea6b3a31524bde079892ea884ca2a0b8c",
+    "size": 51569
+  },
+  "data/raw/fomc/2011-11-30_statement.txt": {
+    "mtime": 1760048259.29294,
+    "path": "data/raw/fomc/2011-11-30_statement.txt",
+    "rows": 41,
+    "sha1": "c17d2af22a561ca3d96e17f18d9bcfb3e2d465ae",
+    "size": 4098
+  },
+  "data/raw/fomc/2011-12-31_html.txt": {
+    "mtime": 1760048263.3317294,
+    "path": "data/raw/fomc/2011-12-31_html.txt",
+    "rows": 188,
+    "sha1": "89ea3dc08bf792dd396798967cadae9a20051e73",
+    "size": 51628
+  },
+  "data/raw/fomc/2011-12-31_statement.txt": {
+    "mtime": 1760048262.29383,
+    "path": "data/raw/fomc/2011-12-31_statement.txt",
+    "rows": 41,
+    "sha1": "816def1034ff46db67b75c9588f5eb5b57120138",
+    "size": 3744
+  },
+  "data/raw/fomc/2012-01-31_html.txt": {
+    "mtime": 1760048266.3935285,
+    "path": "data/raw/fomc/2012-01-31_html.txt",
+    "rows": 309,
+    "sha1": "4b8f626d0c1da75b7b98d0608cc4643debde2bac",
+    "size": 72486
+  },
+  "data/raw/fomc/2012-01-31_press-conference.txt": {
+    "mtime": 1760048265.2968118,
+    "path": "data/raw/fomc/2012-01-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "2f4d4fc699af7e8aac200247735844704c5fc8de",
+    "size": 1653
+  },
+  "data/raw/fomc/2012-01-31_statement.txt": {
+    "mtime": 1760048264.3210433,
+    "path": "data/raw/fomc/2012-01-31_statement.txt",
+    "rows": 40,
+    "sha1": "82165b5b97836a542f8d1b22652b3956aafe6510",
+    "size": 3646
+  },
+  "data/raw/fomc/2012-03-31_html.txt": {
+    "mtime": 1760048268.406032,
+    "path": "data/raw/fomc/2012-03-31_html.txt",
+    "rows": 141,
+    "sha1": "6043d0bcc20c111df6f48ba0a867d4316f2b8cc0",
+    "size": 42836
+  },
+  "data/raw/fomc/2012-03-31_statement.txt": {
+    "mtime": 1760048267.3396459,
+    "path": "data/raw/fomc/2012-03-31_statement.txt",
+    "rows": 40,
+    "sha1": "f245e2add46c2c69e8de7dd216f3508b6bce8ad5",
+    "size": 3703
+  },
+  "data/raw/fomc/2012-04-30_html.txt": {
+    "mtime": 1760048271.356841,
+    "path": "data/raw/fomc/2012-04-30_html.txt",
+    "rows": 148,
+    "sha1": "cfde3497818148097b36452a29e3ac839b752088",
+    "size": 47417
+  },
+  "data/raw/fomc/2012-04-30_press-conference.txt": {
+    "mtime": 1760048270.374248,
+    "path": "data/raw/fomc/2012-04-30_press-conference.txt",
+    "rows": 68,
+    "sha1": "c6d763afe9dbe05ffb5ee8dfc1e56b24253051aa",
+    "size": 1544
+  },
+  "data/raw/fomc/2012-04-30_statement.txt": {
+    "mtime": 1760048269.3584738,
+    "path": "data/raw/fomc/2012-04-30_statement.txt",
+    "rows": 40,
+    "sha1": "d54f782e229a724e3fecab735df67aae4509ef16",
+    "size": 3754
+  },
+  "data/raw/fomc/2012-06-30_html.txt": {
+    "mtime": 1760048274.376047,
+    "path": "data/raw/fomc/2012-06-30_html.txt",
+    "rows": 177,
+    "sha1": "d3c127cbf1099acd74645f7f0d59dae10f10175d",
+    "size": 53533
+  },
+  "data/raw/fomc/2012-06-30_press-conference.txt": {
+    "mtime": 1760048273.3882365,
+    "path": "data/raw/fomc/2012-06-30_press-conference.txt",
+    "rows": 68,
+    "sha1": "73bdab162077e0854b5847ac566f46d767cb5e5a",
+    "size": 1541
+  },
+  "data/raw/fomc/2012-06-30_statement.txt": {
+    "mtime": 1760048272.3795254,
+    "path": "data/raw/fomc/2012-06-30_statement.txt",
+    "rows": 44,
+    "sha1": "e0fa5225030375789d08ea66873387537df77e5e",
+    "size": 4187
+  },
+  "data/raw/fomc/2012-08-31_html.txt": {
+    "mtime": 1760048276.411031,
+    "path": "data/raw/fomc/2012-08-31_html.txt",
+    "rows": 147,
+    "sha1": "a4c3718c7dacb3c379bb13bde382d93cfb26d482",
+    "size": 48035
+  },
+  "data/raw/fomc/2012-08-31_statement.txt": {
+    "mtime": 1760048275.3459656,
+    "path": "data/raw/fomc/2012-08-31_statement.txt",
+    "rows": 40,
+    "sha1": "a4548666858fb8ffdd204891ffb2ed406b4d0719",
+    "size": 3832
+  },
+  "data/raw/fomc/2012-09-30_html.txt": {
+    "mtime": 1760048279.428326,
+    "path": "data/raw/fomc/2012-09-30_html.txt",
+    "rows": 173,
+    "sha1": "ccd42c35e711f0d16234cf3b7026964a9a02fab9",
+    "size": 50963
+  },
+  "data/raw/fomc/2012-09-30_press-conference.txt": {
+    "mtime": 1760048278.377586,
+    "path": "data/raw/fomc/2012-09-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "198eca934859f26d5006ea8875d0e9d2afce4d64",
+    "size": 1601
+  },
+  "data/raw/fomc/2012-09-30_statement.txt": {
+    "mtime": 1760048277.386486,
+    "path": "data/raw/fomc/2012-09-30_statement.txt",
+    "rows": 42,
+    "sha1": "5bd9c637d8eb8da7529246c819bcff4276b863a6",
+    "size": 4621
+  },
+  "data/raw/fomc/2012-10-31_html.txt": {
+    "mtime": 1760048281.4412024,
+    "path": "data/raw/fomc/2012-10-31_html.txt",
+    "rows": 149,
+    "sha1": "71ac53344ccc41cfc14346b731c5129592a44c89",
+    "size": 45189
+  },
+  "data/raw/fomc/2012-10-31_statement.txt": {
+    "mtime": 1760048280.4697545,
+    "path": "data/raw/fomc/2012-10-31_statement.txt",
+    "rows": 41,
+    "sha1": "616dcf01e2aabd9f2b2b8734ce4ee339d6330740",
+    "size": 4561
+  },
+  "data/raw/fomc/2012-12-31_html.txt": {
+    "mtime": 1760048284.4379292,
+    "path": "data/raw/fomc/2012-12-31_html.txt",
+    "rows": 158,
+    "sha1": "f72240ae30ffa65d50ea676335865ee6d0d6d973",
+    "size": 51379
+  },
+  "data/raw/fomc/2012-12-31_press-conference.txt": {
+    "mtime": 1760048283.4388885,
+    "path": "data/raw/fomc/2012-12-31_press-conference.txt",
+    "rows": 68,
+    "sha1": "5878efea311c6d096ce22edd49b5a73e815c0123",
+    "size": 1560
+  },
+  "data/raw/fomc/2012-12-31_statement.txt": {
+    "mtime": 1760048282.6171336,
+    "path": "data/raw/fomc/2012-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "6f9de21c5f8eb8b4b9a6ecec66a5fa972ed66c6b",
+    "size": 5548
+  },
+  "data/raw/fomc/2013-01-31_html.txt": {
+    "mtime": 1760048286.434415,
+    "path": "data/raw/fomc/2013-01-31_html.txt",
+    "rows": 308,
+    "sha1": "1083886ca7d280b2dd3f1cf7fde0c90452c564b8",
+    "size": 73560
+  },
+  "data/raw/fomc/2013-01-31_statement.txt": {
+    "mtime": 1760048285.4180238,
+    "path": "data/raw/fomc/2013-01-31_statement.txt",
+    "rows": 41,
+    "sha1": "015f1b6b205692b54ba8a4a6aed749fcdc0935eb",
+    "size": 5254
+  },
+  "data/raw/fomc/2013-03-31_html.txt": {
+    "mtime": 1760048289.442083,
+    "path": "data/raw/fomc/2013-03-31_html.txt",
+    "rows": 157,
+    "sha1": "3e505370744818823cc6f3709cf69557b3bc2060",
+    "size": 48715
+  },
+  "data/raw/fomc/2013-03-31_press-conference.txt": {
+    "mtime": 1760048288.4547179,
+    "path": "data/raw/fomc/2013-03-31_press-conference.txt",
+    "rows": 68,
+    "sha1": "f1951ff72784b8b8fdda04a689f9db439567da52",
+    "size": 1542
+  },
+  "data/raw/fomc/2013-03-31_statement.txt": {
+    "mtime": 1760048287.4513626,
+    "path": "data/raw/fomc/2013-03-31_statement.txt",
+    "rows": 41,
+    "sha1": "94cc951eaae55df7cc203a67132088fac61b7e93",
+    "size": 5233
+  },
+  "data/raw/fomc/2013-05-31_html.txt": {
+    "mtime": 1760048291.4400485,
+    "path": "data/raw/fomc/2013-05-31_html.txt",
+    "rows": 151,
+    "sha1": "0eacc3ef10fbd11ed604e6887c8257b1bb60ab4e",
+    "size": 46053
+  },
+  "data/raw/fomc/2013-05-31_statement.txt": {
+    "mtime": 1760048290.4802399,
+    "path": "data/raw/fomc/2013-05-31_statement.txt",
+    "rows": 41,
+    "sha1": "997a206b091f5da3d1cb19383106efbcbb243a6e",
+    "size": 5368
+  },
+  "data/raw/fomc/2013-06-30_html.txt": {
+    "mtime": 1760048294.4649644,
+    "path": "data/raw/fomc/2013-06-30_html.txt",
+    "rows": 162,
+    "sha1": "8c6a4edfa33c8cb226a42e13d09e4d4ca2520805",
+    "size": 54576
+  },
+  "data/raw/fomc/2013-06-30_press-conference.txt": {
+    "mtime": 1760048293.435624,
+    "path": "data/raw/fomc/2013-06-30_press-conference.txt",
+    "rows": 68,
+    "sha1": "3ec738174362008ac76423f7270fb9a1e4900ccb",
+    "size": 1540
+  },
+  "data/raw/fomc/2013-06-30_statement.txt": {
+    "mtime": 1760048292.4402647,
+    "path": "data/raw/fomc/2013-06-30_statement.txt",
+    "rows": 41,
+    "sha1": "3d49dfee8571f2d58c056678ed3a4d757f1f6ce6",
+    "size": 5531
+  },
+  "data/raw/fomc/2013-07-31_html.txt": {
+    "mtime": 1760048296.5083835,
+    "path": "data/raw/fomc/2013-07-31_html.txt",
+    "rows": 158,
+    "sha1": "4266ab27735fa45f2fb229ec7e5348a3125814a2",
+    "size": 47990
+  },
+  "data/raw/fomc/2013-07-31_statement.txt": {
+    "mtime": 1760048295.5053444,
+    "path": "data/raw/fomc/2013-07-31_statement.txt",
+    "rows": 41,
+    "sha1": "0e79710b241bad4200f327e0c57effee7ad048d5",
+    "size": 5556
+  },
+  "data/raw/fomc/2013-09-30_html.txt": {
+    "mtime": 1760048299.5007017,
+    "path": "data/raw/fomc/2013-09-30_html.txt",
+    "rows": 151,
+    "sha1": "043cdfd081411181512a8de33879b5b8ee4cf9b9",
+    "size": 54951
+  },
+  "data/raw/fomc/2013-09-30_press-conference.txt": {
+    "mtime": 1760048298.4661992,
+    "path": "data/raw/fomc/2013-09-30_press-conference.txt",
+    "rows": 68,
+    "sha1": "1a510950fa6148c4c3f08380ce4ae058fa21ba6b",
+    "size": 1563
+  },
+  "data/raw/fomc/2013-09-30_statement.txt": {
+    "mtime": 1760048297.5033407,
+    "path": "data/raw/fomc/2013-09-30_statement.txt",
+    "rows": 41,
+    "sha1": "2a38836953af227bc197037da7ac4ad4ba8c6d60",
+    "size": 6224
+  },
+  "data/raw/fomc/2013-10-31_html.txt": {
+    "mtime": 1760048301.4945533,
+    "path": "data/raw/fomc/2013-10-31_html.txt",
+    "rows": 154,
+    "sha1": "9a3fe76af763f53951613caaeee7a5d987d0852d",
+    "size": 51350
+  },
+  "data/raw/fomc/2013-10-31_statement.txt": {
+    "mtime": 1760048300.4874055,
+    "path": "data/raw/fomc/2013-10-31_statement.txt",
+    "rows": 41,
+    "sha1": "2f053b64123f88c7c45a85354c842abab3c6e592",
+    "size": 6093
+  },
+  "data/raw/fomc/2013-12-31_html.txt": {
+    "mtime": 1760048304.560224,
+    "path": "data/raw/fomc/2013-12-31_html.txt",
+    "rows": 149,
+    "sha1": "fd608e526ab27c9261ee3665c3216cdd7ee66057",
+    "size": 58986
+  },
+  "data/raw/fomc/2013-12-31_press-conference.txt": {
+    "mtime": 1760048303.5311022,
+    "path": "data/raw/fomc/2013-12-31_press-conference.txt",
+    "rows": 68,
+    "sha1": "52b7abcdcb577f9f8312f781996ae044ab5e749d",
+    "size": 1559
+  },
+  "data/raw/fomc/2013-12-31_statement.txt": {
+    "mtime": 1760048302.5008967,
+    "path": "data/raw/fomc/2013-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "cb6f6da4ba0c0d2098ced814999a3ced90809476",
+    "size": 6754
+  },
+  "data/raw/fomc/2014-01-31_html.txt": {
+    "mtime": 1760048306.5379524,
+    "path": "data/raw/fomc/2014-01-31_html.txt",
+    "rows": 316,
+    "sha1": "6ea95130f9639b1b757448ff3818cb53bfc2b6e5",
+    "size": 79930
+  },
+  "data/raw/fomc/2014-01-31_statement.txt": {
+    "mtime": 1760048305.5124414,
+    "path": "data/raw/fomc/2014-01-31_statement.txt",
+    "rows": 42,
+    "sha1": "5dcc9601fe6764ad888477c1eed0ba4a2f600fd1",
+    "size": 6541
+  },
+  "data/raw/fomc/2014-03-31_html.txt": {
+    "mtime": 1760048309.5625157,
+    "path": "data/raw/fomc/2014-03-31_html.txt",
+    "rows": 154,
+    "sha1": "2d27de37142b4dd9f742bd9182a791cd88adbdb3",
+    "size": 55961
+  },
+  "data/raw/fomc/2014-03-31_press-conference.txt": {
+    "mtime": 1760048308.5409837,
+    "path": "data/raw/fomc/2014-03-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "9c8077e7e93bf75b66e603441324d21a26f67732",
+    "size": 1572
+  },
+  "data/raw/fomc/2014-03-31_statement.txt": {
+    "mtime": 1760048307.5420613,
+    "path": "data/raw/fomc/2014-03-31_statement.txt",
+    "rows": 45,
+    "sha1": "535393cf9af39e7388c9a9f0fda1716229f802ce",
+    "size": 6893
+  },
+  "data/raw/fomc/2014-04-30_html.txt": {
+    "mtime": 1760048311.5900197,
+    "path": "data/raw/fomc/2014-04-30_html.txt",
+    "rows": 182,
+    "sha1": "6d6576a0e4f2456cefbecd49c0bd9f0fbf888b8b",
+    "size": 45418
+  },
+  "data/raw/fomc/2014-04-30_statement.txt": {
+    "mtime": 1760048310.5423918,
+    "path": "data/raw/fomc/2014-04-30_statement.txt",
+    "rows": 43,
+    "sha1": "74567176e8192191794756b732a6a65559a5a70a",
+    "size": 6435
+  },
+  "data/raw/fomc/2014-06-30_html.txt": {
+    "mtime": 1760048314.5543468,
+    "path": "data/raw/fomc/2014-06-30_html.txt",
+    "rows": 189,
+    "sha1": "25cee7a0a1777f5dff86f9e2ed7c91f643581904",
+    "size": 57241
+  },
+  "data/raw/fomc/2014-06-30_press-conference.txt": {
+    "mtime": 1760048313.5720327,
+    "path": "data/raw/fomc/2014-06-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "51db722a1556ffc213d5b99ccc89745defdeb949",
+    "size": 1563
+  },
+  "data/raw/fomc/2014-06-30_statement.txt": {
+    "mtime": 1760048312.5592952,
+    "path": "data/raw/fomc/2014-06-30_statement.txt",
+    "rows": 43,
+    "sha1": "979d8e53ad242c8a7d05fafbf3f36d4660866193",
+    "size": 6365
+  },
+  "data/raw/fomc/2014-07-31_html.txt": {
+    "mtime": 1760048316.574365,
+    "path": "data/raw/fomc/2014-07-31_html.txt",
+    "rows": 188,
+    "sha1": "9f2c38cf5b75c83d069820f8b9c39730d0ace641",
+    "size": 53533
+  },
+  "data/raw/fomc/2014-07-31_statement.txt": {
+    "mtime": 1760048315.5986645,
+    "path": "data/raw/fomc/2014-07-31_statement.txt",
+    "rows": 44,
+    "sha1": "d15ddbabb54c6eea4605cda5de319bc307857ce0",
+    "size": 6730
+  },
+  "data/raw/fomc/2014-09-30_html.txt": {
+    "mtime": 1760048320.5804842,
+    "path": "data/raw/fomc/2014-09-30_html.txt",
+    "rows": 207,
+    "sha1": "834561df72115d51ff65e37c2c8e5cbe755650a2",
+    "size": 61105
+  },
+  "data/raw/fomc/2014-09-30_policy-normalization-principles-and-plans.txt": {
+    "mtime": 1760048318.5942986,
+    "path": "data/raw/fomc/2014-09-30_policy-normalization-principles-and-plans.txt",
+    "rows": 47,
+    "sha1": "421861d201bc22b4c99882ef84ef7e4f10ff94a4",
+    "size": 4320
+  },
+  "data/raw/fomc/2014-09-30_press-conference.txt": {
+    "mtime": 1760048319.5693257,
+    "path": "data/raw/fomc/2014-09-30_press-conference.txt",
+    "rows": 72,
+    "sha1": "2aee8754d87f81c97f8bbc2f57c6c9cb0347fc7c",
+    "size": 1675
+  },
+  "data/raw/fomc/2014-09-30_statement.txt": {
+    "mtime": 1760048317.5994186,
+    "path": "data/raw/fomc/2014-09-30_statement.txt",
+    "rows": 43,
+    "sha1": "6ce32d7b73efc9be93359e638ada31cbb9872742",
+    "size": 7016
+  },
+  "data/raw/fomc/2014-10-31_html.txt": {
+    "mtime": 1760048322.633728,
+    "path": "data/raw/fomc/2014-10-31_html.txt",
+    "rows": 190,
+    "sha1": "2567b2c27a900edb30256fc007cd9f57c6e662eb",
+    "size": 55867
+  },
+  "data/raw/fomc/2014-10-31_statement.txt": {
+    "mtime": 1760048321.575265,
+    "path": "data/raw/fomc/2014-10-31_statement.txt",
+    "rows": 43,
+    "sha1": "17d76a173b4e06bf6a44a70a01d1255f33b9358a",
+    "size": 5883
+  },
+  "data/raw/fomc/2014-12-31_html.txt": {
+    "mtime": 1760048325.7415283,
+    "path": "data/raw/fomc/2014-12-31_html.txt",
+    "rows": 175,
+    "sha1": "9080218b4c22d606aed07281e008813ede3f273a",
+    "size": 50690
+  },
+  "data/raw/fomc/2014-12-31_press-conference.txt": {
+    "mtime": 1760048324.6005683,
+    "path": "data/raw/fomc/2014-12-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "51cf8feed25934670e2c902900c29fdf7fe2086f",
+    "size": 1586
+  },
+  "data/raw/fomc/2014-12-31_statement.txt": {
+    "mtime": 1760048323.6311967,
+    "path": "data/raw/fomc/2014-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "b33c3c80ffce37f4806a126ae29354a20ed31348",
+    "size": 5878
+  },
+  "data/raw/fomc/2015-01-31_html.txt": {
+    "mtime": 1760048327.6275458,
+    "path": "data/raw/fomc/2015-01-31_html.txt",
+    "rows": 398,
+    "sha1": "49d772615837e06806ebd157e02f512837cd82ea",
+    "size": 95597
+  },
+  "data/raw/fomc/2015-01-31_statement.txt": {
+    "mtime": 1760048326.6610935,
+    "path": "data/raw/fomc/2015-01-31_statement.txt",
+    "rows": 41,
+    "sha1": "58490f8a7f52074aa5906159a64fc67cb46eca2f",
+    "size": 4841
+  },
+  "data/raw/fomc/2015-03-31_html.txt": {
+    "mtime": 1760048330.658534,
+    "path": "data/raw/fomc/2015-03-31_html.txt",
+    "rows": 193,
+    "sha1": "a2aa2c8a43ac99059cde77a850ffd46f5a56821d",
+    "size": 56482
+  },
+  "data/raw/fomc/2015-03-31_press-conference.txt": {
+    "mtime": 1760048329.6667387,
+    "path": "data/raw/fomc/2015-03-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "f29a78f2890f76a2a13475a318c701f39c0e8bff",
+    "size": 1572
+  },
+  "data/raw/fomc/2015-03-31_statement.txt": {
+    "mtime": 1760048328.6070247,
+    "path": "data/raw/fomc/2015-03-31_statement.txt",
+    "rows": 41,
+    "sha1": "0924bd9c48f0bb988812273dad1b62754391f246",
+    "size": 4811
+  },
+  "data/raw/fomc/2015-04-30_html.txt": {
+    "mtime": 1760048332.671377,
+    "path": "data/raw/fomc/2015-04-30_html.txt",
+    "rows": 174,
+    "sha1": "6d064f162a6ce247b179c9c3766c56ab79a317da",
+    "size": 51134
+  },
+  "data/raw/fomc/2015-04-30_statement.txt": {
+    "mtime": 1760048331.6734457,
+    "path": "data/raw/fomc/2015-04-30_statement.txt",
+    "rows": 41,
+    "sha1": "f19eda19d8968373d607b50db34a79443ea16210",
+    "size": 4690
+  },
+  "data/raw/fomc/2015-06-30_html.txt": {
+    "mtime": 1760048335.653616,
+    "path": "data/raw/fomc/2015-06-30_html.txt",
+    "rows": 191,
+    "sha1": "24b813be7117c4626a52163b41db9d3d56721787",
+    "size": 54027
+  },
+  "data/raw/fomc/2015-06-30_press-conference.txt": {
+    "mtime": 1760048334.635383,
+    "path": "data/raw/fomc/2015-06-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "90512b2fc235dd31715e8b8e39d6611d8e9b249e",
+    "size": 1567
+  },
+  "data/raw/fomc/2015-06-30_statement.txt": {
+    "mtime": 1760048333.6515543,
+    "path": "data/raw/fomc/2015-06-30_statement.txt",
+    "rows": 41,
+    "sha1": "5bac71ed7e4ef32d03a2af5e73f6384afdd07bef",
+    "size": 4564
+  },
+  "data/raw/fomc/2015-07-31_html.txt": {
+    "mtime": 1760048337.6986089,
+    "path": "data/raw/fomc/2015-07-31_html.txt",
+    "rows": 200,
+    "sha1": "54c0090de7e92966207de41a70ec2bf828ebf473",
+    "size": 56737
+  },
+  "data/raw/fomc/2015-07-31_statement.txt": {
+    "mtime": 1760048336.6565225,
+    "path": "data/raw/fomc/2015-07-31_statement.txt",
+    "rows": 41,
+    "sha1": "7b2c96def017e5e954b4538a3db947789698e598",
+    "size": 4528
+  },
+  "data/raw/fomc/2015-09-30_html.txt": {
+    "mtime": 1760048340.674181,
+    "path": "data/raw/fomc/2015-09-30_html.txt",
+    "rows": 164,
+    "sha1": "b0b588b02f989aafd8b5977a080d5e0dde687701",
+    "size": 50271
+  },
+  "data/raw/fomc/2015-09-30_press-conference.txt": {
+    "mtime": 1760048339.75364,
+    "path": "data/raw/fomc/2015-09-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "a00af3e4dfb5dd7251cd243ca35896331cfd7c46",
+    "size": 1590
+  },
+  "data/raw/fomc/2015-09-30_statement.txt": {
+    "mtime": 1760048338.6984653,
+    "path": "data/raw/fomc/2015-09-30_statement.txt",
+    "rows": 41,
+    "sha1": "bc3ce633635726d2e9c36b7d805c224045b37f4a",
+    "size": 4834
+  },
+  "data/raw/fomc/2015-10-31_html.txt": {
+    "mtime": 1760048342.721773,
+    "path": "data/raw/fomc/2015-10-31_html.txt",
+    "rows": 203,
+    "sha1": "dab9fbd98ded57977d4c097bacf0f3c09560ec16",
+    "size": 54470
+  },
+  "data/raw/fomc/2015-10-31_statement.txt": {
+    "mtime": 1760048341.708663,
+    "path": "data/raw/fomc/2015-10-31_statement.txt",
+    "rows": 41,
+    "sha1": "251791aede259a3d5740d1f6827798f40e79abaa",
+    "size": 4744
+  },
+  "data/raw/fomc/2015-12-31_html.txt": {
+    "mtime": 1760048345.7090123,
+    "path": "data/raw/fomc/2015-12-31_html.txt",
+    "rows": 180,
+    "sha1": "2947a63bfd6b41dca9d6ed57b764ec1851de69b3",
+    "size": 51568
+  },
+  "data/raw/fomc/2015-12-31_press-conference.txt": {
+    "mtime": 1760048344.691379,
+    "path": "data/raw/fomc/2015-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "67143351855e61d12bac00040e32cfb300ff97ab",
+    "size": 1660
+  },
+  "data/raw/fomc/2015-12-31_statement.txt": {
+    "mtime": 1760048343.696787,
+    "path": "data/raw/fomc/2015-12-31_statement.txt",
+    "rows": 41,
+    "sha1": "da298cda28fb45df1cbcfe60186551c0a5de7e7a",
+    "size": 4834
+  },
+  "data/raw/fomc/2016-01-31_html.txt": {
+    "mtime": 1760048348.7730865,
+    "path": "data/raw/fomc/2016-01-31_html.txt",
+    "rows": 375,
+    "sha1": "7526fef3d3f2febaa268da78b5d3b3022190c13b",
+    "size": 91224
+  },
+  "data/raw/fomc/2016-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048347.7564952,
+    "path": "data/raw/fomc/2016-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 44,
+    "sha1": "d71a3f12e4baabcb21c468df4bed383d29263204",
+    "size": 2804
+  },
+  "data/raw/fomc/2016-01-31_statement.txt": {
+    "mtime": 1760048346.702689,
+    "path": "data/raw/fomc/2016-01-31_statement.txt",
+    "rows": 42,
+    "sha1": "a171390e5d27cb0d392a5858d1fc18fab414564f",
+    "size": 4612
+  },
+  "data/raw/fomc/2016-03-31_html.txt": {
+    "mtime": 1760048351.7454305,
+    "path": "data/raw/fomc/2016-03-31_html.txt",
+    "rows": 176,
+    "sha1": "4763dc099eb9055dc877e4e3c82de77d464f0c27",
+    "size": 52112
+  },
+  "data/raw/fomc/2016-03-31_press-conference.txt": {
+    "mtime": 1760048350.7076488,
+    "path": "data/raw/fomc/2016-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "bdaab631194fa6d0edd93ac02bc61e9c4cce7259",
+    "size": 1643
+  },
+  "data/raw/fomc/2016-03-31_statement.txt": {
+    "mtime": 1760048349.6994338,
+    "path": "data/raw/fomc/2016-03-31_statement.txt",
+    "rows": 42,
+    "sha1": "22766d909be1477c82c68dae3737babfad81a6cd",
+    "size": 4670
+  },
+  "data/raw/fomc/2016-04-30_html.txt": {
+    "mtime": 1760048353.7714734,
+    "path": "data/raw/fomc/2016-04-30_html.txt",
+    "rows": 196,
+    "sha1": "76f08af5a9af695deac7f8ff6849b9b00e453074",
+    "size": 62380
+  },
+  "data/raw/fomc/2016-04-30_statement.txt": {
+    "mtime": 1760048352.7677836,
+    "path": "data/raw/fomc/2016-04-30_statement.txt",
+    "rows": 42,
+    "sha1": "3af12e8d0987c55f38cfd352f019fe30dfd6128d",
+    "size": 4696
+  },
+  "data/raw/fomc/2016-06-30_html.txt": {
+    "mtime": 1760048356.7867963,
+    "path": "data/raw/fomc/2016-06-30_html.txt",
+    "rows": 179,
+    "sha1": "2d68b8fa63e84f84ee90d22d68bf963e6f88cb2e",
+    "size": 55346
+  },
+  "data/raw/fomc/2016-06-30_press-conference.txt": {
+    "mtime": 1760048355.785355,
+    "path": "data/raw/fomc/2016-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "f1f8c1d2043b05f5712afe33e09d4787404a4601",
+    "size": 1637
+  },
+  "data/raw/fomc/2016-06-30_statement.txt": {
+    "mtime": 1760048354.7700713,
+    "path": "data/raw/fomc/2016-06-30_statement.txt",
+    "rows": 42,
+    "sha1": "92dc2617054a3cdc78fa9f93ee78d3c5ea093620",
+    "size": 4466
+  },
+  "data/raw/fomc/2016-07-31_html.txt": {
+    "mtime": 1760048358.763259,
+    "path": "data/raw/fomc/2016-07-31_html.txt",
+    "rows": 201,
+    "sha1": "0b4ed4ad1ef04a5b6a2f5187a335c81c0079a4f3",
+    "size": 68703
+  },
+  "data/raw/fomc/2016-07-31_statement.txt": {
+    "mtime": 1760048357.8009434,
+    "path": "data/raw/fomc/2016-07-31_statement.txt",
+    "rows": 42,
+    "sha1": "f257da1417af7161d47b3a085e908c4dca697f90",
+    "size": 4610
+  },
+  "data/raw/fomc/2016-09-30_html.txt": {
+    "mtime": 1760048361.7872646,
+    "path": "data/raw/fomc/2016-09-30_html.txt",
+    "rows": 288,
+    "sha1": "48c59fc9288888aeb4bb21b69d10ef0f0537db85",
+    "size": 72387
+  },
+  "data/raw/fomc/2016-09-30_press-conference.txt": {
+    "mtime": 1760048360.7851696,
+    "path": "data/raw/fomc/2016-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "11438794d5c327197a72a2964781b03a69d90327",
+    "size": 1665
+  },
+  "data/raw/fomc/2016-09-30_statement.txt": {
+    "mtime": 1760048359.788065,
+    "path": "data/raw/fomc/2016-09-30_statement.txt",
+    "rows": 42,
+    "sha1": "d04ea47a30a93f3badcd2865b63b68d2850f2f6c",
+    "size": 4842
+  },
+  "data/raw/fomc/2016-11-30_html.txt": {
+    "mtime": 1760048363.7976518,
+    "path": "data/raw/fomc/2016-11-30_html.txt",
+    "rows": 213,
+    "sha1": "45cb29a3934e6a0523efd953239957eac982643e",
+    "size": 62051
+  },
+  "data/raw/fomc/2016-11-30_statement.txt": {
+    "mtime": 1760048362.7888699,
+    "path": "data/raw/fomc/2016-11-30_statement.txt",
+    "rows": 42,
+    "sha1": "b717fb008c351c12a7ef55bc8bec25b6be6b4f3a",
+    "size": 4814
+  },
+  "data/raw/fomc/2016-12-31_html.txt": {
+    "mtime": 1760048366.7918725,
+    "path": "data/raw/fomc/2016-12-31_html.txt",
+    "rows": 202,
+    "sha1": "ecab66a9e502e38696d32290f1780b599980cddd",
+    "size": 56376
+  },
+  "data/raw/fomc/2016-12-31_press-conference.txt": {
+    "mtime": 1760048365.8053422,
+    "path": "data/raw/fomc/2016-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "9cc7532fc132b4a218406109cabd28da8ab64e5e",
+    "size": 1659
+  },
+  "data/raw/fomc/2016-12-31_statement.txt": {
+    "mtime": 1760048364.8005364,
+    "path": "data/raw/fomc/2016-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "83cc46473602a8adf4b411b6f30de0b40330ed1b",
+    "size": 4473
+  },
+  "data/raw/fomc/2017-02-28_html.txt": {
+    "mtime": 1760048368.880087,
+    "path": "data/raw/fomc/2017-02-28_html.txt",
+    "rows": 372,
+    "sha1": "165dd35e5fd4ffe4c35675b24de172d4894f7dcc",
+    "size": 83834
+  },
+  "data/raw/fomc/2017-02-28_statement.txt": {
+    "mtime": 1760048367.783163,
+    "path": "data/raw/fomc/2017-02-28_statement.txt",
+    "rows": 43,
+    "sha1": "7c185f18fc197ac3c3476c8d2599e475b26df95e",
+    "size": 4258
+  },
+  "data/raw/fomc/2017-03-31_html.txt": {
+    "mtime": 1760048371.855925,
+    "path": "data/raw/fomc/2017-03-31_html.txt",
+    "rows": 195,
+    "sha1": "6107a7aba649ceca5814238d1101295caffbc9d3",
+    "size": 60367
+  },
+  "data/raw/fomc/2017-03-31_press-conference.txt": {
+    "mtime": 1760048370.838212,
+    "path": "data/raw/fomc/2017-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "6cdadb104a854835c1439fa63a4ec9d2ba0d9ae7",
+    "size": 1640
+  },
+  "data/raw/fomc/2017-03-31_press-releases.txt": {
+    "mtime": 1760047334.8747113,
+    "path": "data/raw/fomc/2017-03-31_press-releases.txt",
+    "rows": 69,
+    "sha1": "b8ec06f0daec8540a031a348215a4fd19e91a95e",
+    "size": 1044
+  },
+  "data/raw/fomc/2017-03-31_statement.txt": {
+    "mtime": 1760048369.828798,
+    "path": "data/raw/fomc/2017-03-31_statement.txt",
+    "rows": 43,
+    "sha1": "cc974418669beb25612f455cf25fc8e364f87723",
+    "size": 4414
+  },
+  "data/raw/fomc/2017-05-31_html.txt": {
+    "mtime": 1760048373.9591556,
+    "path": "data/raw/fomc/2017-05-31_html.txt",
+    "rows": 193,
+    "sha1": "d0f4d14ad4a0d6ad537e38ba4288f6df2f69f126",
+    "size": 57419
+  },
+  "data/raw/fomc/2017-05-31_statement.txt": {
+    "mtime": 1760048372.808049,
+    "path": "data/raw/fomc/2017-05-31_statement.txt",
+    "rows": 43,
+    "sha1": "ca069f27287e2487e7a04173425653837791f49e",
+    "size": 4395
+  },
+  "data/raw/fomc/2017-06-30_addendum-to-the-policy-normalization-principles-and-plans.txt": {
+    "mtime": 1760048375.8486004,
+    "path": "data/raw/fomc/2017-06-30_addendum-to-the-policy-normalization-principles-and-plans.txt",
+    "rows": 52,
+    "sha1": "4b0f1de1a8e75186464c6f8f0204b6cbd50b1c41",
+    "size": 4360
+  },
+  "data/raw/fomc/2017-06-30_html.txt": {
+    "mtime": 1760048377.9187348,
+    "path": "data/raw/fomc/2017-06-30_html.txt",
+    "rows": 208,
+    "sha1": "1bb0e5961a49022c655eeeb16fe171e8006846e9",
+    "size": 59135
+  },
+  "data/raw/fomc/2017-06-30_press-conference.txt": {
+    "mtime": 1760048376.9005475,
+    "path": "data/raw/fomc/2017-06-30_press-conference.txt",
+    "rows": 77,
+    "sha1": "87168d4b88fd4c19fb976382d626fd3ce9089ae4",
+    "size": 1729
+  },
+  "data/raw/fomc/2017-06-30_statement.txt": {
+    "mtime": 1760048374.8234065,
+    "path": "data/raw/fomc/2017-06-30_statement.txt",
+    "rows": 43,
+    "sha1": "006f4c4366469a6ebdd23c802b7584b9a6afea62",
+    "size": 4591
+  },
+  "data/raw/fomc/2017-07-31_html.txt": {
+    "mtime": 1760048379.8613727,
+    "path": "data/raw/fomc/2017-07-31_html.txt",
+    "rows": 174,
+    "sha1": "003d25743c76eb9ae9c90b43ac055fa8f6af5eb1",
+    "size": 50511
+  },
+  "data/raw/fomc/2017-07-31_statement.txt": {
+    "mtime": 1760048378.849201,
+    "path": "data/raw/fomc/2017-07-31_statement.txt",
+    "rows": 43,
+    "sha1": "143150009d7abdbfccff8c134a5fa2c05fe82e13",
+    "size": 4279
+  },
+  "data/raw/fomc/2017-09-30_html.txt": {
+    "mtime": 1760048382.9065845,
+    "path": "data/raw/fomc/2017-09-30_html.txt",
+    "rows": 198,
+    "sha1": "74a68441aef22ccddd2f049a26f503cb10b14312",
+    "size": 57964
+  },
+  "data/raw/fomc/2017-09-30_press-conference.txt": {
+    "mtime": 1760048381.8873808,
+    "path": "data/raw/fomc/2017-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "221cd91dad5e7a0d00f48920aea36d0d17eea03a",
+    "size": 1666
+  },
+  "data/raw/fomc/2017-09-30_statement.txt": {
+    "mtime": 1760048380.849064,
+    "path": "data/raw/fomc/2017-09-30_statement.txt",
+    "rows": 43,
+    "sha1": "24a1d56d6771423024444d8b970f94c16b94c2f7",
+    "size": 4455
+  },
+  "data/raw/fomc/2017-11-30_html.txt": {
+    "mtime": 1760048384.9172957,
+    "path": "data/raw/fomc/2017-11-30_html.txt",
+    "rows": 177,
+    "sha1": "4b87c7075ea0c2c31d676555220be83e04cdf061",
+    "size": 51474
+  },
+  "data/raw/fomc/2017-11-30_statement.txt": {
+    "mtime": 1760048383.935565,
+    "path": "data/raw/fomc/2017-11-30_statement.txt",
+    "rows": 43,
+    "sha1": "3c52c53dcf2dac0c7c219d73669e1e7f8cf6b21a",
+    "size": 4335
+  },
+  "data/raw/fomc/2017-12-31_html.txt": {
+    "mtime": 1760048387.9625254,
+    "path": "data/raw/fomc/2017-12-31_html.txt",
+    "rows": 172,
+    "sha1": "5d4c8963598e2e0193f3eb2d96de705ac8011ead",
+    "size": 50148
+  },
+  "data/raw/fomc/2017-12-31_press-conference.txt": {
+    "mtime": 1760048386.9127262,
+    "path": "data/raw/fomc/2017-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "0e9203e2a02b1485d8a06bcf31ddecedc83be7b2",
+    "size": 1650
+  },
+  "data/raw/fomc/2017-12-31_statement.txt": {
+    "mtime": 1760048385.8780308,
+    "path": "data/raw/fomc/2017-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "2448f45411b948f433e23ceb679791954ac223b4",
+    "size": 4130
+  },
+  "data/raw/fomc/2018-01-31_html.txt": {
+    "mtime": 1760048390.9428186,
+    "path": "data/raw/fomc/2018-01-31_html.txt",
+    "rows": 359,
+    "sha1": "1da9c24feb49b96bf55e2e1d8c880edfb3ec6fd8",
+    "size": 82194
+  },
+  "data/raw/fomc/2018-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048389.9124503,
+    "path": "data/raw/fomc/2018-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 43,
+    "sha1": "78732e7ec736ba8a214d2c9733e6c0b8bf80dd63",
+    "size": 1739
+  },
+  "data/raw/fomc/2018-01-31_statement.txt": {
+    "mtime": 1760048388.9304268,
+    "path": "data/raw/fomc/2018-01-31_statement.txt",
+    "rows": 42,
+    "sha1": "d258e4f8137f1d4924350ed415e93af80da6ec15",
+    "size": 3671
+  },
+  "data/raw/fomc/2018-03-31_html.txt": {
+    "mtime": 1760048393.9861078,
+    "path": "data/raw/fomc/2018-03-31_html.txt",
+    "rows": 181,
+    "sha1": "d31b2d52ccdfc88ad0581a455b199f60c405f8b5",
+    "size": 49280
+  },
+  "data/raw/fomc/2018-03-31_press-conference.txt": {
+    "mtime": 1760048392.936038,
+    "path": "data/raw/fomc/2018-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "8caac2853e13cd305b213f8c719f849eb727367d",
+    "size": 1630
+  },
+  "data/raw/fomc/2018-03-31_statement.txt": {
+    "mtime": 1760048391.984931,
+    "path": "data/raw/fomc/2018-03-31_statement.txt",
+    "rows": 42,
+    "sha1": "551387a57c7994a5aef0dd78e6a62142dacdc6ef",
+    "size": 3826
+  },
+  "data/raw/fomc/2018-05-31_html.txt": {
+    "mtime": 1760048395.944661,
+    "path": "data/raw/fomc/2018-05-31_html.txt",
+    "rows": 171,
+    "sha1": "43324b98cd75f04d5b12ff84656fc98502750b53",
+    "size": 53343
+  },
+  "data/raw/fomc/2018-05-31_statement.txt": {
+    "mtime": 1760048394.9583516,
+    "path": "data/raw/fomc/2018-05-31_statement.txt",
+    "rows": 42,
+    "sha1": "20e7eb4f637436a1b209d895a8b537598aee8e70",
+    "size": 3642
+  },
+  "data/raw/fomc/2018-06-30_html.txt": {
+    "mtime": 1760048398.9598553,
+    "path": "data/raw/fomc/2018-06-30_html.txt",
+    "rows": 181,
+    "sha1": "c5e1d254393ff4dd72e21b2b7dbeae7af3d5465a",
+    "size": 48210
+  },
+  "data/raw/fomc/2018-06-30_press-conference.txt": {
+    "mtime": 1760048397.9506214,
+    "path": "data/raw/fomc/2018-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "37bd51ed8eae98ed144694d9b58148a81f413373",
+    "size": 1623
+  },
+  "data/raw/fomc/2018-06-30_statement.txt": {
+    "mtime": 1760048397.0082245,
+    "path": "data/raw/fomc/2018-06-30_statement.txt",
+    "rows": 42,
+    "sha1": "ca50b1fa530821ff361c9c4207dd0104f2cf470f",
+    "size": 3004
+  },
+  "data/raw/fomc/2018-08-31_html.txt": {
+    "mtime": 1760048400.985927,
+    "path": "data/raw/fomc/2018-08-31_html.txt",
+    "rows": 207,
+    "sha1": "6ad783394df13f098ee06edc960d24fb733d31b2",
+    "size": 56058
+  },
+  "data/raw/fomc/2018-08-31_statement.txt": {
+    "mtime": 1760048399.9876192,
+    "path": "data/raw/fomc/2018-08-31_statement.txt",
+    "rows": 42,
+    "sha1": "74057d118aabcd3490e77f1e2b26b1bc939854ef",
+    "size": 2945
+  },
+  "data/raw/fomc/2018-09-30_html.txt": {
+    "mtime": 1760048403.9871588,
+    "path": "data/raw/fomc/2018-09-30_html.txt",
+    "rows": 178,
+    "sha1": "df42d77403cdb18fdf912620795434226b18ba2f",
+    "size": 48238
+  },
+  "data/raw/fomc/2018-09-30_press-conference.txt": {
+    "mtime": 1760048403.0014806,
+    "path": "data/raw/fomc/2018-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "31d97e7f422f494275a6754f66a373b1c5b2a1f8",
+    "size": 1656
+  },
+  "data/raw/fomc/2018-09-30_statement.txt": {
+    "mtime": 1760048401.9882472,
+    "path": "data/raw/fomc/2018-09-30_statement.txt",
+    "rows": 42,
+    "sha1": "4d092d0a4ed143b624d0a27cd75188d43dcc9ae0",
+    "size": 2824
+  },
+  "data/raw/fomc/2018-11-30_html.txt": {
+    "mtime": 1760048406.0236359,
+    "path": "data/raw/fomc/2018-11-30_html.txt",
+    "rows": 224,
+    "sha1": "040733395a6bab8fe14034960a149d777f59febf",
+    "size": 56314
+  },
+  "data/raw/fomc/2018-11-30_statement.txt": {
+    "mtime": 1760048405.0356674,
+    "path": "data/raw/fomc/2018-11-30_statement.txt",
+    "rows": 42,
+    "sha1": "22f82dbbd97bbb25f0c087a1a611eb82995023bf",
+    "size": 2898
+  },
+  "data/raw/fomc/2018-12-31_html.txt": {
+    "mtime": 1760048409.0333781,
+    "path": "data/raw/fomc/2018-12-31_html.txt",
+    "rows": 231,
+    "sha1": "489208bc79e684c07f1588763203aa51db55622f",
+    "size": 57282
+  },
+  "data/raw/fomc/2018-12-31_press-conference.txt": {
+    "mtime": 1760048408.0197072,
+    "path": "data/raw/fomc/2018-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "de324cefdac072fd946a7706f67ddfcc1eddf794",
+    "size": 1650
+  },
+  "data/raw/fomc/2018-12-31_statement.txt": {
+    "mtime": 1760048407.0027,
+    "path": "data/raw/fomc/2018-12-31_statement.txt",
+    "rows": 42,
+    "sha1": "946678a7c8216748d8b3dd3e76010facb7997dba",
+    "size": 3083
+  },
+  "data/raw/fomc/2019-01-31_html.txt": {
+    "mtime": 1760048414.0658598,
+    "path": "data/raw/fomc/2019-01-31_html.txt",
+    "rows": 414,
+    "sha1": "4dc5034a5b4a60c9ddb7d70b0880716783de7b42",
+    "size": 95148
+  },
+  "data/raw/fomc/2019-01-31_press-conference.txt": {
+    "mtime": 1760048413.065235,
+    "path": "data/raw/fomc/2019-01-31_press-conference.txt",
+    "rows": 74,
+    "sha1": "49957e3230c7d846fbcab20d39c675c04f6be981",
+    "size": 1794
+  },
+  "data/raw/fomc/2019-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048411.169504,
+    "path": "data/raw/fomc/2019-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 42,
+    "sha1": "50613997bd044df07d666594eec2a675c06f6b31",
+    "size": 1699
+  },
+  "data/raw/fomc/2019-01-31_statement-regarding-monetary-policy-implementation-and-balance-sheet-normalization.txt": {
+    "mtime": 1760048412.268987,
+    "path": "data/raw/fomc/2019-01-31_statement-regarding-monetary-policy-implementation-and-balance-sheet-normalization.txt",
+    "rows": 38,
+    "sha1": "b1ffb08ec0cf77eba0b10a2e5e5c170765d5d9b7",
+    "size": 2349
+  },
+  "data/raw/fomc/2019-01-31_statement.txt": {
+    "mtime": 1760048409.9881089,
+    "path": "data/raw/fomc/2019-01-31_statement.txt",
+    "rows": 41,
+    "sha1": "a499d4b33de56c3a3b11c182b37e0a807db6e914",
+    "size": 3076
+  },
+  "data/raw/fomc/2019-03-31_balance-sheet-normalization-principles-and-plans.txt": {
+    "mtime": 1760048416.0362222,
+    "path": "data/raw/fomc/2019-03-31_balance-sheet-normalization-principles-and-plans.txt",
+    "rows": 47,
+    "sha1": "1c8a4908748be970a2ee46ba69f9175f8d12ef0d",
+    "size": 4775
+  },
+  "data/raw/fomc/2019-03-31_html.txt": {
+    "mtime": 1760048418.0836992,
+    "path": "data/raw/fomc/2019-03-31_html.txt",
+    "rows": 225,
+    "sha1": "2c03bca4c9e488b4dc935a974e3306b03260a3a1",
+    "size": 64953
+  },
+  "data/raw/fomc/2019-03-31_press-conference.txt": {
+    "mtime": 1760048417.0623548,
+    "path": "data/raw/fomc/2019-03-31_press-conference.txt",
+    "rows": 77,
+    "sha1": "d2091f3dddc0c62a8a983b4b7270a3718ebe9164",
+    "size": 1718
+  },
+  "data/raw/fomc/2019-03-31_statement.txt": {
+    "mtime": 1760048415.0675066,
+    "path": "data/raw/fomc/2019-03-31_statement.txt",
+    "rows": 41,
+    "sha1": "7167d3e87baeca8bb4e297af774b6a5e22a347e8",
+    "size": 3168
+  },
+  "data/raw/fomc/2019-05-31_html.txt": {
+    "mtime": 1760048421.084932,
+    "path": "data/raw/fomc/2019-05-31_html.txt",
+    "rows": 224,
+    "sha1": "40328d316f795064c77badf816912c93e7fe65ec",
+    "size": 62913
+  },
+  "data/raw/fomc/2019-05-31_press-conference.txt": {
+    "mtime": 1760048420.062004,
+    "path": "data/raw/fomc/2019-05-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "6a535972344f69141215873d7bec32ae415988cb",
+    "size": 1555
+  },
+  "data/raw/fomc/2019-05-31_statement.txt": {
+    "mtime": 1760048419.0793476,
+    "path": "data/raw/fomc/2019-05-31_statement.txt",
+    "rows": 41,
+    "sha1": "090ab9a004a270c519caa39ada9062c99d965bc5",
+    "size": 2998
+  },
+  "data/raw/fomc/2019-06-30_html.txt": {
+    "mtime": 1760048424.0934699,
+    "path": "data/raw/fomc/2019-06-30_html.txt",
+    "rows": 225,
+    "sha1": "696d1693e2c8c562022642f30cf45fa05abef08f",
+    "size": 56035
+  },
+  "data/raw/fomc/2019-06-30_press-conference.txt": {
+    "mtime": 1760048423.0871649,
+    "path": "data/raw/fomc/2019-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "e7282f7ebacc60d3ab08239bd4a305d45d667d66",
+    "size": 1623
+  },
+  "data/raw/fomc/2019-06-30_statement.txt": {
+    "mtime": 1760048422.1097019,
+    "path": "data/raw/fomc/2019-06-30_statement.txt",
+    "rows": 41,
+    "sha1": "eca50228757b5baabcb0c72ca6db5493e7c852db",
+    "size": 3240
+  },
+  "data/raw/fomc/2019-07-31_html.txt": {
+    "mtime": 1760048427.1126027,
+    "path": "data/raw/fomc/2019-07-31_html.txt",
+    "rows": 230,
+    "sha1": "2bbf7197060c5da8a37ccafb673224bd46465d6b",
+    "size": 72263
+  },
+  "data/raw/fomc/2019-07-31_press-conference.txt": {
+    "mtime": 1760048426.0846539,
+    "path": "data/raw/fomc/2019-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "ea027a08157a15e5cbcea84ca0073726fe19c9e5",
+    "size": 1553
+  },
+  "data/raw/fomc/2019-07-31_statement.txt": {
+    "mtime": 1760048425.1211493,
+    "path": "data/raw/fomc/2019-07-31_statement.txt",
+    "rows": 42,
+    "sha1": "0ba08dde9b9c281523a503dbc3a55e36ad1612bc",
+    "size": 3524
+  },
+  "data/raw/fomc/2019-09-30_html.txt": {
+    "mtime": 1760048430.1243799,
+    "path": "data/raw/fomc/2019-09-30_html.txt",
+    "rows": 235,
+    "sha1": "df85b36db04a91a3819002b7112ddd84f72ae7b3",
+    "size": 72074
+  },
+  "data/raw/fomc/2019-09-30_press-conference.txt": {
+    "mtime": 1760048429.090039,
+    "path": "data/raw/fomc/2019-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "5a31fb40547cd9ea654a54d386beaba88812647d",
+    "size": 1656
+  },
+  "data/raw/fomc/2019-09-30_statement.txt": {
+    "mtime": 1760048428.131435,
+    "path": "data/raw/fomc/2019-09-30_statement.txt",
+    "rows": 41,
+    "sha1": "5f223f139d0012cbb349c1e196a28a5625462aa5",
+    "size": 3430
+  },
+  "data/raw/fomc/2019-10-31_html.txt": {
+    "mtime": 1760048434.1717308,
+    "path": "data/raw/fomc/2019-10-31_html.txt",
+    "rows": 273,
+    "sha1": "6327d3fc7ffb1f5e782834d1ffe1eb82a8d7a18b",
+    "size": 84796
+  },
+  "data/raw/fomc/2019-10-31_press-conference.txt": {
+    "mtime": 1760048433.1642485,
+    "path": "data/raw/fomc/2019-10-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "92497ce580c5a6eb83e7d970779d3938535ec0de",
+    "size": 1570
+  },
+  "data/raw/fomc/2019-10-31_statement-1.txt": {
+    "mtime": 1760048432.1305814,
+    "path": "data/raw/fomc/2019-10-31_statement-1.txt",
+    "rows": 41,
+    "sha1": "af78bc48d8a781f4748bfa9eb6c7f3d554f93041",
+    "size": 3201
+  },
+  "data/raw/fomc/2019-10-31_statement.txt": {
+    "mtime": 1760048431.1164875,
+    "path": "data/raw/fomc/2019-10-31_statement.txt",
+    "rows": 51,
+    "sha1": "1a8923066f087f189ecc65f1dcf63890413384a5",
+    "size": 5662
+  },
+  "data/raw/fomc/2019-12-31_html.txt": {
+    "mtime": 1760048437.1989625,
+    "path": "data/raw/fomc/2019-12-31_html.txt",
+    "rows": 229,
+    "sha1": "becd836257c323281d2c1001a20061093a8ad2c1",
+    "size": 58018
+  },
+  "data/raw/fomc/2019-12-31_press-conference.txt": {
+    "mtime": 1760048436.1292465,
+    "path": "data/raw/fomc/2019-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "755df518e453be35931cf02a80726a40e02afb6c",
+    "size": 1650
+  },
+  "data/raw/fomc/2019-12-31_statement.txt": {
+    "mtime": 1760048435.1826346,
+    "path": "data/raw/fomc/2019-12-31_statement.txt",
+    "rows": 41,
+    "sha1": "8c9d3b44456c93b36a60c42fa06a3536e8e69844",
+    "size": 3005
+  },
+  "data/raw/fomc/2020-01-01_minutes.txt": {
+    "mtime": 1759117103.1472523,
+    "path": "data/raw/fomc/2020-01-01_minutes.txt",
+    "rows": 3473,
+    "sha1": "96c9087f8398c91c8038f1ce5891318a1daaeaab",
+    "size": 642795
+  },
+  "data/raw/fomc/2020-01-31_html-1.txt": {
+    "mtime": 1760048182.9720178,
+    "path": "data/raw/fomc/2020-01-31_html-1.txt",
+    "rows": 410,
+    "sha1": "71b765af3b8c18a163f9ddfaef2c63aa4ecf4042",
+    "size": 88954
+  },
+  "data/raw/fomc/2020-01-31_html.txt": {
+    "mtime": 1760048179.8985155,
+    "path": "data/raw/fomc/2020-01-31_html.txt",
+    "rows": 41,
+    "sha1": "c1420b1e0f24cbd2122f06caee094f0f37131a68",
+    "size": 3011
+  },
+  "data/raw/fomc/2020-01-31_implementation-note.txt": {
+    "mtime": 1760048180.9237661,
+    "path": "data/raw/fomc/2020-01-31_implementation-note.txt",
+    "rows": 48,
+    "sha1": "1e63f3102bad1f2c0ed2790cb3dc7c05210111a8",
+    "size": 4600
+  },
+  "data/raw/fomc/2020-01-31_press-conference.txt": {
+    "mtime": 1760048181.9225688,
+    "path": "data/raw/fomc/2020-01-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "b998f9fe242b39b19b26cb78cc1f926ebf5e2cdb",
+    "size": 1570
+  },
+  "data/raw/fomc/2020-03-31_html-1.txt": {
+    "mtime": 1760048186.9663005,
+    "path": "data/raw/fomc/2020-03-31_html-1.txt",
+    "rows": 48,
+    "sha1": "4bd9b04530f8e6e69faf4ae810aedfccd1e112b8",
+    "size": 5498
+  },
+  "data/raw/fomc/2020-03-31_html-2.txt": {
+    "mtime": 1760048190.0533311,
+    "path": "data/raw/fomc/2020-03-31_html-2.txt",
+    "rows": 184,
+    "sha1": "780a9b2e3a99f49ea4429ba5c6c2120c24b23b0b",
+    "size": 66828
+  },
+  "data/raw/fomc/2020-03-31_html-3.txt": {
+    "mtime": 1760048191.9830296,
+    "path": "data/raw/fomc/2020-03-31_html-3.txt",
+    "rows": 54,
+    "sha1": "3b42ce6c183d33c163e79d709fbe6e3463840173",
+    "size": 4959
+  },
+  "data/raw/fomc/2020-03-31_html.txt": {
+    "mtime": 1760048183.9461863,
+    "path": "data/raw/fomc/2020-03-31_html.txt",
+    "rows": 40,
+    "sha1": "cdc1c4e02e2c407ba3cd62f8e098e3ec76472613",
+    "size": 1711
+  },
+  "data/raw/fomc/2020-03-31_implementation-note-1.txt": {
+    "mtime": 1760048187.977747,
+    "path": "data/raw/fomc/2020-03-31_implementation-note-1.txt",
+    "rows": 49,
+    "sha1": "4f9b08dac33cbbedee91a4359933677d469f1c21",
+    "size": 4279
+  },
+  "data/raw/fomc/2020-03-31_implementation-note.txt": {
+    "mtime": 1760048184.9237123,
+    "path": "data/raw/fomc/2020-03-31_implementation-note.txt",
+    "rows": 48,
+    "sha1": "379547a6e3d00f38e83cd90d1b7169fb36da12b2",
+    "size": 4508
+  },
+  "data/raw/fomc/2020-03-31_press-conference-1.txt": {
+    "mtime": 1760048188.9534354,
+    "path": "data/raw/fomc/2020-03-31_press-conference-1.txt",
+    "rows": 73,
+    "sha1": "cdf937c300ad9c17802742c9ed55535f8614b34c",
+    "size": 1736
+  },
+  "data/raw/fomc/2020-03-31_press-conference.txt": {
+    "mtime": 1760048185.9636738,
+    "path": "data/raw/fomc/2020-03-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "7459a9433664354217ba1d75b898d3259b7a877c",
+    "size": 1555
+  },
+  "data/raw/fomc/2020-03-31_press-release-1.txt": {
+    "mtime": 1760048192.985516,
+    "path": "data/raw/fomc/2020-03-31_press-release-1.txt",
+    "rows": 39,
+    "sha1": "fa731add36284bb0c2317e11c7d9d95259a3d382",
+    "size": 2684
+  },
+  "data/raw/fomc/2020-03-31_press-release.txt": {
+    "mtime": 1760048191.0294356,
+    "path": "data/raw/fomc/2020-03-31_press-release.txt",
+    "rows": 40,
+    "sha1": "d281a4ba644eab0d05fdfde7a0ec55fe9a218f1e",
+    "size": 2411
+  },
+  "data/raw/fomc/2020-04-30_html-1.txt": {
+    "mtime": 1760048197.0168161,
+    "path": "data/raw/fomc/2020-04-30_html-1.txt",
+    "rows": 191,
+    "sha1": "18a9d0da5225f6b2af855052b71d5128fe183198",
+    "size": 63872
+  },
+  "data/raw/fomc/2020-04-30_html.txt": {
+    "mtime": 1760048193.9941177,
+    "path": "data/raw/fomc/2020-04-30_html.txt",
+    "rows": 43,
+    "sha1": "d9fb12764bbd13ff75a8d8e6c7d23fd753add199",
+    "size": 3702
+  },
+  "data/raw/fomc/2020-04-30_implementation-note.txt": {
+    "mtime": 1760048194.9710474,
+    "path": "data/raw/fomc/2020-04-30_implementation-note.txt",
+    "rows": 52,
+    "sha1": "e8e5ca72809a984733e05e3a250c6b7e29b9baa7",
+    "size": 3317
+  },
+  "data/raw/fomc/2020-04-30_press-conference.txt": {
+    "mtime": 1760048196.0015013,
+    "path": "data/raw/fomc/2020-04-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "e6bdb29dbc5ec3e57842e64458969ffc5c5bf003",
+    "size": 1555
+  },
+  "data/raw/fomc/2020-06-30_html-1.txt": {
+    "mtime": 1760048201.0128016,
+    "path": "data/raw/fomc/2020-06-30_html-1.txt",
+    "rows": 238,
+    "sha1": "9c5e62a8e8240d2b4df97038da79936b19cd9d2d",
+    "size": 68045
+  },
+  "data/raw/fomc/2020-06-30_html.txt": {
+    "mtime": 1760048197.995096,
+    "path": "data/raw/fomc/2020-06-30_html.txt",
+    "rows": 43,
+    "sha1": "5d5d9b437c9446e8f7229dfefff15494f8ca2157",
+    "size": 3702
+  },
+  "data/raw/fomc/2020-06-30_implementation-note.txt": {
+    "mtime": 1760048199.023646,
+    "path": "data/raw/fomc/2020-06-30_implementation-note.txt",
+    "rows": 55,
+    "sha1": "6d840a84a6b440d7023516c64bd1f1ffd21bbad1",
+    "size": 3674
+  },
+  "data/raw/fomc/2020-06-30_press-conference.txt": {
+    "mtime": 1760048200.0126147,
+    "path": "data/raw/fomc/2020-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "b472968a38f286f46f2d9937014c78e789d313ed",
+    "size": 1621
+  },
+  "data/raw/fomc/2020-07-31_html-1.txt": {
+    "mtime": 1760048205.0501816,
+    "path": "data/raw/fomc/2020-07-31_html-1.txt",
+    "rows": 224,
+    "sha1": "c62001f983191f82411b08b9c0a6115adfc55b83",
+    "size": 61347
+  },
+  "data/raw/fomc/2020-07-31_html.txt": {
+    "mtime": 1760048202.0019624,
+    "path": "data/raw/fomc/2020-07-31_html.txt",
+    "rows": 43,
+    "sha1": "85d80e2f3c5ded6a5728bffc843702520d6ceb71",
+    "size": 3836
+  },
+  "data/raw/fomc/2020-07-31_implementation-note.txt": {
+    "mtime": 1760048203.0310972,
+    "path": "data/raw/fomc/2020-07-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "f078e11a3e12a3f0a520925d49b7ece669693cb5",
+    "size": 3518
+  },
+  "data/raw/fomc/2020-07-31_press-conference.txt": {
+    "mtime": 1760048204.0494132,
+    "path": "data/raw/fomc/2020-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "0cb763da717f6c4bed1a60faba5a503ad68cd039",
+    "size": 1553
+  },
+  "data/raw/fomc/2020-08-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048206.0644255,
+    "path": "data/raw/fomc/2020-08-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 65,
+    "sha1": "ca3a5f8d188f612df8de45a7dd3232253ec485c2",
+    "size": 5259
+  },
+  "data/raw/fomc/2020-09-30_html-1.txt": {
+    "mtime": 1760048210.1004584,
+    "path": "data/raw/fomc/2020-09-30_html-1.txt",
+    "rows": 208,
+    "sha1": "d0f150c370b0e5582726c179f1e33a6056f92d2e",
+    "size": 66988
+  },
+  "data/raw/fomc/2020-09-30_html.txt": {
+    "mtime": 1760048207.0549636,
+    "path": "data/raw/fomc/2020-09-30_html.txt",
+    "rows": 44,
+    "sha1": "dbd74452337556214890356f9603ca3e1a6c3dab",
+    "size": 4440
+  },
+  "data/raw/fomc/2020-09-30_implementation-note.txt": {
+    "mtime": 1760048208.0501096,
+    "path": "data/raw/fomc/2020-09-30_implementation-note.txt",
+    "rows": 57,
+    "sha1": "3cf28dd54686eda8e873b1a52d58b2a56b977c72",
+    "size": 3632
+  },
+  "data/raw/fomc/2020-09-30_press-conference.txt": {
+    "mtime": 1760048209.0935743,
+    "path": "data/raw/fomc/2020-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "ea521505a9c482ae69f4ab199ab761a030a1359c",
+    "size": 1656
+  },
+  "data/raw/fomc/2020-11-30_html-1.txt": {
+    "mtime": 1760048214.1575794,
+    "path": "data/raw/fomc/2020-11-30_html-1.txt",
+    "rows": 219,
+    "sha1": "ede618d9b135a8037bcbe7cca6b9be2b905923f6",
+    "size": 64768
+  },
+  "data/raw/fomc/2020-11-30_html.txt": {
+    "mtime": 1760048211.0598428,
+    "path": "data/raw/fomc/2020-11-30_html.txt",
+    "rows": 43,
+    "sha1": "274a88f094dd85de955793660849dbd5c0c99f2c",
+    "size": 3913
+  },
+  "data/raw/fomc/2020-11-30_implementation-note.txt": {
+    "mtime": 1760048212.082669,
+    "path": "data/raw/fomc/2020-11-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "3d04c81505bc7c8f40560d8fd0e42a6ff6943520",
+    "size": 3468
+  },
+  "data/raw/fomc/2020-11-30_press-conference.txt": {
+    "mtime": 1760048213.0830283,
+    "path": "data/raw/fomc/2020-11-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "6343e7c991e2bb2bb4ce22d00ec05fa83a83c37c",
+    "size": 1571
+  },
+  "data/raw/fomc/2020-12-31_html-1.txt": {
+    "mtime": 1760048218.1703014,
+    "path": "data/raw/fomc/2020-12-31_html-1.txt",
+    "rows": 221,
+    "sha1": "a313b734b5f26c6c5dbf4a08fdf651a1c2c992ce",
+    "size": 56642
+  },
+  "data/raw/fomc/2020-12-31_html.txt": {
+    "mtime": 1760048215.1133194,
+    "path": "data/raw/fomc/2020-12-31_html.txt",
+    "rows": 43,
+    "sha1": "0fda9758fee69ae662bb7e69d99fa2f8a14ec83a",
+    "size": 4024
+  },
+  "data/raw/fomc/2020-12-31_implementation-note.txt": {
+    "mtime": 1760048216.0864863,
+    "path": "data/raw/fomc/2020-12-31_implementation-note.txt",
+    "rows": 56,
+    "sha1": "1f1a0df7562b5a4fdd4d38280829d8b443db9db2",
+    "size": 3658
+  },
+  "data/raw/fomc/2020-12-31_press-conference.txt": {
+    "mtime": 1760048217.1133487,
+    "path": "data/raw/fomc/2020-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "1c8e705e943108af938862d0325c07db9cb725b0",
+    "size": 1650
+  },
+  "data/raw/fomc/2021-01-01_minutes.txt": {
+    "mtime": 1759117099.287904,
+    "path": "data/raw/fomc/2021-01-01_minutes.txt",
+    "rows": 3614,
+    "sha1": "862ac625a7cc33446bd51f1341a67c732b7799ba",
+    "size": 655692
+  },
+  "data/raw/fomc/2021-01-31_html-1.txt": {
+    "mtime": 1760048150.8074718,
+    "path": "data/raw/fomc/2021-01-31_html-1.txt",
+    "rows": 386,
+    "sha1": "6156b3ec630ff1371bef41d63e5ed156855d7a5d",
+    "size": 85423
+  },
+  "data/raw/fomc/2021-01-31_html.txt": {
+    "mtime": 1760048146.742492,
+    "path": "data/raw/fomc/2021-01-31_html.txt",
+    "rows": 43,
+    "sha1": "ba459262d3e82947297316c6f004a91143637da3",
+    "size": 4101
+  },
+  "data/raw/fomc/2021-01-31_implementation-note.txt": {
+    "mtime": 1760048147.7794576,
+    "path": "data/raw/fomc/2021-01-31_implementation-note.txt",
+    "rows": 56,
+    "sha1": "5a4fd4200d24c3716a0be37470ff5a7926376c24",
+    "size": 3542
+  },
+  "data/raw/fomc/2021-01-31_press-conference.txt": {
+    "mtime": 1760048148.7881732,
+    "path": "data/raw/fomc/2021-01-31_press-conference.txt",
+    "rows": 72,
+    "sha1": "3e599a8dbce5b5ff166d760e50ffdbec406de894",
+    "size": 1670
+  },
+  "data/raw/fomc/2021-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048149.762754,
+    "path": "data/raw/fomc/2021-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 43,
+    "sha1": "a30ff404a2941f1be2cd0238ef9b332fdfc9d1b3",
+    "size": 1551
+  },
+  "data/raw/fomc/2021-03-31_html-1.txt": {
+    "mtime": 1760048154.8231728,
+    "path": "data/raw/fomc/2021-03-31_html-1.txt",
+    "rows": 211,
+    "sha1": "2266ce25641ddb3ca55fb41eb63ac5c457e8fd7f",
+    "size": 59144
+  },
+  "data/raw/fomc/2021-03-31_html.txt": {
+    "mtime": 1760048151.7913294,
+    "path": "data/raw/fomc/2021-03-31_html.txt",
+    "rows": 43,
+    "sha1": "3e6a3f2f1219a3860566f16705e999c514d82d5d",
+    "size": 4063
+  },
+  "data/raw/fomc/2021-03-31_implementation-note.txt": {
+    "mtime": 1760048152.7835386,
+    "path": "data/raw/fomc/2021-03-31_implementation-note.txt",
+    "rows": 57,
+    "sha1": "606db9bcf0b375e5f0328e7f274c25386fdc6565",
+    "size": 3627
+  },
+  "data/raw/fomc/2021-03-31_press-conference.txt": {
+    "mtime": 1760048153.8354545,
+    "path": "data/raw/fomc/2021-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "60cd39373394f960f7be3a0fa98256cced38eed6",
+    "size": 1630
+  },
+  "data/raw/fomc/2021-04-30_html-1.txt": {
+    "mtime": 1760048158.812229,
+    "path": "data/raw/fomc/2021-04-30_html-1.txt",
+    "rows": 220,
+    "sha1": "d372ec05b606051faea8f4be70b3c601ccf8a5f2",
+    "size": 59766
+  },
+  "data/raw/fomc/2021-04-30_html.txt": {
+    "mtime": 1760048155.8260586,
+    "path": "data/raw/fomc/2021-04-30_html.txt",
+    "rows": 43,
+    "sha1": "e13d24f4c69c0478584477572ce529b713330b57",
+    "size": 4051
+  },
+  "data/raw/fomc/2021-04-30_implementation-note.txt": {
+    "mtime": 1760048156.7876647,
+    "path": "data/raw/fomc/2021-04-30_implementation-note.txt",
+    "rows": 55,
+    "sha1": "c920e63d6bc793b2235cf79251d99386f3358d93",
+    "size": 3466
+  },
+  "data/raw/fomc/2021-04-30_press-conference.txt": {
+    "mtime": 1760048157.8798199,
+    "path": "data/raw/fomc/2021-04-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "a16b91a86e0f1510b7bf64dfd8627fb0ee5a2e51",
+    "size": 1555
+  },
+  "data/raw/fomc/2021-06-30_html-1.txt": {
+    "mtime": 1760048162.8798373,
+    "path": "data/raw/fomc/2021-06-30_html-1.txt",
+    "rows": 227,
+    "sha1": "26a48c0020f821e33981128f8c98a58b7f374261",
+    "size": 64610
+  },
+  "data/raw/fomc/2021-06-30_html.txt": {
+    "mtime": 1760048159.8158271,
+    "path": "data/raw/fomc/2021-06-30_html.txt",
+    "rows": 43,
+    "sha1": "1fa53b1859d6b830338343631e65395455fee992",
+    "size": 4011
+  },
+  "data/raw/fomc/2021-06-30_implementation-note.txt": {
+    "mtime": 1760048160.8335524,
+    "path": "data/raw/fomc/2021-06-30_implementation-note.txt",
+    "rows": 54,
+    "sha1": "8e161223a5ca6b22fb1d80ec753d1b7c6136a652",
+    "size": 3802
+  },
+  "data/raw/fomc/2021-06-30_press-conference.txt": {
+    "mtime": 1760048161.8464255,
+    "path": "data/raw/fomc/2021-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "cbaf2af1df950558c00ef61f34c0c613428ddc60",
+    "size": 1623
+  },
+  "data/raw/fomc/2021-07-31_html-1.txt": {
+    "mtime": 1760048166.8766646,
+    "path": "data/raw/fomc/2021-07-31_html-1.txt",
+    "rows": 239,
+    "sha1": "dc3653d0b8ee4648f175b15a843ee05f81af396e",
+    "size": 71288
+  },
+  "data/raw/fomc/2021-07-31_html.txt": {
+    "mtime": 1760048163.8418365,
+    "path": "data/raw/fomc/2021-07-31_html.txt",
+    "rows": 43,
+    "sha1": "befce83c2d90c9e65df8e16a477c85140204f615",
+    "size": 4094
+  },
+  "data/raw/fomc/2021-07-31_implementation-note.txt": {
+    "mtime": 1760048164.8432124,
+    "path": "data/raw/fomc/2021-07-31_implementation-note.txt",
+    "rows": 60,
+    "sha1": "51c883a616547cee7d2087d80c2a450beb88c548",
+    "size": 3972
+  },
+  "data/raw/fomc/2021-07-31_press-conference.txt": {
+    "mtime": 1760048165.8654525,
+    "path": "data/raw/fomc/2021-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "c1c3014fdead7fdf7210c82f607a61fe25403803",
+    "size": 1553
+  },
+  "data/raw/fomc/2021-09-30_html-1.txt": {
+    "mtime": 1760048170.8656132,
+    "path": "data/raw/fomc/2021-09-30_html-1.txt",
+    "rows": 194,
+    "sha1": "232b6406a4787a147ce0f33548fd280ad3bd28b7",
+    "size": 59377
+  },
+  "data/raw/fomc/2021-09-30_html.txt": {
+    "mtime": 1760048167.8488948,
+    "path": "data/raw/fomc/2021-09-30_html.txt",
+    "rows": 43,
+    "sha1": "1edf0ac0d1cf2c0d259624d43bf90fbc4f349b34",
+    "size": 4213
+  },
+  "data/raw/fomc/2021-09-30_implementation-note.txt": {
+    "mtime": 1760048168.8776588,
+    "path": "data/raw/fomc/2021-09-30_implementation-note.txt",
+    "rows": 56,
+    "sha1": "a67d408633f53cd714ea2ff30d81009d11f3df54",
+    "size": 3647
+  },
+  "data/raw/fomc/2021-09-30_press-conference.txt": {
+    "mtime": 1760048169.8649287,
+    "path": "data/raw/fomc/2021-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "a3de994811610e7aee4861cc72c42ccb42ed253f",
+    "size": 1656
+  },
+  "data/raw/fomc/2021-11-30_html-1.txt": {
+    "mtime": 1760048174.8797019,
+    "path": "data/raw/fomc/2021-11-30_html-1.txt",
+    "rows": 194,
+    "sha1": "0ad30131281c3ea7454951a2db92fa000f1b96ff",
+    "size": 56606
+  },
+  "data/raw/fomc/2021-11-30_html.txt": {
+    "mtime": 1760048171.872498,
+    "path": "data/raw/fomc/2021-11-30_html.txt",
+    "rows": 43,
+    "sha1": "873de2d2df7188ba2c8d0a58c30889a71cc423cb",
+    "size": 4892
+  },
+  "data/raw/fomc/2021-11-30_implementation-note.txt": {
+    "mtime": 1760048172.88664,
+    "path": "data/raw/fomc/2021-11-30_implementation-note.txt",
+    "rows": 58,
+    "sha1": "a6829bd2d672a5e29ccd3bd1c3ebccd46554db8b",
+    "size": 4026
+  },
+  "data/raw/fomc/2021-11-30_press-conference.txt": {
+    "mtime": 1760048173.936385,
+    "path": "data/raw/fomc/2021-11-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "6afe69cd12930fc279f4ecc97bc4a457c07a7a05",
+    "size": 1571
+  },
+  "data/raw/fomc/2021-12-31_html-1.txt": {
+    "mtime": 1760048178.939946,
+    "path": "data/raw/fomc/2021-12-31_html-1.txt",
+    "rows": 231,
+    "sha1": "88d4d9331d4e68dc19cda2da01cbf01775764647",
+    "size": 63720
+  },
+  "data/raw/fomc/2021-12-31_html.txt": {
+    "mtime": 1760048175.8993068,
+    "path": "data/raw/fomc/2021-12-31_html.txt",
+    "rows": 43,
+    "sha1": "14512e235956230096a7cef2de166b5eb5283aaa",
+    "size": 4285
+  },
+  "data/raw/fomc/2021-12-31_implementation-note.txt": {
+    "mtime": 1760048176.8805873,
+    "path": "data/raw/fomc/2021-12-31_implementation-note.txt",
+    "rows": 57,
+    "sha1": "ac27fd64536124953b69c708d00b2a51ec6c79e9",
+    "size": 3824
+  },
+  "data/raw/fomc/2021-12-31_press-conference.txt": {
+    "mtime": 1760048177.9031885,
+    "path": "data/raw/fomc/2021-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "8680c8bad4c1e1a1010d7b10c2ee895e1947b857",
+    "size": 1650
+  },
+  "data/raw/fomc/2022-01-01_minutes.txt": {
+    "mtime": 1759117095.5308297,
+    "path": "data/raw/fomc/2022-01-01_minutes.txt",
+    "rows": 3361,
+    "sha1": "e391d4db64623ecc2be4234c0e8f6c67654ca7b5",
+    "size": 613426
+  },
+  "data/raw/fomc/2022-01-31_html-1.txt": {
+    "mtime": 1760048116.6528275,
+    "path": "data/raw/fomc/2022-01-31_html-1.txt",
+    "rows": 418,
+    "sha1": "8b140cf786253c7c9e1dd47f03d4d94d28c330d7",
+    "size": 90721
+  },
+  "data/raw/fomc/2022-01-31_html.txt": {
+    "mtime": 1760048111.647613,
+    "path": "data/raw/fomc/2022-01-31_html.txt",
+    "rows": 42,
+    "sha1": "03f89a8e5828a62ce0b1bf90e29bde65112ede24",
+    "size": 3660
+  },
+  "data/raw/fomc/2022-01-31_implementation-note.txt": {
+    "mtime": 1760048112.6222062,
+    "path": "data/raw/fomc/2022-01-31_implementation-note.txt",
+    "rows": 57,
+    "sha1": "0de8c382c020bdb1af7983cdeefdb8af8805093c",
+    "size": 3816
+  },
+  "data/raw/fomc/2022-01-31_press-conference.txt": {
+    "mtime": 1760048113.5946848,
+    "path": "data/raw/fomc/2022-01-31_press-conference.txt",
+    "rows": 74,
+    "sha1": "3569df8244ae3f194b4e5adef479070a343c8bdc",
+    "size": 1783
+  },
+  "data/raw/fomc/2022-01-31_principles-for-reducing-the-size-of-the-federal-reserve-s-balance-sheet.txt": {
+    "mtime": 1760048115.6344707,
+    "path": "data/raw/fomc/2022-01-31_principles-for-reducing-the-size-of-the-federal-reserve-s-balance-sheet.txt",
+    "rows": 42,
+    "sha1": "7adba86a4e107d245f06b45eff113da13a83db6d",
+    "size": 2458
+  },
+  "data/raw/fomc/2022-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048114.6123114,
+    "path": "data/raw/fomc/2022-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 42,
+    "sha1": "15e6bffe4cc67fc69753046d14e8feabb6e0bc91",
+    "size": 1477
+  },
+  "data/raw/fomc/2022-03-31_html-1.txt": {
+    "mtime": 1760048120.67654,
+    "path": "data/raw/fomc/2022-03-31_html-1.txt",
+    "rows": 222,
+    "sha1": "78e9bd8206183573188ff8865cbeae8e24294ecf",
+    "size": 58709
+  },
+  "data/raw/fomc/2022-03-31_html.txt": {
+    "mtime": 1760048117.6183217,
+    "path": "data/raw/fomc/2022-03-31_html.txt",
+    "rows": 42,
+    "sha1": "0db69b7918e00218cf7b8080f6a68e022e1a0b2b",
+    "size": 3150
+  },
+  "data/raw/fomc/2022-03-31_implementation-note.txt": {
+    "mtime": 1760048118.6401265,
+    "path": "data/raw/fomc/2022-03-31_implementation-note.txt",
+    "rows": 52,
+    "sha1": "29b2c77b1020efccd3c89291122c245edf314a41",
+    "size": 3432
+  },
+  "data/raw/fomc/2022-03-31_press-conference.txt": {
+    "mtime": 1760048119.6395738,
+    "path": "data/raw/fomc/2022-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "ae6e8ef1bedea426b1e333abcc92990159722d8e",
+    "size": 1630
+  },
+  "data/raw/fomc/2022-05-31_html-1.txt": {
+    "mtime": 1760048125.6547465,
+    "path": "data/raw/fomc/2022-05-31_html-1.txt",
+    "rows": 197,
+    "sha1": "3077e7256c6a723e7f3946ed249646d3000c70fe",
+    "size": 53331
+  },
+  "data/raw/fomc/2022-05-31_html.txt": {
+    "mtime": 1760048121.642792,
+    "path": "data/raw/fomc/2022-05-31_html.txt",
+    "rows": 44,
+    "sha1": "e9a5732bd3558ac5f8434e39836a4b6990cf1981",
+    "size": 3395
+  },
+  "data/raw/fomc/2022-05-31_implementation-note.txt": {
+    "mtime": 1760048122.6551306,
+    "path": "data/raw/fomc/2022-05-31_implementation-note.txt",
+    "rows": 56,
+    "sha1": "392e85cf1099f5ba060cfcf24c0a8963b9677aa0",
+    "size": 3907
+  },
+  "data/raw/fomc/2022-05-31_plans-for-reducing-the-size-of-the-federal-reserve-s-balance-sheet.txt": {
+    "mtime": 1760048124.6739583,
+    "path": "data/raw/fomc/2022-05-31_plans-for-reducing-the-size-of-the-federal-reserve-s-balance-sheet.txt",
+    "rows": 49,
+    "sha1": "7608ad954ef7ae6d65d1b1ee2931cfd6a06f14b6",
+    "size": 3057
+  },
+  "data/raw/fomc/2022-05-31_press-conference.txt": {
+    "mtime": 1760048123.6969335,
+    "path": "data/raw/fomc/2022-05-31_press-conference.txt",
+    "rows": 72,
+    "sha1": "d906efdae0f2e6ba9c16f0616132054e010a1a00",
+    "size": 1645
+  },
+  "data/raw/fomc/2022-06-30_html-1.txt": {
+    "mtime": 1760048129.7074988,
+    "path": "data/raw/fomc/2022-06-30_html-1.txt",
+    "rows": 196,
+    "sha1": "dcc2ee92731ae9d8bdfc7f0c46571ebf91eccda7",
+    "size": 53970
+  },
+  "data/raw/fomc/2022-06-30_html.txt": {
+    "mtime": 1760048126.6672242,
+    "path": "data/raw/fomc/2022-06-30_html.txt",
+    "rows": 42,
+    "sha1": "4d004430fcdf734d143c95fa4eb9f10497a4dc4a",
+    "size": 3294
+  },
+  "data/raw/fomc/2022-06-30_implementation-note.txt": {
+    "mtime": 1760048127.7156034,
+    "path": "data/raw/fomc/2022-06-30_implementation-note.txt",
+    "rows": 54,
+    "sha1": "41a02ef268b1460551d7474e94478f7fafbe2544",
+    "size": 3688
+  },
+  "data/raw/fomc/2022-06-30_press-conference.txt": {
+    "mtime": 1760048128.6950624,
+    "path": "data/raw/fomc/2022-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "2cb9b546e4e23a8b1796e85c6cf21be9add0002c",
+    "size": 1623
+  },
+  "data/raw/fomc/2022-07-31_html-1.txt": {
+    "mtime": 1760048133.7034202,
+    "path": "data/raw/fomc/2022-07-31_html-1.txt",
+    "rows": 197,
+    "sha1": "c7a5ccf5178dc12ad46b0baf25918f0c124a60d7",
+    "size": 57951
+  },
+  "data/raw/fomc/2022-07-31_html.txt": {
+    "mtime": 1760048130.687255,
+    "path": "data/raw/fomc/2022-07-31_html.txt",
+    "rows": 42,
+    "sha1": "4d6d9c1ec219484671fb943252f4881cb2be0fe5",
+    "size": 2956
+  },
+  "data/raw/fomc/2022-07-31_implementation-note.txt": {
+    "mtime": 1760048131.6966422,
+    "path": "data/raw/fomc/2022-07-31_implementation-note.txt",
+    "rows": 55,
+    "sha1": "fe466fd83eea48dba227bf92e04e594e5f8d8f73",
+    "size": 4405
+  },
+  "data/raw/fomc/2022-07-31_press-conference.txt": {
+    "mtime": 1760048132.7013454,
+    "path": "data/raw/fomc/2022-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "fcfb4b2361255ccb0ca034ea31a46c851b95304d",
+    "size": 1553
+  },
+  "data/raw/fomc/2022-09-30_html-1.txt": {
+    "mtime": 1760048137.729772,
+    "path": "data/raw/fomc/2022-09-30_html-1.txt",
+    "rows": 223,
+    "sha1": "4be325e84b357855a0acea6f101445a0ee021344",
+    "size": 53134
+  },
+  "data/raw/fomc/2022-09-30_html.txt": {
+    "mtime": 1760048134.7209365,
+    "path": "data/raw/fomc/2022-09-30_html.txt",
+    "rows": 42,
+    "sha1": "3d670824d7cba0df334c2dda640b694d166c9972",
+    "size": 2963
+  },
+  "data/raw/fomc/2022-09-30_implementation-note.txt": {
+    "mtime": 1760048135.7158022,
+    "path": "data/raw/fomc/2022-09-30_implementation-note.txt",
+    "rows": 52,
+    "sha1": "5f022462b6742e6848bce58662ae14fb81edf48b",
+    "size": 3770
+  },
+  "data/raw/fomc/2022-09-30_press-conference.txt": {
+    "mtime": 1760048136.756426,
+    "path": "data/raw/fomc/2022-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "6349c95136be16ce3b0adcad888cecf06b207962",
+    "size": 1656
+  },
+  "data/raw/fomc/2022-11-30_html-1.txt": {
+    "mtime": 1760048141.7594895,
+    "path": "data/raw/fomc/2022-11-30_html-1.txt",
+    "rows": 214,
+    "sha1": "3134428f1794c15761a53625574caeb5f4acf96c",
+    "size": 55054
+  },
+  "data/raw/fomc/2022-11-30_html.txt": {
+    "mtime": 1760048138.7286644,
+    "path": "data/raw/fomc/2022-11-30_html.txt",
+    "rows": 45,
+    "sha1": "9e1b88aafcb95ff4ec5c775d775f29eed202098f",
+    "size": 3434
+  },
+  "data/raw/fomc/2022-11-30_implementation-note.txt": {
+    "mtime": 1760048139.712522,
+    "path": "data/raw/fomc/2022-11-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "f77c24a690c75b1f4cda3946740ae0e6b39b66fb",
+    "size": 3749
+  },
+  "data/raw/fomc/2022-11-30_press-conference.txt": {
+    "mtime": 1760048140.7587876,
+    "path": "data/raw/fomc/2022-11-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "0de34f830ac73ec5aed7cbdd2f839e09c30746bb",
+    "size": 1571
+  },
+  "data/raw/fomc/2022-12-31_html-1.txt": {
+    "mtime": 1760048145.800502,
+    "path": "data/raw/fomc/2022-12-31_html-1.txt",
+    "rows": 226,
+    "sha1": "956dc15020bd46174d9dce63c8dec8450bfaaad7",
+    "size": 52812
+  },
+  "data/raw/fomc/2022-12-31_html.txt": {
+    "mtime": 1760048142.7531464,
+    "path": "data/raw/fomc/2022-12-31_html.txt",
+    "rows": 45,
+    "sha1": "d30ac9eca1236960c1187c3b698d99c588db02a8",
+    "size": 3435
+  },
+  "data/raw/fomc/2022-12-31_implementation-note.txt": {
+    "mtime": 1760048143.7538755,
+    "path": "data/raw/fomc/2022-12-31_implementation-note.txt",
+    "rows": 52,
+    "sha1": "d74c5078929ca3edf35751cad6060df32e9ff983",
+    "size": 3800
+  },
+  "data/raw/fomc/2022-12-31_press-conference.txt": {
+    "mtime": 1760048144.846105,
+    "path": "data/raw/fomc/2022-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "c223ecdbf20ea2f3ec97f9087e5653f9d10395d4",
+    "size": 1650
+  },
+  "data/raw/fomc/2023-01-01_minutes.txt": {
+    "mtime": 1759117091.7648935,
+    "path": "data/raw/fomc/2023-01-01_minutes.txt",
+    "rows": 3505,
+    "sha1": "1f90edc02fbca9ee105ce12b69c73503e716dceb",
+    "size": 595280
+  },
+  "data/raw/fomc/2023-02-28_html-1.txt": {
+    "mtime": 1760048082.4600763,
+    "path": "data/raw/fomc/2023-02-28_html-1.txt",
+    "rows": 276,
+    "sha1": "1ed3e7bce7a2858c8e0c39e48a15c9bbf4982d43",
+    "size": 59235
+  },
+  "data/raw/fomc/2023-02-28_html.txt": {
+    "mtime": 1760048078.4401495,
+    "path": "data/raw/fomc/2023-02-28_html.txt",
+    "rows": 45,
+    "sha1": "2bcd6d51e58991a66c46b7c628f8cb2e072cced9",
+    "size": 3181
+  },
+  "data/raw/fomc/2023-02-28_implementation-note.txt": {
+    "mtime": 1760048079.3973622,
+    "path": "data/raw/fomc/2023-02-28_implementation-note.txt",
+    "rows": 53,
+    "sha1": "c1f2b73ed7a94daecac37d6d8cbc6acba610439f",
+    "size": 3764
+  },
+  "data/raw/fomc/2023-02-28_press-conference.txt": {
+    "mtime": 1760048080.435368,
+    "path": "data/raw/fomc/2023-02-28_press-conference.txt",
+    "rows": 72,
+    "sha1": "df54de213602af66d5946c83348ff1cc69243178",
+    "size": 1690
+  },
+  "data/raw/fomc/2023-02-28_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048081.468755,
+    "path": "data/raw/fomc/2023-02-28_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 44,
+    "sha1": "cd687c21ea1d44aa97c1653c295de708d0663c99",
+    "size": 1556
+  },
+  "data/raw/fomc/2023-03-31_html-1.txt": {
+    "mtime": 1760048086.4802332,
+    "path": "data/raw/fomc/2023-03-31_html-1.txt",
+    "rows": 223,
+    "sha1": "362e3c917217605e62634e2bb7c3b7c3c94477a0",
+    "size": 51067
+  },
+  "data/raw/fomc/2023-03-31_html.txt": {
+    "mtime": 1760048083.4720793,
+    "path": "data/raw/fomc/2023-03-31_html.txt",
+    "rows": 45,
+    "sha1": "f7fe5227f5478d1be6f63474362e61401a000d99",
+    "size": 3377
+  },
+  "data/raw/fomc/2023-03-31_implementation-note.txt": {
+    "mtime": 1760048084.4544578,
+    "path": "data/raw/fomc/2023-03-31_implementation-note.txt",
+    "rows": 54,
+    "sha1": "8347fba9c4f15c1fd1d5f32411d00ef3b2095927",
+    "size": 3550
+  },
+  "data/raw/fomc/2023-03-31_press-conference.txt": {
+    "mtime": 1760048085.4472747,
+    "path": "data/raw/fomc/2023-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "6cd204e6771795d56bd2dd45717112919cc2c370",
+    "size": 1630
+  },
+  "data/raw/fomc/2023-05-31_html-1.txt": {
+    "mtime": 1760048090.7269979,
+    "path": "data/raw/fomc/2023-05-31_html-1.txt",
+    "rows": 233,
+    "sha1": "d8a9b2295a71b8add131fca06c5a7912afbc30a1",
+    "size": 55942
+  },
+  "data/raw/fomc/2023-05-31_html.txt": {
+    "mtime": 1760048087.4563253,
+    "path": "data/raw/fomc/2023-05-31_html.txt",
+    "rows": 45,
+    "sha1": "d0f4b5fce7e09021697a7d00fce85b63c17f179b",
+    "size": 3160
+  },
+  "data/raw/fomc/2023-05-31_implementation-note.txt": {
+    "mtime": 1760048088.470734,
+    "path": "data/raw/fomc/2023-05-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "68bd463ac9040c646e4a6b33e36cd915931f13cf",
+    "size": 3575
+  },
+  "data/raw/fomc/2023-05-31_press-conference.txt": {
+    "mtime": 1760048089.4668875,
+    "path": "data/raw/fomc/2023-05-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "3721f89e8c50789de441065f73462c52d205bddd",
+    "size": 1541
+  },
+  "data/raw/fomc/2023-06-30_html-1.txt": {
+    "mtime": 1760048094.5105712,
+    "path": "data/raw/fomc/2023-06-30_html-1.txt",
+    "rows": 218,
+    "sha1": "f8242ba7a6432c0deef716e40a76d1b82abe9a1b",
+    "size": 48086
+  },
+  "data/raw/fomc/2023-06-30_html.txt": {
+    "mtime": 1760048091.4932055,
+    "path": "data/raw/fomc/2023-06-30_html.txt",
+    "rows": 45,
+    "sha1": "7c5a100ff3adb54dd0b4ab9b23089afb833f9d8b",
+    "size": 3230
+  },
+  "data/raw/fomc/2023-06-30_implementation-note.txt": {
+    "mtime": 1760048092.5621762,
+    "path": "data/raw/fomc/2023-06-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "e46167f100fd5f59ff786711157c253bea7af5d2",
+    "size": 3302
+  },
+  "data/raw/fomc/2023-06-30_press-conference.txt": {
+    "mtime": 1760048093.5042684,
+    "path": "data/raw/fomc/2023-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "88862b4a5e27373cc93c0049a3f78d0e72a0c623",
+    "size": 1623
+  },
+  "data/raw/fomc/2023-07-31_html-1.txt": {
+    "mtime": 1760048098.5532718,
+    "path": "data/raw/fomc/2023-07-31_html-1.txt",
+    "rows": 212,
+    "sha1": "46b2b1c2c3af15ae1927e4fef4f504480cfb2285",
+    "size": 47219
+  },
+  "data/raw/fomc/2023-07-31_html.txt": {
+    "mtime": 1760048095.509565,
+    "path": "data/raw/fomc/2023-07-31_html.txt",
+    "rows": 45,
+    "sha1": "6274ac21a370bc9d5952e4133d5421152920bbfa",
+    "size": 3187
+  },
+  "data/raw/fomc/2023-07-31_implementation-note.txt": {
+    "mtime": 1760048096.5211825,
+    "path": "data/raw/fomc/2023-07-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "d67731d26e3ae44c224ab9b76c0feea9bc13f0c4",
+    "size": 3575
+  },
+  "data/raw/fomc/2023-07-31_press-conference.txt": {
+    "mtime": 1760048097.5222447,
+    "path": "data/raw/fomc/2023-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "30640fd21d0bcfec67f770b1cdfe07b93f5c2884",
+    "size": 1553
+  },
+  "data/raw/fomc/2023-09-30_html-1.txt": {
+    "mtime": 1760048102.574219,
+    "path": "data/raw/fomc/2023-09-30_html-1.txt",
+    "rows": 214,
+    "sha1": "1176244f68ad811f704381476f1eacbfb5fa818c",
+    "size": 44824
+  },
+  "data/raw/fomc/2023-09-30_html.txt": {
+    "mtime": 1760048099.54375,
+    "path": "data/raw/fomc/2023-09-30_html.txt",
+    "rows": 45,
+    "sha1": "5cefc542a4f075ef75b3e8b8289d302b5b5b738b",
+    "size": 3234
+  },
+  "data/raw/fomc/2023-09-30_implementation-note.txt": {
+    "mtime": 1760048100.5410118,
+    "path": "data/raw/fomc/2023-09-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "2a744f73a2d46ed2674d471e7c06623e3a8ab9f9",
+    "size": 3337
+  },
+  "data/raw/fomc/2023-09-30_press-conference.txt": {
+    "mtime": 1760048101.5566127,
+    "path": "data/raw/fomc/2023-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "c2eae8275af07219f0ec2ccf54a56f8b117c15e6",
+    "size": 1656
+  },
+  "data/raw/fomc/2023-11-30_html-1.txt": {
+    "mtime": 1760048106.621238,
+    "path": "data/raw/fomc/2023-11-30_html-1.txt",
+    "rows": 218,
+    "sha1": "a9d515957ec5518b3c4e235346f2a5360f1eb12e",
+    "size": 47418
+  },
+  "data/raw/fomc/2023-11-30_html.txt": {
+    "mtime": 1760048103.6115947,
+    "path": "data/raw/fomc/2023-11-30_html.txt",
+    "rows": 45,
+    "sha1": "22c076e8ee45ae4d5b3c8d6c7801a0f7efeef426",
+    "size": 3268
+  },
+  "data/raw/fomc/2023-11-30_implementation-note.txt": {
+    "mtime": 1760048104.5552943,
+    "path": "data/raw/fomc/2023-11-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "b89262ef69af1c6e19fc7df57f6d86f8b6e568bf",
+    "size": 3325
+  },
+  "data/raw/fomc/2023-11-30_press-conference.txt": {
+    "mtime": 1760048105.561427,
+    "path": "data/raw/fomc/2023-11-30_press-conference.txt",
+    "rows": 70,
+    "sha1": "a3e4e92b5004e67a3636fdd5c22e50c266cca0a9",
+    "size": 1589
+  },
+  "data/raw/fomc/2023-12-31_html-1.txt": {
+    "mtime": 1760048110.700519,
+    "path": "data/raw/fomc/2023-12-31_html-1.txt",
+    "rows": 210,
+    "sha1": "1eb1fddd554cb6c1e7cad5244b42156aed978580",
+    "size": 46923
+  },
+  "data/raw/fomc/2023-12-31_html.txt": {
+    "mtime": 1760048107.5953414,
+    "path": "data/raw/fomc/2023-12-31_html.txt",
+    "rows": 45,
+    "sha1": "6393e8a0180293a630f05819db510bbf457e1654",
+    "size": 3322
+  },
+  "data/raw/fomc/2023-12-31_implementation-note.txt": {
+    "mtime": 1760048108.5392513,
+    "path": "data/raw/fomc/2023-12-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "15a584c00d3d6f10e7850c7c36762007a6d52d60",
+    "size": 3330
+  },
+  "data/raw/fomc/2023-12-31_press-conference.txt": {
+    "mtime": 1760048109.614352,
+    "path": "data/raw/fomc/2023-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "1f98206bce353abe907f53e3ba554171f6bda9f1",
+    "size": 1650
+  },
+  "data/raw/fomc/2024-01-01_minutes.txt": {
+    "mtime": 1759117088.0406215,
+    "path": "data/raw/fomc/2024-01-01_minutes.txt",
+    "rows": 2882,
+    "sha1": "9161b22697453c88e8696abbd67798e263e1f34b",
+    "size": 533202
+  },
+  "data/raw/fomc/2024-01-31_html-1.txt": {
+    "mtime": 1760048049.378326,
+    "path": "data/raw/fomc/2024-01-31_html-1.txt",
+    "rows": 274,
+    "sha1": "74f1690b54621fa8ba305445638b9292edc5589c",
+    "size": 51314
+  },
+  "data/raw/fomc/2024-01-31_html.txt": {
+    "mtime": 1760048045.2734895,
+    "path": "data/raw/fomc/2024-01-31_html.txt",
+    "rows": 45,
+    "sha1": "9a25a7b381c7553992342233d980da8bcb50d4e0",
+    "size": 3134
+  },
+  "data/raw/fomc/2024-01-31_implementation-note.txt": {
+    "mtime": 1760048046.2692325,
+    "path": "data/raw/fomc/2024-01-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "36cd8b4d70ac9675ec1826576121c06126d321c5",
+    "size": 3328
+  },
+  "data/raw/fomc/2024-01-31_press-conference.txt": {
+    "mtime": 1760048047.297193,
+    "path": "data/raw/fomc/2024-01-31_press-conference.txt",
+    "rows": 72,
+    "sha1": "f65377d2cb97b27913466e9b3ee285d5871f7b8e",
+    "size": 1670
+  },
+  "data/raw/fomc/2024-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048048.3303878,
+    "path": "data/raw/fomc/2024-01-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 44,
+    "sha1": "8d51fdd0c8285d6ca58799735861326a51fe368d",
+    "size": 1545
+  },
+  "data/raw/fomc/2024-03-31_html-1.txt": {
+    "mtime": 1760048053.3084533,
+    "path": "data/raw/fomc/2024-03-31_html-1.txt",
+    "rows": 229,
+    "sha1": "564396d5f5486d4f307df568c80f48e74ec4f455",
+    "size": 49783
+  },
+  "data/raw/fomc/2024-03-31_html.txt": {
+    "mtime": 1760048050.4582105,
+    "path": "data/raw/fomc/2024-03-31_html.txt",
+    "rows": 45,
+    "sha1": "b60489be34204d001aa323106b9b18f42a3ea3bc",
+    "size": 3094
+  },
+  "data/raw/fomc/2024-03-31_implementation-note.txt": {
+    "mtime": 1760048051.265779,
+    "path": "data/raw/fomc/2024-03-31_implementation-note.txt",
+    "rows": 54,
+    "sha1": "dc59bc2edf503d91e499850eec65ddf015d0b4b8",
+    "size": 3309
+  },
+  "data/raw/fomc/2024-03-31_press-conference.txt": {
+    "mtime": 1760048052.286661,
+    "path": "data/raw/fomc/2024-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "bf907e28e9531b81f5488d3f4ae38bda4efe3204",
+    "size": 1630
+  },
+  "data/raw/fomc/2024-05-31_html-1.txt": {
+    "mtime": 1760048057.3286765,
+    "path": "data/raw/fomc/2024-05-31_html-1.txt",
+    "rows": 218,
+    "sha1": "2396a8fe0e77457a0467c0c22891d62a1491d4a6",
+    "size": 48815
+  },
+  "data/raw/fomc/2024-05-31_html.txt": {
+    "mtime": 1760048054.2998953,
+    "path": "data/raw/fomc/2024-05-31_html.txt",
+    "rows": 45,
+    "sha1": "f8dbdc077ac9a9daffc9cc80fb637358c7f9625d",
+    "size": 3586
+  },
+  "data/raw/fomc/2024-05-31_implementation-note.txt": {
+    "mtime": 1760048055.3148563,
+    "path": "data/raw/fomc/2024-05-31_implementation-note.txt",
+    "rows": 55,
+    "sha1": "dce31fab3321b2f02d6fabca5187ff90361bae4b",
+    "size": 3932
+  },
+  "data/raw/fomc/2024-05-31_press-conference.txt": {
+    "mtime": 1760048056.310131,
+    "path": "data/raw/fomc/2024-05-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "f34aefe3f48b5a970bf8046d49dd39b8e0a7bac7",
+    "size": 1555
+  },
+  "data/raw/fomc/2024-06-30_html-1.txt": {
+    "mtime": 1760048061.3551679,
+    "path": "data/raw/fomc/2024-06-30_html-1.txt",
+    "rows": 213,
+    "sha1": "93da5414c20f65650681b320e9c90abc350009a1",
+    "size": 44816
+  },
+  "data/raw/fomc/2024-06-30_html.txt": {
+    "mtime": 1760048058.3348155,
+    "path": "data/raw/fomc/2024-06-30_html.txt",
+    "rows": 45,
+    "sha1": "5ae526e894ae71065f6226eb9126e058c7cdad6d",
+    "size": 3185
+  },
+  "data/raw/fomc/2024-06-30_implementation-note.txt": {
+    "mtime": 1760048059.335148,
+    "path": "data/raw/fomc/2024-06-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "7461de4007fed92f47e7581c0c43e503bc7b4494",
+    "size": 3388
+  },
+  "data/raw/fomc/2024-06-30_press-conference.txt": {
+    "mtime": 1760048060.3680646,
+    "path": "data/raw/fomc/2024-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "8566c04d1d364bccfc9ce7d35ad1a221820f51de",
+    "size": 1623
+  },
+  "data/raw/fomc/2024-07-31_html-1.txt": {
+    "mtime": 1760048065.4113362,
+    "path": "data/raw/fomc/2024-07-31_html-1.txt",
+    "rows": 223,
+    "sha1": "ecd409713b4d6414998c5593e7c5eaa5e2070fa0",
+    "size": 45791
+  },
+  "data/raw/fomc/2024-07-31_html.txt": {
+    "mtime": 1760048062.359903,
+    "path": "data/raw/fomc/2024-07-31_html.txt",
+    "rows": 45,
+    "sha1": "e0ab8e3cb5e10f7f4252aab2d60eb668a701409d",
+    "size": 3265
+  },
+  "data/raw/fomc/2024-07-31_implementation-note.txt": {
+    "mtime": 1760048063.3853498,
+    "path": "data/raw/fomc/2024-07-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "291435b48c155257eda7b1dc1b3b2dd2a3a59e0b",
+    "size": 3405
+  },
+  "data/raw/fomc/2024-07-31_press-conference.txt": {
+    "mtime": 1760048064.3532603,
+    "path": "data/raw/fomc/2024-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "d9cf7ed46051658d63ec2b4e04137ea65d2a4f21",
+    "size": 1553
+  },
+  "data/raw/fomc/2024-09-30_html-1.txt": {
+    "mtime": 1760048069.3960822,
+    "path": "data/raw/fomc/2024-09-30_html-1.txt",
+    "rows": 206,
+    "sha1": "8735ca7a003c4bdcd34584d0d6bd1ba30f576035",
+    "size": 45334
+  },
+  "data/raw/fomc/2024-09-30_html.txt": {
+    "mtime": 1760048066.3908296,
+    "path": "data/raw/fomc/2024-09-30_html.txt",
+    "rows": 45,
+    "sha1": "856be9b44d1f5c35072e7ca09c47fa68b26cdc78",
+    "size": 3264
+  },
+  "data/raw/fomc/2024-09-30_implementation-note.txt": {
+    "mtime": 1760048067.5624697,
+    "path": "data/raw/fomc/2024-09-30_implementation-note.txt",
+    "rows": 53,
+    "sha1": "fb95cd84cf51f3a3615fb1d393932c569d7e8f11",
+    "size": 3594
+  },
+  "data/raw/fomc/2024-09-30_press-conference.txt": {
+    "mtime": 1760048068.3976846,
+    "path": "data/raw/fomc/2024-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "06172fc459d88125e38621754777ccd1ab0082be",
+    "size": 1656
+  },
+  "data/raw/fomc/2024-11-30_html-1.txt": {
+    "mtime": 1760048073.4217014,
+    "path": "data/raw/fomc/2024-11-30_html-1.txt",
+    "rows": 243,
+    "sha1": "fa0bb1ed87605731e3c273274870bb064e51546c",
+    "size": 50197
+  },
+  "data/raw/fomc/2024-11-30_html.txt": {
+    "mtime": 1760048070.4607685,
+    "path": "data/raw/fomc/2024-11-30_html.txt",
+    "rows": 45,
+    "sha1": "7312808556dc7f8024e83c20597107665079b720",
+    "size": 3039
+  },
+  "data/raw/fomc/2024-11-30_implementation-note.txt": {
+    "mtime": 1760048071.3846903,
+    "path": "data/raw/fomc/2024-11-30_implementation-note.txt",
+    "rows": 54,
+    "sha1": "a98ac0c05546f1e8d5e49a653b300904d30e0d62",
+    "size": 3696
+  },
+  "data/raw/fomc/2024-11-30_press-conference.txt": {
+    "mtime": 1760048072.3784273,
+    "path": "data/raw/fomc/2024-11-30_press-conference.txt",
+    "rows": 65,
+    "sha1": "1b9883355d9a98599f871dc5cceeba3862d8e595",
+    "size": 1509
+  },
+  "data/raw/fomc/2024-12-31_html-1.txt": {
+    "mtime": 1760048077.4432151,
+    "path": "data/raw/fomc/2024-12-31_html-1.txt",
+    "rows": 221,
+    "sha1": "32468218d759c913eaf63b0882cd022ceb0079d9",
+    "size": 46878
+  },
+  "data/raw/fomc/2024-12-31_html.txt": {
+    "mtime": 1760048074.3695557,
+    "path": "data/raw/fomc/2024-12-31_html.txt",
+    "rows": 45,
+    "sha1": "27e545c65e499eebc507f07360ae65dec820bc59",
+    "size": 3192
+  },
+  "data/raw/fomc/2024-12-31_implementation-note.txt": {
+    "mtime": 1760048075.4153242,
+    "path": "data/raw/fomc/2024-12-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "0214b8469c4d29454306d5c48258f8d347ea23c7",
+    "size": 3879
+  },
+  "data/raw/fomc/2024-12-31_press-conference.txt": {
+    "mtime": 1760048076.43758,
+    "path": "data/raw/fomc/2024-12-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "244088d80f224d692ff34a774effab09649d672b",
+    "size": 1650
+  },
+  "data/raw/fomc/2025-01-01_minutes.txt": {
+    "mtime": 1759117085.4456565,
+    "path": "data/raw/fomc/2025-01-01_minutes.txt",
+    "rows": 8895,
+    "sha1": "65b00f21c9628772cd096f458d3bc202f11e662c",
+    "size": 2055127
+  },
+  "data/raw/fomc/2025-01-31_html-1.txt": {
+    "mtime": 1760048023.2108655,
+    "path": "data/raw/fomc/2025-01-31_html-1.txt",
+    "rows": 310,
+    "sha1": "f1faf3a4d60fac8c2f0d803521c80e1aa5405ddf",
+    "size": 55892
+  },
+  "data/raw/fomc/2025-01-31_html.txt": {
+    "mtime": 1760048020.167911,
+    "path": "data/raw/fomc/2025-01-31_html.txt",
+    "rows": 45,
+    "sha1": "fe155da3731c60c87b0d14bef7e5ac561587c2d2",
+    "size": 2968
+  },
+  "data/raw/fomc/2025-01-31_implementation-note.txt": {
+    "mtime": 1760048021.1769378,
+    "path": "data/raw/fomc/2025-01-31_implementation-note.txt",
+    "rows": 53,
+    "sha1": "b9424cf1c8a2aac08d120514c5b4a155ed4efaf3",
+    "size": 3425
+  },
+  "data/raw/fomc/2025-01-31_press-conference.txt": {
+    "mtime": 1760048022.1525676,
+    "path": "data/raw/fomc/2025-01-31_press-conference.txt",
+    "rows": 65,
+    "sha1": "3074c3c571ae39825aab61bd0acf8435c0376036",
+    "size": 1455
+  },
+  "data/raw/fomc/2025-03-31_fed-financial-statements.txt": {
+    "mtime": 1760047333.8388283,
+    "path": "data/raw/fomc/2025-03-31_fed-financial-statements.txt",
+    "rows": 35,
+    "sha1": "5e6d9b890edbb0f689f2536866ed3777a57f745d",
+    "size": 1654
+  },
+  "data/raw/fomc/2025-03-31_html-1.txt": {
+    "mtime": 1760048027.1600378,
+    "path": "data/raw/fomc/2025-03-31_html-1.txt",
+    "rows": 265,
+    "sha1": "e681c782a9ef639ad1e7cb0fa7912d5a24ab968d",
+    "size": 49623
+  },
+  "data/raw/fomc/2025-03-31_html.txt": {
+    "mtime": 1760048024.1694643,
+    "path": "data/raw/fomc/2025-03-31_html.txt",
+    "rows": 45,
+    "sha1": "c34603a95f1415ef7b01198bf409449a79dac82d",
+    "size": 3347
+  },
+  "data/raw/fomc/2025-03-31_implementation-note.txt": {
+    "mtime": 1760048025.2002585,
+    "path": "data/raw/fomc/2025-03-31_implementation-note.txt",
+    "rows": 54,
+    "sha1": "6422b667c0a28e5e3ffb3fac382670e2482a51a4",
+    "size": 3609
+  },
+  "data/raw/fomc/2025-03-31_press-conference.txt": {
+    "mtime": 1760048026.1788435,
+    "path": "data/raw/fomc/2025-03-31_press-conference.txt",
+    "rows": 75,
+    "sha1": "433b76c0f7993923e693ae9ceddb726e1de619d2",
+    "size": 1630
+  },
+  "data/raw/fomc/2025-05-31_html-1.txt": {
+    "mtime": 1760048031.2235801,
+    "path": "data/raw/fomc/2025-05-31_html-1.txt",
+    "rows": 283,
+    "sha1": "4dce5ab396a557ef616829147c99a183f50a4afc",
+    "size": 51954
+  },
+  "data/raw/fomc/2025-05-31_html.txt": {
+    "mtime": 1760048028.2139714,
+    "path": "data/raw/fomc/2025-05-31_html.txt",
+    "rows": 45,
+    "sha1": "29332dd0f81974d14f3d09a1559e2aadfd35d429",
+    "size": 3062
+  },
+  "data/raw/fomc/2025-05-31_implementation-note.txt": {
+    "mtime": 1760048029.1982944,
+    "path": "data/raw/fomc/2025-05-31_implementation-note.txt",
+    "rows": 52,
+    "sha1": "d0c71fee7b2cc796fc8cf9d96ea9ffdf00dbf88d",
+    "size": 3252
+  },
+  "data/raw/fomc/2025-05-31_press-conference.txt": {
+    "mtime": 1760048030.1816041,
+    "path": "data/raw/fomc/2025-05-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "8b4150eae06cc77aeea8add0c85b62ec56ca8673",
+    "size": 1541
+  },
+  "data/raw/fomc/2025-06-30_html-1.txt": {
+    "mtime": 1760048035.2503235,
+    "path": "data/raw/fomc/2025-06-30_html-1.txt",
+    "rows": 275,
+    "sha1": "059878f7fe8b1dd574c923029d9f22221357401c",
+    "size": 48241
+  },
+  "data/raw/fomc/2025-06-30_html.txt": {
+    "mtime": 1760048032.225567,
+    "path": "data/raw/fomc/2025-06-30_html.txt",
+    "rows": 45,
+    "sha1": "b883dd465cda5ead63a7b3fff5376d2bfc35e79c",
+    "size": 2908
+  },
+  "data/raw/fomc/2025-06-30_implementation-note.txt": {
+    "mtime": 1760048033.2204785,
+    "path": "data/raw/fomc/2025-06-30_implementation-note.txt",
+    "rows": 52,
+    "sha1": "32e46b4d6c7566ca4549498e0140e97aacc763c7",
+    "size": 3264
+  },
+  "data/raw/fomc/2025-06-30_press-conference.txt": {
+    "mtime": 1760048034.2247505,
+    "path": "data/raw/fomc/2025-06-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "4e054d28b015b76b386e4cd2bbcf204d5a7921ea",
+    "size": 1623
+  },
+  "data/raw/fomc/2025-07-31_html-1.txt": {
+    "mtime": 1760048039.2370718,
+    "path": "data/raw/fomc/2025-07-31_html-1.txt",
+    "rows": 233,
+    "sha1": "ef98e70515e0119801f5b24a524ce6de2aa36223",
+    "size": 48411
+  },
+  "data/raw/fomc/2025-07-31_html.txt": {
+    "mtime": 1760048036.2516968,
+    "path": "data/raw/fomc/2025-07-31_html.txt",
+    "rows": 45,
+    "sha1": "6da3ad17b7e43c763a19365b02f2e6303a7a0a0f",
+    "size": 3073
+  },
+  "data/raw/fomc/2025-07-31_implementation-note.txt": {
+    "mtime": 1760048037.236258,
+    "path": "data/raw/fomc/2025-07-31_implementation-note.txt",
+    "rows": 52,
+    "sha1": "079989a556b6e63711bae3f1e7de6caed74bd92b",
+    "size": 3259
+  },
+  "data/raw/fomc/2025-07-31_press-conference.txt": {
+    "mtime": 1760048038.2523139,
+    "path": "data/raw/fomc/2025-07-31_press-conference.txt",
+    "rows": 70,
+    "sha1": "4cc997b6ec955bd9cfc3496b39d6ba7a4d16b1f1",
+    "size": 1553
+  },
+  "data/raw/fomc/2025-08-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt": {
+    "mtime": 1760048040.2746544,
+    "path": "data/raw/fomc/2025-08-31_statement-on-longer-run-goals-and-monetary-policy-strategy.txt",
+    "rows": 51,
+    "sha1": "48755bef6c618486d88e93b34a2c26b036d31fb5",
+    "size": 2312
+  },
+  "data/raw/fomc/2025-09-30_html-1.txt": {
+    "mtime": 1760048044.2894716,
+    "path": "data/raw/fomc/2025-09-30_html-1.txt",
+    "rows": 215,
+    "sha1": "0365db0f7e139c16b0726fc37adb805ef6dc6f4b",
+    "size": 43102
+  },
+  "data/raw/fomc/2025-09-30_html.txt": {
+    "mtime": 1760048041.2501614,
+    "path": "data/raw/fomc/2025-09-30_html.txt",
+    "rows": 45,
+    "sha1": "4a3732524cb2a8f4f79cd64cac77d047bb1181e5",
+    "size": 3119
+  },
+  "data/raw/fomc/2025-09-30_implementation-note.txt": {
+    "mtime": 1760048042.248456,
+    "path": "data/raw/fomc/2025-09-30_implementation-note.txt",
+    "rows": 52,
+    "sha1": "e2e2466377c93dbf287ea5f6622c9d89f882ce83",
+    "size": 3541
+  },
+  "data/raw/fomc/2025-09-30_press-conference.txt": {
+    "mtime": 1760048043.2651846,
+    "path": "data/raw/fomc/2025-09-30_press-conference.txt",
+    "rows": 75,
+    "sha1": "42e757aea3c292f592374822fe2835479b436fb7",
+    "size": 1656
+  }
+}

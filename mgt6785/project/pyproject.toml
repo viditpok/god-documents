@@ -1,0 +1,131 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macrotone"
+version = "0.1.0"
+description = "ML + NLP for Factor Allocation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.14.0",
+    "empyrical-reloaded==0.5.10",
+    "fredapi>=0.5.2",
+    "hmmlearn>=0.3.3",
+    "joblib>=1.4.2",
+    "lightgbm>=4.6.0",
+    "loguru>=0.7.3",
+    "lxml>=6.0.2",
+    "matplotlib>=3.10.6",
+    "nltk>=3.9.1",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "pandas-datareader>=0.10.0",
+    "pdfminer-six>=20250506",
+    "plotly>=5.24.1",
+    "pyarrow>=21.0.0",
+    "kaleido==0.2.1",
+    "pydantic>=2.9.2",
+    "python-pptx>=0.6.23",
+    "reportlab>=4.2.2",
+    "pyportfolioopt>=1.5.6",
+    "pyyaml>=6.0.3",
+    "quantstats>=0.0.77",
+    "requests>=2.32.5",
+    "scikit-learn>=1.7.2",
+    "sentencepiece>=0.2.1",
+    "statsmodels>=0.14.5",
+    "torch>=2.8.0",
+    "transformers>=4.56.2",
+    "typer>=0.12.5",
+    "streamlit>=1.38.0",
+    "xgboost>=3.0.5",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "black", "pytest", "mypy"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311", "py312", "py313"]
+skip-string-normalization = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests"]
+exclude = ["data", "notebooks"]
+extend-exclude = ["build", "dist"]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "C4",
+    "UP",
+    "RUF",
+]
+ignore = [
+    "E203",
+    "E266",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_no_return = true
+strict_optional = true
+disallow_untyped_calls = true
+disallow_any_generics = true
+no_implicit_optional = true
+plugins = []
+exclude = [
+    "data",
+    "notebooks",
+]
+
+[[tool.mypy.overrides]]
+module = "macrotones.*"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = [
+    "numpy.*",
+    "pandas.*",
+    "matplotlib.*",
+    "sklearn.*",
+    "xgboost.*",
+    "yaml",
+"transformers.*",
+"bs4.*",
+"loguru.*",
+    "torch.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-config --strict-markers"
+pythonpath = ["src"]
+testpaths = ["tests"]
+xfail_strict = true
+
+[tool.pytest.ini_options.markers]
+slow = "Marks slow-running tests."
+
+[tool.ruff.format]
+docstring-code-format = true
+preview = true

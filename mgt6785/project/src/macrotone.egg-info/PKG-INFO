@@ -1,0 +1,355 @@
+Metadata-Version: 2.4
+Name: macrotone
+Version: 0.1.0
+Summary: ML + NLP for Factor Allocation
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.14.0
+Requires-Dist: empyrical-reloaded==0.5.10
+Requires-Dist: fredapi>=0.5.2
+Requires-Dist: hmmlearn>=0.3.3
+Requires-Dist: joblib>=1.4.2
+Requires-Dist: lightgbm>=4.6.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: lxml>=6.0.2
+Requires-Dist: matplotlib>=3.10.6
+Requires-Dist: nltk>=3.9.1
+Requires-Dist: numpy>=2.3.3
+Requires-Dist: pandas>=2.3.2
+Requires-Dist: pandas-datareader>=0.10.0
+Requires-Dist: pdfminer-six>=20250506
+Requires-Dist: plotly>=5.24.1
+Requires-Dist: pyarrow>=21.0.0
+Requires-Dist: kaleido==0.2.1
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: python-pptx>=0.6.23
+Requires-Dist: reportlab>=4.2.2
+Requires-Dist: pyportfolioopt>=1.5.6
+Requires-Dist: pyyaml>=6.0.3
+Requires-Dist: quantstats>=0.0.77
+Requires-Dist: requests>=2.32.5
+Requires-Dist: scikit-learn>=1.7.2
+Requires-Dist: sentencepiece>=0.2.1
+Requires-Dist: statsmodels>=0.14.5
+Requires-Dist: torch>=2.8.0
+Requires-Dist: transformers>=4.56.2
+Requires-Dist: typer>=0.12.5
+Requires-Dist: streamlit>=1.38.0
+Requires-Dist: xgboost>=3.0.5
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+
+# MacroTone: ML + NLP for Factor Allocation
+
+**Release:** v3.0.0 — November 10, 2025  
+**Status:** Stable | Tested | 85 %+ coverage
+
+MacroTone reproduces a factor-allocation workflow that blends macro data, NLP features, and deterministic backtesting utilities. The project runs entirely with local commands; no cloud services are required.
+
+> **MacroTone v3** introduces realistic cost modeling, benchmark flexibility, attribution diagnostics, and interactive counterfactual analysis so the dashboard is review-ready for demos or academic replication.
+
+## Project Summary
+
+**Factor Timing Strategy Using Macroeconomic Regimes and NLP**  
+Contributors: Vidit Pokharna, Devang Ajmera, Osho Sharma
+
+### Motivation
+Factor investing (value, momentum, size) is often deployed statically, yet empirical work shows returns are regime-dependent. MacroTone pairs classic factor signals with NLP-derived macroeconomic regimes (FOMC minutes, macro releases) so the allocator can rotate exposures dynamically, improving risk-adjusted performance and drawdown control.
+
+### Research Questions
+- Can NLP on FOMC minutes and macro reports classify market regimes (expansion, slowdown, recession)?
+- Do factor returns (value, momentum, size) vary systematically across these regimes?
+- Does an ML-driven timing strategy improve Sharpe ratios and drawdown control relative to static allocations?
+
+### Data Sources
+- **WRDS**: CRSP stock returns, Compustat fundamentals, Fama-French factor libraries (via WRDS/Ken French).
+- **Public**: FOMC minutes (federalreserve.gov), FRED macro time series (GDP, CPI, economic releases).
+- **Optional**: Social sentiment feeds (e.g., X API) for macro commentary.
+
+### Methodology
+1. **NLP Regime Classification** – Apply FinBERT (or comparable transformer) to FOMC minutes/macro reports; label regimes as expansion vs. slowdown/recession.
+2. **Feature Engineering** – Combine factor returns, macro indicators, and NLP regime scores.
+3. **Modeling** – Use gradient boosting / random forests to predict next-period factor performance.
+4. **Allocation** – Overweight factors with the highest predicted returns while respecting turnover and cost constraints.
+5. **Backtesting** – Weekly rebalancing with realistic friction, benchmarked against buy-and-hold SPY and equal-weight factor allocations.
+
+### Commands & Validation
+- `uv run make quickstart` – One-line command that lint-checks, runs tests, executes the full pipeline (data, NLP, macro features, training, backtests, diagnostics), and launches the Streamlit UI with the latest artifacts.
+- `uv run ruff check src ui` – Lint passed (no issues).
+- `uv run pytest -q` – All tests passed (NumPy emits a benign divide warning in deterministic seed tests).
+- `uv run make report` – Regenerates `data/processed/tearsheet.png` and `data/processed/report.html` used by the UI’s full-width tearsheet section.
+
+## Quickstart (One Command)
+
+```bash
+# lint → tests → make all (data→nlp→features→train→backtest→report) → launch UI
+uv run make quickstart
+```
+
+To regenerate the full export bundle with the latest cost/benchmark metadata:
+
+```bash
+uv run make quickstart
+uv run make ppt
+uv run make pdf
+```
+
+## Results Summary
+
+| Metric | Value |
+| --- | --- |
+| Excess Sharpe | **1.17** |
+| Max Drawdown | **–8.3 %** |
+| Rolling Sharpe | Stable, above 1.0 since 2014 |
+| Turnover (post‑2016) | **0.19** |
+
+- Transaction costs are applied per rebalance (`pnl_net = pnl_gross – turnover × bps`) and the reports now show both gross and net series alongside benchmark alignment.
+- Diagnostics surfaces IC significance (Pearson/Spearman), flags weak signals (`|IC| < 0.1` or `p > 0.05`), and adds a Factor Stability Index (Var(weights)/Mean|weights|) so drift can be compared across SMB/HML/UMD/Mkt_RF.
+- Rolling IC (2010–2025) and per‑year attribution charts highlight regime behaviour; downloads for IC/attribution/narratives are built into the tab.
+- The Macro & NLP page now includes dynamic λ(t) based on inverse regime variance plus case-study callouts whenever macro tone diverges from FinBERT sentiment.
+- Simulator presets log turnover, cost, Δ Sharpe, Δ volatility, and Δ weights to `.cache/simulator_runs.csv`, with tornado bars normalized to Δ Sharpe per 1σ shock.
+- README screenshots (`docs/ui/v3.2_overview.png`, `v3.2_simulator.png`, `v3.2_diagnostics.png`, `v3_dataqa.png`) reflect the latest UI, and `quickstart.py` prints “✅ Determinism OK (seed=42, hashseed set)” after the pipeline completes while `reports.py` stamps the HTML footer with release metadata and a generation timestamp.
+
+### Reproducibility
+
+```
+Seed: 42 | PYTHONHASHSEED=42
+Git commit: 5919be15a6c0dc5c5156a86e316583125c543f7f
+Data hash (backtest.parquet): 6213ef30db9bdfa7e8d85a8baa53266ef094bdcd
+```
+
+The quickstart orchestrator (`src/macrotones/quickstart.py`) now:
+
+1. Ensures `ruff`, `black`, `pytest`, and `mypy` are installed.
+2. Runs `ruff check src tests`, `pytest -q`, and `make all` sequentially with ✅/❌ logging.
+3. Launches the Streamlit dashboard unless `HEADLESS=1`.
+
+Supported toggles:
+
+* `FAST=1` (skips slow sweeps; uses smaller windows)
+* `RUN_NLP=0/1` (skip/enable FinBERT scoring in the `make nlp` step)
+* `HEADLESS=1` (don’t launch UI)
+
+Examples:
+
+```bash
+FAST=1 RUN_NLP=0 HEADLESS=1 uv run make quickstart
+```
+
+---
+
+## Macro & NLP Inputs
+
+MacroTone blends macroeconomic z-scores with NLP sentiment to drive the LLM allocator:
+
+- `data/raw/fred_monthly.parquet` – CPI, UNRATE, yield curve, and spreads feed `macrotones.data.macro_loader`.
+- `data/interim/nlp_regime_scores.parquet` – FinBERT + topic/LM metrics merged into the Macro & NLP dashboard tab.
+- `data/processed/llm_policy_log.csv` – Logged each month with λ, MRI, NLP regime, ridge/LLM/final weights, and the latest LLM rationale.
+- `data/processed/panel.parquet` – Combined macro panel powering PCA-based Macro Regime Index (MRI).
+
+The Macro & NLP dashboard tab shows:
+1. Macro heatmap (z-scores) plus MRI trend.
+2. NLP sentiment timeline, regime bar chart, and λ blend trend.
+3. LLM rationale expander, latest LLM policy weights, and download button for `llm_policy_log.csv`.
+
+---
+
+## Dashboard (Streamlit)
+
+* Run locally:
+
+```bash
+PYTHONPATH=src uv run make ui
+# or
+uv run streamlit run ui/app.py
+```
+
+* Theme: **dark navy** with polished KPI cards and centralized Plotly helper (no deprecated kwargs). Toggle light/dark + fast mode from the sidebar.
+* Tabs: **Overview**, **Signals & Weights**, **Diagnostics**, **Macro & NLP**, **Tearsheet**, **Simulator**.
+  * Overview highlights 5 KPI cards, equity curve, drawdowns, and rolling Sharpe.
+  * Macro & NLP pairs an animated macro heatmap, λ histogram, correlation view, and Regime Narrator commentary with downloadable policy logs.
+  * Tearsheet tab enlarges rolling Sharpe + drawdown charts and shows the PNG report.
+  * Simulator lets you shift CPI/Unemployment/Term Spread deltas and generate counterfactual LLM weights alongside baseline deltas.
+* **New in v3:** built-in cost/benchmark toggles, LLM λ/α helper sliders with tooltips, simulator presets with turnover + cost readouts, factor attribution & IC significance charts, Data QA tab, and a permalink copier for demos.
+* Costs / Benchmark / Simulator Presets / Attribution / Data QA Tabs are documented and demo-ready for reviewers.
+
+Artifacts the UI reads from `data/processed/`:
+
+* `tearsheet.png`, `report.html`
+* `backtest.parquet`, `ic_summary.csv`, `ic_rolling.parquet`
+* `regime_summary.csv`, `regime_coverage.csv`
+* `llm_policy_log.csv` (LLM weights & rationale history)
+
+If the UI looks stale, re-run:
+
+```bash
+PYTHONPATH=src uv run make report
+```
+
+### UI Preview
+
+![MacroTone Overview](docs/ui/v3.2_overview.png)
+![Simulator Presets](docs/ui/v3.2_simulator.png)
+![Diagnostics](docs/ui/v3.2_diagnostics.png)
+![Data QA](docs/ui/v3_dataqa.png)
+
+---
+
+## Reports & Artifacts
+
+Generate/refresh reports:
+
+```bash
+PYTHONPATH=src uv run make report
+```
+
+Outputs:
+
+* `data/processed/tearsheet.png` (equity, drawdown, rolling Sharpe with min-window fallback, weights heatmap, turnover)
+* `data/processed/report.html` (single-file summary)
+* `data/processed/equity_curve.png`, `rolling_sharpe.png`
+* `data/processed/backtest.parquet`, `preds.parquet`
+* `uv run make ppt` builds `MacroTone_Tearsheet_v3.pptx` (tearsheet + attribution summary + simulator sensitivity tornado).
+* `uv run make pdf` renders a lightweight PDF copy of `report.html` for reviewers.
+
+---
+
+## NLP Regime Coverage
+
+Full crawl + scoring (may be slow/polite):
+
+```bash
+PYTHONPATH=src uv run make nlp_full
+# or run separately:
+PYTHONPATH=src uv run make fetch_fomc
+PYTHONPATH=src uv run make nlp
+```
+
+* Crawler saves normalized FOMC text under `data/raw/fomc/` (idempotent, hashed).
+* FinBERT scoring writes `data/interim/nlp_doc_scores.parquet` (doc cache) and
+  `data/interim/nlp_regime_scores.parquet`.
+* Feature builder prefers **_filled** NLP columns; regime report always produces:
+
+  * `data/processed/regime_summary.csv`
+  * `data/processed/regime_coverage.csv`
+  * `data/processed/regime_boxplot.png`
+
+---
+
+## Quality Gates (local only)
+
+```bash
+# Lint/format
+uv run ruff check src ui
+uv run black --check .
+
+# Types
+uv run mypy src
+
+# Tests
+uv run pytest -q
+# Expected summary: `...................................` with 0 warnings.
+# Coverage (via `uv run pytest --cov=src`) should remain ≥ 85 %.
+```
+
+Enable pre-commit hooks (optional):
+
+```bash
+uv run pre-commit install
+```
+
+---
+
+## Determinism / Seeds
+
+We set a global seed across Python/NumPy/sklearn/xgboost/(torch if present).
+Utility: `src/macrotones/utils/seed.py`. Entry points call it automatically.
+
+---
+
+## CLI (validated config)
+
+```bash
+# Validate config and run steps
+uv run python -m macrotones.cli features --config config/project.yaml
+uv run python -m macrotones.cli backtest --config config/project.yaml
+uv run python -m macrotones.cli report --config config/project.yaml
+
+# Other subcommands: crawl, score, diag, walkforward, costs
+```
+
+Config schema is enforced via Pydantic (`src/macrotones/config/schema.py`).
+
+---
+
+## Makefile Targets
+
+```bash
+make all           # chains data → nlp → features → train → backtest → report
+make nlp_full      # crawler + scorer
+make diagnostics_alpha  # ridge/LLM alpha decay + attribution
+make features
+make train
+make backtest
+make report
+make diag          # IC diagnostics
+make walkforward   # rolling OOS windows
+make costs         # cost/slippage sweep
+make sample_data   # small fixtures for local dev
+make audit         # data manifest check
+make quickstart    # one-button orchestrator
+```
+
+## MacroTone Interactive Insights v2
+
+* 📸 Screenshots live in `docs/ui/` for presentations and README snippets.
+* 🧭 Sidebar settings: choose light/dark theme, enable Fast mode (trim FinBERT history), and open the “ℹ️ How to Use” help panel.
+* 🧠 Regime Narrator blends MRI + NLP regime each month to describe risk tone (expansion, contraction, divergence, or neutral).
+* 🧪 Counterfactual Simulator tab lets you slide CPI/Unemployment/Term Spread shocks, instantly recompute LLM policy weights, and compare vs. baseline.
+* 📊 Macro & NLP tab adds an animated macro heatmap, λ histogram, macro↔NLP correlation heatmap, and a download button for both HTML report and policy log.
+* 📥 Every tab now includes a “Download HTML Report” button (writes `macrotones_report_YYYYMMDD.html`) so you can archive reproducible runs alongside `data/processed/llm_policy_log.csv`.
+
+---
+
+## Data Audit (manifest)
+
+Integrity check for key files (SHA1/size/rows):
+
+```bash
+uv run python -m macrotones.tools.audit_data
+# Update manifest after intentional changes:
+uv run python -m macrotones.tools.audit_data --update
+```
+
+Writes/compares `data/manifest.json` for:
+
+* `data/raw/ff/ff_monthly.parquet`
+* `data/raw/fomc/*.txt` (aggregated)
+* `data/interim/nlp_doc_scores.parquet`
+* `data/processed/*`
+
+---
+
+## Troubleshooting
+
+* **Plotly deprecation warnings**: All figures must render via `show_plotly(fig)` which calls `st.plotly_chart(fig, config=PLOTLY_CONFIG)` (no deprecated kwargs).
+* **Rolling Sharpe empty early**: We use a **min window of 3** observations; expect the panel to populate after month 3.
+* **UI not updating NLP**: Re-run `make nlp_full` followed by `make report` (mtime-based cache busting is enabled).
+* **Too slow**: Use `FAST=1` with `make quickstart` to skip sweeps and shrink windows.
+
+---
+
+## Intentional Removals
+
+Legacy notebooks and scripts were removed/are unnecessary:
+
+* `*.ipynb`, `build_panel.py`, `fetch_compustat.py`, `fetch_crsp.py`,
+  `factor_exposures.py`, `predict.py`, `regime_label.py`, `costs.py`, `rebalance.py`
+
+The current pipeline replaces them with modular, tested components.
+
+MacroTone v3.0.0 | Stable Release | Python 3.11+  
+Run `make release` for full artifact regeneration.
